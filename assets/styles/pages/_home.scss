@@ -1,0 +1,26 @@
+#intro {
+  margin-top: -56px;
+
+  
+  
+  .container {
+    max-width: 95vw;
+
+    // TO-DO: responsive breakpoint
+    height: 100vh;
+
+    padding-left: 15vw;
+
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+    background: linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 22.81%, rgba(255, 255, 255, 0.40) 98.88%), url(/images/waldemar-brandt.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .content {
+        width: 80%;
+    }
+  }
+}
+
+
