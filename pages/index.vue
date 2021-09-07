@@ -1,48 +1,63 @@
 <template>
-  <div>
+  <div class="bg-primary">
     <!-- Responsive navbar-->
         <Nav />
         <!-- Header-->
-        <header id="intro" class="container-fluid bg-primary">
+        <header id="intro" class="container-fluid bg-primary p-0">
             <div class="container d-flex justify-content-center">
                 <div class="content align-self-center">
-                    <h1 class="text-center">RFA Conseil</h1>
+                    <iconLogo class="w-100 m-auto mb-4"> </iconLogo>
                     <h2 class="text-primary">Conseil et Courtage</h2>
-                    <h3>en location et entretien de <br> vêtements de travail et autres prestations</h3>
+                    <h3 class="mb-3">en location et entretien de <br> vêtements de travail et autres prestations</h3>
+                    <iconDots></iconDots>
+                    <button class="btn btn-primary">En savoir plus</button>
                 </div>
             </div>
         </header>
         <!-- Features section-->
-        <section class="py-5 border-bottom" id="features">
-            <div class="container px-5 my-5">
-                <div class="row gx-5">
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
-                        <h2 class="h4 fw-bolder">Featured title</h2>
-                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-                        <a class="text-decoration-none" href="#!">
-                            Call to action
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
-                        <h2 class="h4 fw-bolder">Featured title</h2>
-                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-                        <a class="text-decoration-none" href="#!">
-                            Call to action
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
-                        <h2 class="h4 fw-bolder">Featured title</h2>
-                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-                        <a class="text-decoration-none" href="#!">
-                            Call to action
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
+        <section class="container-fluid bg-primary mb-5" id="expertise">
+            <div class="container card px-4 py-5">
+               <div class="row">
+                   <div class="col-7">
+                    <p class="text-justify">RFA CONSEIL propose un service exclusif de conseil et de courtage dans le domaine de la location et l'entretien de vêtements de travail, armoires vestiaires, linge plat, équipements sanitaires, tapis antisalissures, lavettes industrielles, fontaines dégraissantes, fontaines à eau et machines à café. <br> <br>
+Née en 2015 de la volonté de son dirigeant de mettre à profit une expertise de plus de 25 ans dans ce domaine d’activités, RFA CONSEIL s’adresse à tous types d’entreprises dans l’industrie, l’hôtellerie, la restauration et les établissements de santé.</p>
+                   </div>
+                   <div class="col align-self-center">
+                       <h3 class="text-primary text-end">Obtenez des réponses techniques et tarifaires à vos exigences, et gardez la maîtrise des conditions générales de vente de vos contrats.</h3>
+                   </div>
+               </div>
+
+               <div class="row">
+                   <Title text="L’objectif de RFA CONSEIL est d’assurer à tous ses clients"/>
+                   <ul class="ml-2">
+                       <li>L’optimisation des besoin avec l’élaboration d’un nouveau cahier des charges</li>
+                       <li>La garantie d’une réduction des coûts</li>
+                       <li>L’optimisation des conditions contractuelles</li>
+                   </ul>
+                   <p class="text-primary">RFA CONSEIL vous assure un service indépendant en toutes circonstances qui représente vos intérêts.</p>
+               </div>
+
+                <div class="row">
+                    <Title text="Bénéficiez de conseils personnalisés pour une rentabilité accrue"/>
+                   <p class="text">La rémunération perçue par RFA CONSEIL est conditionnée aux économies générées par son intervention.</p>
+                   <p class="text">Un principe simple qui vous protège et nous engage:</p>
+                   <p class="text-primary">Si RFA CONSEIL ne vous permet pas de dégager d’économies, vous n’avez pas d’honoraire à verser !</p>
+               </div> 
+            </div>
+        </section>
+
+         <section class="container-fluid bg-primary mb-5" id="prestations">
+            <div class="container card px-4 py-5">
+                <h3 class="text-center mb-3">Les prestations de RFA CONSEIL</h3>
+
+                <div class="row mb-4">
+                    <p>RFA CONSEIL détient une connaissance incontestable du marché des blanchisseurs et loueurs de linge, et permet à votre entreprise de bénéficier de cette expertise de plus de 25 ans.</p>
+                    <p>Pour apporter une réponse exhaustive aux besoins de chaque client, RFA CONSEIL propose une prestation déclinée en trois volets: </p>
+                </div>
+
+                <div class="row">
+                    <Title text="1. EVALUATION TECHNIQUE" class="mb-3"/>
+                    <p>Bénéficiez d’un audit technique au sein de vos locaux comprenant l’élaboration d’un cahier des charges approfondi pour vos futurs besoins et recevez des conseils sur mesures en adéquation avec votre réalité et vos contraintes.</p>
                 </div>
             </div>
         </section>
