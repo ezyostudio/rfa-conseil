@@ -10,47 +10,55 @@
           <h2 class="text-primary">Conseil et Courtage</h2>
           <h3 class="mb-4">en location et entretien de <br> vêtements de travail et autres prestations</h3>
           <icon-dots class="mb-4" />
-          <button class="btn btn-lg fw-bold btn-primary" @click="scrollTo($refs.expertiseSection)">En savoir plus <icon-arrow-down /></button>
+          <button class="btn btn-lg fw-bold btn-primary" @click="scrollTo($refs.expertiseSection)">En savoir plus
+            <icon-arrow-down /></button>
         </div>
       </div>
     </header>
     <!-- Features section-->
     <section class="container-fluid bg-primary mb-5" id="expertise" ref="expertiseSection">
       <div class="container card px-4 py-5">
-        <div class="row">
-          <div class="col-7">
-            <p class="text-justify">RFA CONSEIL propose un service exclusif de conseil et de courtage dans le domaine de
-              la location et l'entretien de vêtements de travail, armoires vestiaires, linge plat, équipements
-              sanitaires, tapis antisalissures, lavettes industrielles, fontaines dégraissantes, fontaines à eau et
-              machines à café. <br><br>
-              Née en 2015 de la volonté de son dirigeant de mettre à profit une expertise de plus de 25 ans dans ce
-              domaine d’activités, RFA CONSEIL s’adresse à tous types d’entreprises dans l’industrie, l’hôtellerie, la
-              restauration et les établissements de santé.</p>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-7">
+              <p class="text-justify">RFA CONSEIL propose un service exclusif de conseil et de courtage dans le domaine
+                de
+                la location et l'entretien de vêtements de travail, armoires vestiaires, linge plat, équipements
+                sanitaires, tapis antisalissures, lavettes industrielles, fontaines dégraissantes, fontaines à eau et
+                machines à café. <br><br>
+                Née en 2015 de la volonté de son dirigeant de mettre à profit une expertise de plus de 25 ans dans ce
+                domaine d’activités, RFA CONSEIL s’adresse à tous types d’entreprises dans l’industrie, l’hôtellerie, la
+                restauration et les établissements de santé.</p>
+            </div>
+            <div class="col align-self-center">
+              <h3 class="text-primary fw-bold text-end">Obtenez des réponses techniques et tarifaires à vos exigences,
+                et
+                gardez
+                la maîtrise des conditions générales de vente de vos contrats.</h3>
+            </div>
           </div>
-          <div class="col align-self-center">
-            <h3 class="text-primary fw-bold text-end">Obtenez des réponses techniques et tarifaires à vos exigences, et gardez
-              la maîtrise des conditions générales de vente de vos contrats.</h3>
+
+          <div class="row">
+            <rfa-title class="mb-3">L’objectif de RFA CONSEIL est d’assurer à tous ses clients</rfa-title>
+            <ul class="ms-2">
+              <li>L’optimisation des besoin avec l’élaboration d’un nouveau cahier des charges</li>
+              <li>La garantie d’une réduction des coûts</li>
+              <li>L’optimisation des conditions contractuelles</li>
+            </ul>
+            <p class="text-primary fw-bold">RFA CONSEIL vous assure un service indépendant en toutes circonstances qui
+              représente
+              vos intérêts.</p>
           </div>
-        </div>
 
-        <div class="row">
-          <rfa-title class="mb-3">L’objectif de RFA CONSEIL est d’assurer à tous ses clients</rfa-title>
-          <ul class="ms-2">
-            <li>L’optimisation des besoin avec l’élaboration d’un nouveau cahier des charges</li>
-            <li>La garantie d’une réduction des coûts</li>
-            <li>L’optimisation des conditions contractuelles</li>
-          </ul>
-          <p class="text-primary fw-bold">RFA CONSEIL vous assure un service indépendant en toutes circonstances qui représente
-            vos intérêts.</p>
-        </div>
-
-        <div class="row">
-          <rfa-title class="mb-3">Bénéficiez de conseils personnalisés pour une rentabilité accrue</rfa-title>
-          <p class="text">La rémunération perçue par RFA CONSEIL est conditionnée aux économies générées par son
-            intervention.</p>
-          <p class="text">Un principe simple qui vous protège et nous engage:</p>
-          <p class="text-primary fw-bold">Si RFA CONSEIL ne vous permet pas de dégager d’économies, vous n’avez pas d’honoraire
-            à verser !</p>
+          <div class="row">
+            <rfa-title class="mb-3">Bénéficiez de conseils personnalisés pour une rentabilité accrue</rfa-title>
+            <p class="text">La rémunération perçue par RFA CONSEIL est conditionnée aux économies générées par son
+              intervention.</p>
+            <p class="text">Un principe simple qui vous protège et nous engage:</p>
+            <p class="text-primary fw-bold">Si RFA CONSEIL ne vous permet pas de dégager d’économies, vous n’avez pas
+              d’honoraire
+              à verser !</p>
+          </div>
         </div>
       </div>
     </section>
@@ -355,17 +363,17 @@
 
 <script>
   export default {
-      methods: {
-          scrollTo(target) {
-            if (target && 'scrollIntoView' in target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'center', 
-                    inline: 'nearest'
-                })
-            }
-          }
+    methods: {
+      scrollTo(target) {
+        if (target && 'scrollIntoView' in target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center',
+            inline: 'nearest'
+          })
+        }
       }
+    }
   }
 
 </script>
