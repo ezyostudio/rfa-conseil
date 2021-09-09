@@ -31,11 +31,30 @@
 }
 
 section .container.card {
+
+  ul {
+    li {
+      list-style-type: none;
+      position: relative;
+  
+      &:before {
+        content: '';
+        background: url('/images/virgule_4x.png');
+        background-size: cover;
+        position: absolute;
+        top: 7px;
+        left: -15px;
+        width: 40px;
+        height: 20px;
+      }
+    }
+  }
+
+
   border-radius: 39px;
   box-shadow: -10px -10px 30px rgba(0, 0, 0, 0.13);
   border: 0;
   background: $white;
-  pad
 }
 
 #expertise {
@@ -54,20 +73,48 @@ section .container.card {
 }
 
 
-ul {
-  li {
-    list-style-type: none;
-    position: relative;
 
-    &:before {
-      content: '';
-      background: url('/images/virgule_4x.png');
-      background-size: cover;
-      position: absolute;
-      top: 7px;
-      left: -15px;
-      width: 40px;
-      height: 20px;
+#prestations {
+  .card {
+    border-radius: 20px;
+    border: none;
+    img {
+      width: 100%;
+      border-radius: 20px;
+      
+    }
+  }
+
+  #armoire {
+    .card {
+      background-color: #727676 !important;
+    }
+  }
+
+  #linge {
+    .px-5{
+      padding: 0 12.5% !important; 
+    }
+    .card {
+      background-color: #32AFDA !important;
+    }
+  }
+
+  #sanitaire {
+    .px-5{
+      padding: 0 12.5% !important; 
+    }
+    .card {
+      background-color: #94D0E6 !important;
+    }
+  }
+
+  #tapis {
+    .px-5{
+      padding: 0 25% !important; 
+    }
+    .card {
+      background-color: #44607D !important;
     }
   }
 }
