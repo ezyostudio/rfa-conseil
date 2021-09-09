@@ -4,14 +4,14 @@
   z-index: 0;
 
   .container {
-    max-width: 95vw;
+    max-width: 90vw;
 
     // TO-DO: responsive breakpoint
-    height: 100vh;
+    height: calc(95vh - 100px);
 
     margin-right: 0;
     margin-left: auto;
-    padding-left: 15vw;
+    padding-left: 10vw;
 
     border-top-left-radius: 100%;
     border-bottom-left-radius: 100%;
@@ -30,9 +30,22 @@
   }
 }
 
+section .container.card {
+  border-radius: 39px;
+  box-shadow: -10px -10px 30px rgba(0, 0, 0, 0.13);
+  border: 0;
+  background: $white;
+}
+
 #expertise {
-  margin-top: -56px;  
+  margin-top: -5em;  
   z-index: 1;
+
+  .container {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.72) 0%, #FFFFFF 19.79%);
+    backdrop-filter: blur(28px);
+
+  }
   p {
     text-align: justify;
   }

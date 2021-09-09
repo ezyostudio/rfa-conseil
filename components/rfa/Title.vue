@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p class="text-light">{{text}}</p>
+        <p class="text-light" v-bind="$props"><slot>{{text}}</slot></p>
     </div>
 </template>
 
