@@ -65,260 +65,262 @@
 
     <section class="container-fluid bg-primary mb-5" id="prestations">
       <div class="container card px-4 py-5">
-        <h3 class="text-center mb-3">Les prestations de RFA CONSEIL</h3>
+        <div class="card-body">
+          <h3 class="text-center mb-3">Les prestations de RFA CONSEIL</h3>
 
-        <div class="row mb-4">
-          <p>RFA CONSEIL détient une connaissance incontestable du marché des blanchisseurs et loueurs de linge, et
-            permet à votre entreprise de bénéficier de cette expertise de plus de 25 ans.</p>
-          <p>Pour apporter une réponse exhaustive aux besoins de chaque client, RFA CONSEIL propose une prestation
-            déclinée en trois volets: </p>
-        </div>
+          <div class="row mb-4">
+            <p>RFA CONSEIL détient une connaissance incontestable du marché des blanchisseurs et loueurs de linge, et
+              permet à votre entreprise de bénéficier de cette expertise de plus de 25 ans.</p>
+            <p>Pour apporter une réponse exhaustive aux besoins de chaque client, RFA CONSEIL propose une prestation
+              déclinée en trois volets: </p>
+          </div>
 
-        <div class="row">
-          <rfa-title class="mb-3">> 1. EVALUATION TECHNIQUE </rfa-title>
-          <p>Bénéficiez d’un audit technique au sein de vos locaux comprenant l’élaboration d’un cahier des charges
-            approfondi pour vos futurs besoins et recevez des conseils sur mesures en adéquation avec votre réalité et
-            vos contraintes.</p>
-        </div>
+          <div class="row">
+            <rfa-title class="mb-3">> 1. EVALUATION TECHNIQUE </rfa-title>
+            <p>Bénéficiez d’un audit technique au sein de vos locaux comprenant l’élaboration d’un cahier des charges
+              approfondi pour vos futurs besoins et recevez des conseils sur mesures en adéquation avec votre réalité et
+              vos contraintes.</p>
+          </div>
 
-        <div>
-          <h4>VETEMENTS DE TRAVAIL</h4>
+          <div>
+            <h4>VETEMENTS DE TRAVAIL</h4>
 
-          <div class="row mb-5">
-            <div class="row mb-3">
-              <h5 class="text-center ">Standard</h5>
+            <div class="row mb-5">
+              <div class="row mb-3">
+                <h5 class="text-center ">Standard</h5>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="card bg-primary">
+                    <div class="card-body">
+                      <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
+                      <h5 class="card-title text-center text-light">hotellerie</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card bg-primary">
+                    <div class="card-body">
+                      <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
+                      <h5 class="card-title text-center text-light">hotellerie</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card bg-primary">
+                    <div class="card-body">
+                      <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
+                      <h5 class="card-title text-center text-light">hotellerie</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card bg-primary">
+                    <div class="card-body">
+                      <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
+                      <h5 class="card-title text-center text-light">hotellerie</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="row">
-              <div class="col">
-                <div class="card bg-primary">
-                <div class="card-body">
-                  <img src="../static/images/hotellerie-33.jpg" alt="" class="mb-3">
-                  <h5 class="card-title text-center text-light">hotellerie</h5>
+
+
+            <div class="row mb-5">
+              <div class="row mb-3">
+                <h5 class="text-center ">EPI</h5>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="card bg-primary">
+                    <div class="card-body">
+                      <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
+                      <h5 class="card-title text-center text-light">hotellerie</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card bg-primary">
+                    <div class="card-body">
+                      <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
+                      <h5 class="card-title text-center text-light">hotellerie</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card bg-primary">
+                    <div class="card-body">
+                      <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
+                      <h5 class="card-title text-center text-light">hotellerie</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card bg-primary">
+                    <div class="card-body">
+                      <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
+                      <h5 class="card-title text-center text-light">hotellerie</h5>
+                    </div>
+                  </div>
                 </div>
               </div>
+            </div>
+
+
+            <div class="row mb-5" id="armoire">
+              <div class="row mb-3">
+                <h5>ARMOIRES VESTIMENTAIRES</h5>
               </div>
-              <div class="col">
-                <div class="card bg-primary">
-                <div class="card-body">
-                  <img src="../static/images/hotellerie-33.jpg" alt="" class="mb-3">
-                  <h5 class="card-title text-center text-light">hotellerie</h5>
+              <div class="row">
+                <div class="col">
+                  <div class="card bg-primary">
+                    <div class="card-body">
+                      <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
+                      <h5 class="card-title text-center text-light">hotellerie</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card bg-primary">
+                    <div class="card-body">
+                      <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
+                      <h5 class="card-title text-center text-light">hotellerie</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card bg-primary">
+                    <div class="card-body">
+                      <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
+                      <h5 class="card-title text-center text-light">hotellerie</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card bg-primary">
+                    <div class="card-body">
+                      <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
+                      <h5 class="card-title text-center text-light">hotellerie</h5>
+                    </div>
+                  </div>
                 </div>
               </div>
+            </div>
+
+
+            <div class="row mb-5" id="linge">
+              <div class="row mb-3">
+                <h5>LINGES PLATS</h5>
               </div>
-              <div class="col">
-                <div class="card bg-primary">
-                <div class="card-body">
-                  <img src="../static/images/hotellerie-33.jpg" alt="" class="mb-3">
-                  <h5 class="card-title text-center text-light">hotellerie</h5>
+              <div class="row px-5">
+                <div class="col">
+                  <div class="card bg-primary">
+                    <div class="card-body">
+                      <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
+                      <h5 class="card-title text-center text-light">hotellerie</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card bg-primary">
+                    <div class="card-body">
+                      <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
+                      <h5 class="card-title text-center text-light">hotellerie</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card bg-primary">
+                    <div class="card-body">
+                      <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
+                      <h5 class="card-title text-center text-light">hotellerie</h5>
+                    </div>
+                  </div>
                 </div>
               </div>
+            </div>
+
+            <div class="mb-5" id="sanitaire">
+              <div class="mb-3">
+                <h5>EQUIPEMENTS SANITAIRES</h5>
               </div>
-              <div class="col">
-                <div class="card bg-primary">
-                <div class="card-body">
-                  <img src="../static/images/hotellerie-33.jpg" alt="" class="mb-3">
-                  <h5 class="card-title text-center text-light">hotellerie</h5>
+              <div class="row px-5">
+                <div class="col">
+                  <div class="card bg-primary">
+                    <div class="card-body">
+                      <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
+                      <h5 class="card-title text-center text-light">hotellerie</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card bg-primary">
+                    <div class="card-body">
+                      <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
+                      <h5 class="card-title text-center text-light">hotellerie</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card bg-primary">
+                    <div class="card-body">
+                      <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
+                      <h5 class="card-title text-center text-light">hotellerie</h5>
+                    </div>
+                  </div>
                 </div>
               </div>
+            </div>
+
+            <div class="mb-5" id="tapis">
+              <!-- <div class="mb-3"> -->
+                <h5 class="mb-3">TAPIS ANTISALISSURES</h5>
+              <!-- </div> -->
+              <div class="row px-5">
+                <div class="col">
+                  <div class="card bg-primary">
+                    <div class="card-body">
+                      <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
+                      <h5 class="card-title text-center text-light">hotellerie</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card bg-primary">
+                    <div class="card-body">
+                      <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
+                      <h5 class="card-title text-center text-light">hotellerie</h5>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
-
-          <div class="row mb-5">
-            <div class="row mb-3">
-              <h5 class="text-center ">EPI</h5>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card bg-primary">
-                <div class="card-body">
-                  <img src="../static/images/hotellerie-33.jpg" alt="" class="mb-3">
-                  <h5 class="card-title text-center text-light">hotellerie</h5>
-                </div>
-              </div>
-              </div>
-              <div class="col">
-                <div class="card bg-primary">
-                <div class="card-body">
-                  <img src="../static/images/hotellerie-33.jpg" alt="" class="mb-3">
-                  <h5 class="card-title text-center text-light">hotellerie</h5>
-                </div>
-              </div>
-              </div>
-              <div class="col">
-                <div class="card bg-primary">
-                <div class="card-body">
-                  <img src="../static/images/hotellerie-33.jpg" alt="" class="mb-3">
-                  <h5 class="card-title text-center text-light">hotellerie</h5>
-                </div>
-              </div>
-              </div>
-              <div class="col">
-                <div class="card bg-primary">
-                <div class="card-body">
-                  <img src="../static/images/hotellerie-33.jpg" alt="" class="mb-3">
-                  <h5 class="card-title text-center text-light">hotellerie</h5>
-                </div>
-              </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="row mb-5" id="armoire">
-            <div class="row mb-3">
-              <h5>ARMOIRES VESTIMENTAIRES</h5>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="card bg-primary">
-                <div class="card-body">
-                  <img src="../static/images/hotellerie-33.jpg" alt="" class="mb-3">
-                  <h5 class="card-title text-center text-light">hotellerie</h5>
-                </div>
-              </div>
-              </div>
-              <div class="col">
-                <div class="card bg-primary">
-                <div class="card-body">
-                  <img src="../static/images/hotellerie-33.jpg" alt="" class="mb-3">
-                  <h5 class="card-title text-center text-light">hotellerie</h5>
-                </div>
-              </div>
-              </div>
-              <div class="col">
-                <div class="card bg-primary">
-                <div class="card-body">
-                  <img src="../static/images/hotellerie-33.jpg" alt="" class="mb-3">
-                  <h5 class="card-title text-center text-light">hotellerie</h5>
-                </div>
-              </div>
-              </div>
-              <div class="col">
-                <div class="card bg-primary">
-                <div class="card-body">
-                  <img src="../static/images/hotellerie-33.jpg" alt="" class="mb-3">
-                  <h5 class="card-title text-center text-light">hotellerie</h5>
-                </div>
-              </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="row mb-5" id="linge">
-            <div class="row mb-3">
-              <h5>LINGES PLATS</h5>
-            </div>
-            <div class="row px-5">
-              <div class="col">
-                <div class="card bg-primary">
-                <div class="card-body">
-                  <img src="../static/images/hotellerie-33.jpg" alt="" class="mb-3">
-                  <h5 class="card-title text-center text-light">hotellerie</h5>
-                </div>
-              </div>
-              </div>
-              <div class="col">
-                <div class="card bg-primary">
-                <div class="card-body">
-                  <img src="../static/images/hotellerie-33.jpg" alt="" class="mb-3">
-                  <h5 class="card-title text-center text-light">hotellerie</h5>
-                </div>
-              </div>
-              </div>
-              <div class="col">
-                <div class="card bg-primary">
-                <div class="card-body">
-                  <img src="../static/images/hotellerie-33.jpg" alt="" class="mb-3">
-                  <h5 class="card-title text-center text-light">hotellerie</h5>
-                </div>
-              </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row mb-5" id="sanitaire">
-            <div class="row mb-3">
-              <h5>EQUIPEMENTS SANITAIRES</h5>
-            </div>
-            <div class="row px-5">
-              <div class="col">
-                <div class="card bg-primary">
-                <div class="card-body">
-                  <img src="../static/images/hotellerie-33.jpg" alt="" class="mb-3">
-                  <h5 class="card-title text-center text-light">hotellerie</h5>
-                </div>
-              </div>
-              </div>
-              <div class="col">
-                <div class="card bg-primary">
-                <div class="card-body">
-                  <img src="../static/images/hotellerie-33.jpg" alt="" class="mb-3">
-                  <h5 class="card-title text-center text-light">hotellerie</h5>
-                </div>
-              </div>
-              </div>
-              <div class="col">
-                <div class="card bg-primary">
-                <div class="card-body">
-                  <img src="../static/images/hotellerie-33.jpg" alt="" class="mb-3">
-                  <h5 class="card-title text-center text-light">hotellerie</h5>
-                </div>
-              </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row mb-5" id="tapis">
-            <div class="row mb-3">
-              <h5>TAPIS ANTISALISSURES</h5>
-            </div>
-            <div class="row px-5">
-              <div class="col">
-                <div class="card bg-primary">
-                <div class="card-body">
-                  <img src="../static/images/hotellerie-33.jpg" alt="" class="mb-3">
-                  <h5 class="card-title text-center text-light">hotellerie</h5>
-                </div>
-              </div>
-              </div>
-              <div class="col">
-                <div class="card bg-primary">
-                <div class="card-body">
-                  <img src="../static/images/hotellerie-33.jpg" alt="" class="mb-3">
-                  <h5 class="card-title text-center text-light">hotellerie</h5>
-                </div>
-              </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
           <rfa-title class="mb-3">> 2. NÉGOCIATION TARIFAIRES </rfa-title>
-        </div>
 
-        <div class="row">
-          <rfa-title class="mb-3">> 3. AUDIT DES CLAUSES CONTRACTUELLES </rfa-title>
+          <div>
+            <rfa-title class="mb-3">> 3. AUDIT DES CLAUSES CONTRACTUELLES</rfa-title>
+            <!-- TO-DO -->
+          </div>
         </div>
       </div>
     </section>
-   
+
     <!-- Footer-->
     <footer class="py-3">
       <div class="container">
         <div class="row">
-        <div class="col">
-          <p class="m-0 text-light">&copy; 2021 RFA CONSEIL</p>
-        </div>
-        <div class="col">
-          <p class="text-light text-end">Made with <iconLOVE /> by EzyoStudio</p>
+          <div class="col">
+            <p class="m-0 text-light">&copy; 2021 RFA CONSEIL</p>
+          </div>
+          <div class="col">
+            <p class="text-light text-end">Made with
+              <icon-love /> by EzyoStudio</p>
+          </div>
         </div>
       </div>
-      </div>
-      
+
     </footer>
   </div>
 </template>
