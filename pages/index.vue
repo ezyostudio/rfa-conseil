@@ -90,7 +90,7 @@
                 <h5 class="text-center ">Standard</h5>
               </div>
               <div class="row">
-                <div class="col">
+                <div class="col-12 col-md-6 col-lg-3">
                   <div class="card bg-primary">
                     <div class="card-body">
                       <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
@@ -98,7 +98,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col">
+                <div class="col-12 col-md-6 col-lg-3">
                   <div class="card bg-primary">
                     <div class="card-body">
                       <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
@@ -106,7 +106,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col">
+                <div class="col-12 col-md-6 col-lg-3">
                   <div class="card bg-primary">
                     <div class="card-body">
                       <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
@@ -114,7 +114,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col">
+                <div class="col-12 col-md-6 col-lg-3">
                   <div class="card bg-primary">
                     <div class="card-body">
                       <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
@@ -131,7 +131,7 @@
                 <h5 class="text-center ">EPI</h5>
               </div>
               <div class="row">
-                <div class="col">
+                <div class="col-12 col-md-6 col-lg-3">
                   <div class="card bg-primary">
                     <div class="card-body">
                       <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
@@ -139,7 +139,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col">
+                <div class="col-12 col-md-6 col-lg-3">
                   <div class="card bg-primary">
                     <div class="card-body">
                       <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
@@ -147,7 +147,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col">
+                <div class="col-12 col-md-6 col-lg-3">
                   <div class="card bg-primary">
                     <div class="card-body">
                       <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
@@ -155,7 +155,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col">
+                <div class="col-12 col-md-6 col-lg-3">
                   <div class="card bg-primary">
                     <div class="card-body">
                       <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
@@ -172,7 +172,7 @@
                 <h5>ARMOIRES VESTIMENTAIRES</h5>
               </div>
               <div class="row">
-                <div class="col">
+                <div class="col-12 col-md-6 col-lg-3">
                   <div class="card bg-primary">
                     <div class="card-body">
                       <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
@@ -180,7 +180,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col">
+                <div class="col-12 col-md-6 col-lg-3">
                   <div class="card bg-primary">
                     <div class="card-body">
                       <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
@@ -188,7 +188,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col">
+                <div class="col-12 col-md-6 col-lg-3">
                   <div class="card bg-primary">
                     <div class="card-body">
                       <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
@@ -196,7 +196,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col">
+                <div class="col-12 col-md-6 col-lg-3">
                   <div class="card bg-primary">
                     <div class="card-body">
                       <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
