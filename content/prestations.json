@@ -35,6 +35,66 @@
         "title":"hotellerie",
         "image": "/images/hotellerie-33.jpg"
       }
+    ],
+    "armoires": [
+      {
+        "title":"hotellerie",
+        "image": "/images/hotellerie-33.jpg"
+      },
+      {
+        "title":"hotellerie",
+        "image": "/images/hotellerie-33.jpg"
+      },
+      {
+        "title":"hotellerie",
+        "image": "/images/hotellerie-33.jpg"
+      },
+      {
+        "title":"hotellerie",
+        "image": "/images/hotellerie-33.jpg"
+      }
+    ],
+    "linges": [
+      {
+        "title":"hotellerie",
+        "image": "/images/hotellerie-33.jpg"
+      },
+      {
+        "title":"hotellerie",
+        "image": "/images/hotellerie-33.jpg"
+      },
+      {
+        "title":"hotellerie",
+        "image": "/images/hotellerie-33.jpg"
+      }
+    ],
+    "sanitaires": [
+      {
+        "title":"hotellerie",
+        "image": "/images/hotellerie-33.jpg"
+      },
+      {
+        "title":"hotellerie",
+        "image": "/images/hotellerie-33.jpg"
+      },
+      {
+        "title":"hotellerie",
+        "image": "/images/hotellerie-33.jpg"
+      },
+      {
+        "title":"hotellerie",
+        "image": "/images/hotellerie-33.jpg"
+      }
+    ],
+    "tapis": [
+      {
+        "title":"hotellerie",
+        "image": "/images/hotellerie-33.jpg"
+      },
+      {
+        "title":"hotellerie",
+        "image": "/images/hotellerie-33.jpg"
+      }
     ]
   }
 }
