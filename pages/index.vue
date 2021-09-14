@@ -86,10 +86,9 @@
           </div>
 
           <div>
-            <h4>VETEMENTS DE TRAVAIL</h4>
 
-            <rfa-prestation-list title="Standard" class="mb-5" color="#105391" :data="prestations.standard" />
-            <rfa-prestation-list title="EPI" class="mb-5" color="#105391" :data="prestations.epi" />
+            <rfa-prestation-list title="VETEMENTS DE TRAVAIL" subtitle="Standard" class="mb-5" color="#105391" :data="prestations.standard" />
+            <rfa-prestation-list subtitle="EPI" class="mb-5" color="#105391" :data="prestations.epi" />
 
             <rfa-prestation-list title="ARMOIRES VESTIMENTAIRES" class="mb-5" color="#727676" :data="prestations.armoires" />
             <rfa-prestation-list title="LINGES PLATS" class="mb-5" color="#32AFDA" :data="prestations.linges" />

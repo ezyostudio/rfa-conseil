@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h5 v-if="title" class="text-center">{{title}}</h5>
+    <h4 v-if="title">{{title}}</h4>
+    <h5 v-if="subtitle" class="text-center">{{subtitle}}</h5>
 
     <div class="row gy-4 justify-content-center">
       <div v-for="x in data" :key="x.title" class="col-12 col-md-6 col-lg-3">
@@ -13,7 +14,7 @@
 
 <script>
   export default {
-    props: ['title', 'color', 'data']
+    props: ['title', 'color', 'data', 'subtitle']
   }
 
 </script>
