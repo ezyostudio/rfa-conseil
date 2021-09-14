@@ -1,0 +1,40 @@
+{
+  "data": {
+    "standard": [
+      {
+        "title":"hotellerie",
+        "image": "/images/hotellerie-33.jpg"
+      },
+      {
+        "title":"hotellerie",
+        "image": "/images/hotellerie-33.jpg"
+      },
+      {
+        "title":"hotellerie",
+        "image": "/images/hotellerie-33.jpg"
+      },
+      {
+        "title":"hotellerie",
+        "image": "/images/hotellerie-33.jpg"
+      }
+    ],
+    "epi": [
+      {
+        "title":"hotellerie",
+        "image": "/images/hotellerie-33.jpg"
+      },
+      {
+        "title":"hotellerie",
+        "image": "/images/hotellerie-33.jpg"
+      },
+      {
+        "title":"hotellerie",
+        "image": "/images/hotellerie-33.jpg"
+      },
+      {
+        "title":"hotellerie",
+        "image": "/images/hotellerie-33.jpg"
+      }
+    ]
+  }
+}

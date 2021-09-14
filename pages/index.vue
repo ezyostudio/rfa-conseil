@@ -2,6 +2,7 @@
   <div class="bg-primary">
     <!-- Responsive navbar-->
     <Nav />
+
     <!-- Header-->
     <header id="intro" class="container-fluid bg-primary p-0">
       <div class="container d-flex justify-content-center">
@@ -11,10 +12,12 @@
           <h3 class="mb-4">en location et entretien de <br> vêtements de travail et autres prestations</h3>
           <icon-dots class="mb-4" />
           <button class="btn btn-lg fw-bold btn-primary" @click="scrollTo($refs.expertiseSection)">En savoir plus
-            <icon-arrow-down /></button>
+            <icon-arrow-down />
+          </button>
         </div>
       </div>
     </header>
+
     <!-- Features section-->
     <section class="container-fluid bg-primary mb-5" id="expertise" ref="expertiseSection">
       <div class="container card px-4 py-5">
@@ -85,87 +88,13 @@
           <div>
             <h4>VETEMENTS DE TRAVAIL</h4>
 
-            <div class="row mb-5">
-              <div class="row mb-3">
-                <h5 class="text-center ">Standard</h5>
-              </div>
-              <div class="row">
-                <div class="col-12 col-md-6 col-lg-3">
-                  <div class="card bg-primary">
-                    <div class="card-body">
-                      <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
-                      <h5 class="card-title text-center text-light">hotellerie</h5>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                  <div class="card bg-primary">
-                    <div class="card-body">
-                      <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
-                      <h5 class="card-title text-center text-light">hotellerie</h5>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                  <div class="card bg-primary">
-                    <div class="card-body">
-                      <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
-                      <h5 class="card-title text-center text-light">hotellerie</h5>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                  <div class="card bg-primary">
-                    <div class="card-body">
-                      <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
-                      <h5 class="card-title text-center text-light">hotellerie</h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <rfa-prestation-list title="Standard" class="mb-5" color="#105391" :data="prestations.standard" />
+            <rfa-prestation-list title="EPI" class="mb-5" color="#105391" :data="prestations.epi" />
 
-
-            <div class="row mb-5">
-              <div class="row mb-3">
-                <h5 class="text-center ">EPI</h5>
-              </div>
-              <div class="row">
-                <div class="col-12 col-md-6 col-lg-3">
-                  <div class="card bg-primary">
-                    <div class="card-body">
-                      <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
-                      <h5 class="card-title text-center text-light">hotellerie</h5>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                  <div class="card bg-primary">
-                    <div class="card-body">
-                      <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
-                      <h5 class="card-title text-center text-light">hotellerie</h5>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                  <div class="card bg-primary">
-                    <div class="card-body">
-                      <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
-                      <h5 class="card-title text-center text-light">hotellerie</h5>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                  <div class="card bg-primary">
-                    <div class="card-body">
-                      <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
-                      <h5 class="card-title text-center text-light">hotellerie</h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+            <rfa-prestation-list title="ARMOIRES VESTIMENTAIRES" class="mb-5" color="#105391" :data="prestations.armoires" />
+            <rfa-prestation-list title="LINGES PLATS" class="mb-5" color="#105391" :data="prestations.armoires" />
+            <rfa-prestation-list title="EQUIPEMENTS SANITAIRES" class="mb-5" color="#105391" :data="prestations.armoires" />
+            <rfa-prestation-list title="TAPIS ANTISALISSURES" class="mb-5" color="#105391" :data="prestations.armoires" />
 
             <div class="row mb-5" id="armoire">
               <div class="row mb-3">
@@ -213,7 +142,7 @@
                 <h5>LINGES PLATS</h5>
               </div>
               <div class="row px-5">
-                <div class="col">
+                <div class="col-3">
                   <div class="card bg-primary">
                     <div class="card-body">
                       <img src="/images/hotellerie-33.jpg" alt="" class="mb-3">
@@ -274,7 +203,7 @@
 
             <div class="mb-5" id="tapis">
               <!-- <div class="mb-3"> -->
-                <h5 class="mb-3">TAPIS ANTISALISSURES</h5>
+              <h5 class="mb-3">TAPIS ANTISALISSURES</h5>
               <!-- </div> -->
               <div class="row px-5">
                 <div class="col">
@@ -327,6 +256,11 @@
 
 <script>
   export default {
+    async asyncData({$content}) {
+      const prestations = (await $content('prestations').fetch()).data;
+
+      return {prestations};
+    },
     methods: {
       scrollTo(target) {
         if (target && 'scrollIntoView' in target) {
