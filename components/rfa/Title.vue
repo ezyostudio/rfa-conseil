@@ -14,6 +14,7 @@
     width: fit-content;
     box-sizing: border-box;
     padding: .15em 1em;
+    padding-left: .4em;
   }
 
   h3 {

@@ -17,7 +17,7 @@
       </div>
     </nav>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent" style="z-index: 10">
+    <nav ref="lowerBar" class="navbar navbar-expand-lg navbar-light bg-transparent" style="z-index: 10">
       <a class="d-none d-md-block navbar-brand position-absolute px-5 mt-n4" href="#">
         <img src="/images/logo-light.png" alt="" height="70px">
       </a>
@@ -36,3 +36,39 @@
     </nav>
   </div>
 </template>
+
+<script>
+  // import {
+  //   defineComponent,
+  //   ref
+  // } from '@nuxtjs/composition-api'
+
+  // export default defineComponent({
+  //   setup() {
+  //     const lowerBar = ref(null);
+
+
+  //     const handleScroll = () => {
+  //       if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+  //         console.log('yay!')
+  //       }
+  //     }
+
+  //     // .. code
+
+  //     // this will register the event when the component is mounted on the DOM
+  //     onMounted(() => {
+  //       window.addEventListener('scroll', handleScroll)
+  //     })
+
+  //     // We then unregister the listener when the component is removed from the DOM
+  //     onUnmounted(() => {
+  //       window.removeEventListener('scroll', handleScroll)
+  //     })
+  //     return {
+  //       lowerBar
+  //     };
+  //   },
+  // })
+
+</script>

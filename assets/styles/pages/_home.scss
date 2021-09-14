@@ -84,3 +84,17 @@ section .container.card {
     }
   }
 }
+
+
+h3 .feather-chevron-right {
+  vertical-align: sub;
+  transition: transform .3s;
+}
+
+[data-bs-toggle="collapse"] {
+  &[aria-expanded="true"] {
+    h3 .feather-chevron-right {
+        transform: rotate(90deg);
+      }
+  }
+}

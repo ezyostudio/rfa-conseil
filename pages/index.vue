@@ -34,7 +34,8 @@
                 restauration et les établissements de santé.</p>
             </div>
             <div class="col align-self-center order-0 order-md-1 mb-5 mb-md-0">
-              <h3 class="text-primary fw-bold text-center text-md-end">Obtenez des réponses techniques et tarifaires à vos exigences,
+              <h3 class="text-primary fw-bold text-center text-md-end">Obtenez des réponses techniques et tarifaires à
+                vos exigences,
                 et
                 gardez
                 la maîtrise des conditions générales de vente de vos contrats.</h3>
@@ -78,74 +79,30 @@
               déclinée en trois volets: </p>
           </div>
 
-          <div id="accordion">
-  <div class="card">
-    <div class="card-header" id="headingOne">
-      <h5 class="mb-0">
-        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Collapsible Group Item #1
-        </button>
-      </h5>
-    </div>
+          <rfa-title class="mb-3" data-bs-toggle="collapse" href="#collapsibl_one" role="button"
+            aria-expanded="true" aria-controls="collapsibl_one"><icon-chevron-right /> 1. EVALUATION TECHNIQUE </rfa-title>
 
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingTwo">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Collapsible Group Item #2
-        </button>
-      </h5>
-    </div>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingThree">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Collapsible Group Item #3
-        </button>
-      </h5>
-    </div>
-    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-</div>
-
-          <div class="row" id="headingOne">
-            <rfa-title class="mb-3" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">> 1. EVALUATION TECHNIQUE </rfa-title>
+          <div id="collapsibl_one" class="collapse show">
             <p>Bénéficiez d’un audit technique au sein de vos locaux comprenant l’élaboration d’un cahier des charges
               approfondi pour vos futurs besoins et recevez des conseils sur mesures en adéquation avec votre réalité et
               vos contraintes.</p>
-          </div>
 
-          <div>
-
-            <rfa-prestation-list title="VETEMENTS DE TRAVAIL" subtitle="Standard" class="mb-5" color="#105391" :data="prestations.standard" />
+            <rfa-prestation-list title="VETEMENTS DE TRAVAIL" subtitle="Standard" class="mb-5" color="#105391"
+              :data="prestations.standard" />
             <rfa-prestation-list subtitle="EPI" class="mb-5" color="#105391" :data="prestations.epi" />
 
-            <rfa-prestation-list title="ARMOIRES VESTIMENTAIRES" class="mb-5" color="#727676" :data="prestations.armoires" />
+            <rfa-prestation-list title="ARMOIRES VESTIMENTAIRES" class="mb-5" color="#727676"
+              :data="prestations.armoires" />
             <rfa-prestation-list title="LINGES PLATS" class="mb-5" color="#32AFDA" :data="prestations.linges" />
-            <rfa-prestation-list title="EQUIPEMENTS SANITAIRES" class="mb-5" color="#94D0E6" :data="prestations.sanitaires" />
+            <rfa-prestation-list title="EQUIPEMENTS SANITAIRES" class="mb-5" color="#94D0E6"
+              :data="prestations.sanitaires" />
             <rfa-prestation-list title="TAPIS ANTISALISSURES" class="mb-5" color="#44607D" :data="prestations.tapis" />
           </div>
 
-          <rfa-title class="mb-3">> 2. NÉGOCIATION TARIFAIRES </rfa-title>
+          <rfa-title class="mb-3"><icon-chevron-right /> 2. NÉGOCIATION TARIFAIRES </rfa-title>
 
           <div>
-            <rfa-title class="mb-3">> 3. AUDIT DES CLAUSES CONTRACTUELLES</rfa-title>
+            <rfa-title class="mb-3"><icon-chevron-right /> 3. AUDIT DES CLAUSES CONTRACTUELLES</rfa-title>
             <!-- TO-DO -->
           </div>
         </div>
@@ -172,10 +129,14 @@
 
 <script>
   export default {
-    async asyncData({$content}) {
+    async asyncData({
+      $content
+    }) {
       const prestations = (await $content('prestations').fetch()).data;
 
-      return {prestations};
+      return {
+        prestations
+      };
     },
     methods: {
       scrollTo(target) {

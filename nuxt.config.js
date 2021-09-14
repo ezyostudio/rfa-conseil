@@ -10,6 +10,7 @@ export default {
 
   generate: {
     dir: './dist',
+    interval: 2000, // fix nuxt composition api bug
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -32,21 +33,6 @@ export default {
         src: "https://polyfill.io/v3/polyfill.min.js?features=smoothscroll",
         body: true,
       },
-
-      {
-        src: "https://code.jquery.com/jquery-3.2.1.slim.min.js",
-        body: true,
-      },
-
-      {
-        src: "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js",
-        body: true,
-      },
-
-      {
-        src: "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js",
-        body: true,
-      },
     ]
   },
 
@@ -59,6 +45,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+      { src: '@plugins/bootstrap', mode: 'client' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -66,6 +53,7 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    // '@nuxtjs/composition-api/module'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
