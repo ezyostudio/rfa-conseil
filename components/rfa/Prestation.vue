@@ -1,5 +1,5 @@
 <template>
-  <div class="card" :style="style">
+  <div class="card" :style="cardStyle">
     <div class="card-body">
       <img :src="prestation.image" :alt="prestation.alt" class="mb-3">
       <h5 class="card-title text-center text-light">{{prestation.title}}</h5>
@@ -9,6 +9,6 @@
 
 <script>
 export default {
-  props: ['prestation', 'style']
+  props: ['prestation', 'cardStyle']
 }
 </script>
