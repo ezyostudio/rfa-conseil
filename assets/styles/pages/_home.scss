@@ -8,6 +8,7 @@
 
     // TO-DO: responsive breakpoint
     height: calc(95vh - 100px);
+    min-height: 600px;
 
     margin-right: 0;
     margin-left: auto;
@@ -72,8 +73,6 @@ section .container.card {
   }
 }
 
-
-
 #prestations {
   .card {
     border-radius: 20px;
@@ -82,39 +81,6 @@ section .container.card {
       width: 100%;
       border-radius: 20px;
       
-    }
-  }
-
-  #armoire {
-    .card {
-      background-color: #727676 !important;
-    }
-  }
-
-  #linge {
-    .px-5{
-      padding: 0 12.5% !important; 
-    }
-    .card {
-      background-color: #32AFDA !important;
-    }
-  }
-
-  #sanitaire {
-    .px-5{
-      padding: 0 12.5% !important; 
-    }
-    .card {
-      background-color: #94D0E6 !important;
-    }
-  }
-
-  #tapis {
-    .px-5{
-      padding: 0 25% !important; 
-    }
-    .card {
-      background-color: #44607D !important;
     }
   }
 }

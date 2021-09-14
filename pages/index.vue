@@ -23,7 +23,7 @@
       <div class="container card px-4 py-5">
         <div class="card-body">
           <div class="row">
-            <div class="col-7">
+            <div class="col-12 col-md-7 order-1 order-md-0">
               <p class="text-justify">RFA CONSEIL propose un service exclusif de conseil et de courtage dans le domaine
                 de
                 la location et l'entretien de vêtements de travail, armoires vestiaires, linge plat, équipements
@@ -33,8 +33,8 @@
                 domaine d’activités, RFA CONSEIL s’adresse à tous types d’entreprises dans l’industrie, l’hôtellerie, la
                 restauration et les établissements de santé.</p>
             </div>
-            <div class="col align-self-center">
-              <h3 class="text-primary fw-bold text-end">Obtenez des réponses techniques et tarifaires à vos exigences,
+            <div class="col align-self-center order-0 order-md-1 mb-5 mb-md-0">
+              <h3 class="text-primary fw-bold text-center text-md-end">Obtenez des réponses techniques et tarifaires à vos exigences,
                 et
                 gardez
                 la maîtrise des conditions générales de vente de vos contrats.</h3>
@@ -95,7 +95,6 @@
             <rfa-prestation-list title="LINGES PLATS" class="mb-5" color="#32AFDA" :data="prestations.linges" />
             <rfa-prestation-list title="EQUIPEMENTS SANITAIRES" class="mb-5" color="#94D0E6" :data="prestations.sanitaires" />
             <rfa-prestation-list title="TAPIS ANTISALISSURES" class="mb-5" color="#44607D" :data="prestations.tapis" />
-
           </div>
 
           <rfa-title class="mb-3">> 2. NÉGOCIATION TARIFAIRES </rfa-title>
