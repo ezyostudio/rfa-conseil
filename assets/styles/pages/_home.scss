@@ -37,7 +37,7 @@ section .container.card {
     li {
       list-style-type: none;
       position: relative;
-  
+
       &:before {
         content: '';
         background: url('/images/virgule_4x.png');
@@ -77,10 +77,11 @@ section .container.card {
   .card {
     border-radius: 20px;
     border: none;
+
     img {
       width: 100%;
       border-radius: 20px;
-      
+
     }
   }
 }
@@ -94,7 +95,7 @@ h3 .feather-chevron-right {
 [data-bs-toggle="collapse"] {
   &[aria-expanded="true"] {
     h3 .feather-chevron-right {
-        transform: rotate(90deg);
-      }
+      transform: rotate(90deg);
+    }
   }
 }

@@ -1,7 +1,20 @@
 <template>
   <div class="bg-primary">
     <!-- Responsive navbar-->
-    <Nav />
+    <Nav :links="[
+      {
+        label: 'EXPERTISE',
+        ref: () => $refs.expertiseSection 
+      },
+      {
+        label: 'PRESTATION',
+        ref: () => $refs.prestationSection
+      },
+      {
+        label: 'CONTACT',
+        ref: () => $refs.contactSection
+      }
+    ]" />
 
     <!-- Header-->
     <header id="intro" class="container-fluid bg-primary p-0">
@@ -11,14 +24,13 @@
           <h2 class="text-primary">Conseil et Courtage</h2>
           <h3 class="mb-4">en location et entretien de <br> vêtements de travail et autres prestations</h3>
           <icon-dots class="mb-4" />
-          <button class="btn btn-lg fw-bold btn-primary" @click="scrollTo($refs.expertiseSection)">En savoir plus
+          <button class="btn btn-lg fw-bold btn-primary" @click="$scrollTo($refs.expertiseSection)">En savoir plus
             <icon-arrow-down />
           </button>
         </div>
       </div>
     </header>
 
-    <!-- Features section-->
     <section class="container-fluid bg-primary mb-5" id="expertise" ref="expertiseSection">
       <div class="container card px-4 py-5">
         <div class="card-body">
@@ -67,7 +79,7 @@
       </div>
     </section>
 
-    <section class="container-fluid bg-primary mb-5" id="prestations">
+    <section class="container-fluid bg-primary mb-5" id="prestations" ref="prestationSection">
       <div class="container card px-4 py-5">
         <div class="card-body">
           <h3 class="text-center mb-3">Les prestations de RFA CONSEIL</h3>
@@ -79,10 +91,11 @@
               déclinée en trois volets: </p>
           </div>
 
-          <rfa-title class="mb-3" data-bs-toggle="collapse" href="#collapsibl_one" role="button"
-            aria-expanded="true" aria-controls="collapsibl_one"><icon-chevron-right /> 1. EVALUATION TECHNIQUE </rfa-title>
+          <rfa-title class="mb-3" data-bs-toggle="collapse" href="#collapsible_one" role="button" aria-expanded="true"
+            aria-controls="collapsible_one">
+            <icon-chevron-right /> 1. EVALUATION TECHNIQUE </rfa-title>
 
-          <div id="collapsibl_one" class="collapse show">
+          <div id="collapsible_one" class="collapse show">
             <p>Bénéficiez d’un audit technique au sein de vos locaux comprenant l’élaboration d’un cahier des charges
               approfondi pour vos futurs besoins et recevez des conseils sur mesures en adéquation avec votre réalité et
               vos contraintes.</p>
@@ -99,11 +112,29 @@
             <rfa-prestation-list title="TAPIS ANTISALISSURES" class="mb-5" color="#44607D" :data="prestations.tapis" />
           </div>
 
-          <rfa-title class="mb-3"><icon-chevron-right /> 2. NÉGOCIATION TARIFAIRES </rfa-title>
+          <rfa-title class="mb-3" data-bs-toggle="collapse" href="#collapsible_two" role="button" aria-expanded="false"
+            aria-controls="collapsible_two">
+            <icon-chevron-right /> 2. NÉGOCIATION TARIFAIRES </rfa-title>
 
-          <div>
-            <rfa-title class="mb-3"><icon-chevron-right /> 3. AUDIT DES CLAUSES CONTRACTUELLES</rfa-title>
-            <!-- TO-DO -->
+          <div id="collapsible_two" class="collapse">
+            <p class="text-primary fw-bold">Disposez de solutions tarifaires innovantantes par :</p>
+            <ul>
+              <li>Soit la renégociation du contrat existant avec votre prestataire,</li>
+              <li>Soit la mise en concurrence de celui-ci en conformité avec le cahier des charges établi
+                ensemble en fonction de vos nouveaux besoins.</li>
+            </ul>
+          </div>
+
+          <rfa-title class="mb-3" data-bs-toggle="collapse" href="#collapsible_three" role="button"
+            aria-expanded="false" aria-controls="collapsible_three">
+            <icon-chevron-right /> 3. AUDIT DES CLAUSES CONTRACTUELLES</rfa-title>
+
+
+          <div id="collapsible_three" class="collapse">
+            <p>Profitez d'une analyse compléte de vos contrats actuels et d'une revalorisation des conditions
+              générales de vente de vos futurs contrats de location et d'entretien.</p>
+            <p>RFA CONSEIL assure le respect de vos intéréts par le biais d'un audit axé sur l'étude et le
+              controle des clauses de vos contrats.</p>
           </div>
         </div>
       </div>
@@ -138,17 +169,7 @@
         prestations
       };
     },
-    methods: {
-      scrollTo(target) {
-        if (target && 'scrollIntoView' in target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'center',
-            inline: 'nearest'
-          })
-        }
-      }
-    }
+    methods: {}
   }
 
 </script>
