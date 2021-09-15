@@ -110,6 +110,10 @@
             <rfa-prestation-list title="EQUIPEMENTS SANITAIRES" class="mb-5" color="#94D0E6"
               :data="prestations.sanitaires" />
             <rfa-prestation-list title="TAPIS ANTISALISSURES" class="mb-5" color="#44607D" :data="prestations.tapis" />
+            <rfa-prestation-list title="LAVETTE INDUSTRIELLES" class="mb-5" color="#004873" :data="prestations.lavette" />
+            <rfa-prestation-list title="FONTAINES DÉGRAISSANTES" class="mb-5" color="#64518D" :data="prestations.fontaine_d" />
+            <rfa-prestation-list title="FONTAINES À EAU" class="mb-5" color="#7E7D97" :data="prestations.fontaine_eau" />
+            <rfa-prestation-list title="DISTRIBUTION AUTOMATIQUE" class="mb-5" color="#4B4C7D" :data="prestations.distributeur" />
           </div>
 
           <rfa-title class="mb-3" data-bs-toggle="collapse" href="#collapsible_two" role="button" aria-expanded="false"

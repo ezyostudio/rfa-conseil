@@ -2,97 +2,128 @@
   "data": {
     "standard": [
       {
-        "title":"hotellerie",
+        "title":"Industrie",
         "image": "/images/hotellerie-33.jpg"
       },
       {
-        "title":"hotellerie",
+        "title":"Santé",
         "image": "/images/hotellerie-33.jpg"
       },
       {
-        "title":"hotellerie",
+        "title":"Hôtellerie",
         "image": "/images/hotellerie-33.jpg"
       },
       {
-        "title":"hotellerie",
+        "title":"Restauration",
         "image": "/images/hotellerie-33.jpg"
       }
     ],
     "epi": [
       {
-        "title":"hotellerie",
+        "title":"Haute visibilité",
         "image": "/images/hotellerie-33.jpg"
       },
       {
-        "title":"hotellerie",
+        "title":"Agroalimentaire",
         "image": "/images/hotellerie-33.jpg"
       },
       {
-        "title":"hotellerie",
+        "title":"Feu / Soudure / Chimique",
         "image": "/images/hotellerie-33.jpg"
       },
       {
-        "title":"hotellerie",
+        "title":"Salle blanche",
         "image": "/images/hotellerie-33.jpg"
       }
     ],
     "armoires": [
       {
-        "title":"hotellerie",
+        "title":"Plié",
         "image": "/images/hotellerie-33.jpg"
       },
       {
-        "title":"hotellerie",
+        "title":"Cintre",
         "image": "/images/hotellerie-33.jpg"
       },
       {
-        "title":"hotellerie",
+        "title":"Penderie",
         "image": "/images/hotellerie-33.jpg"
       },
       {
-        "title":"hotellerie",
+        "title":"Réceptacle linge salle",
         "image": "/images/hotellerie-33.jpg"
       }
     ],
     "linges": [
       {
-        "title":"hotellerie",
+        "title":"Hôtel",
         "image": "/images/hotellerie-33.jpg"
       },
       {
-        "title":"hotellerie",
+        "title":"Restaurant",
         "image": "/images/hotellerie-33.jpg"
       },
       {
-        "title":"hotellerie",
+        "title":"SPA",
         "image": "/images/hotellerie-33.jpg"
       }
     ],
     "sanitaires": [
       {
-        "title":"hotellerie",
         "image": "/images/hotellerie-33.jpg"
       },
       {
-        "title":"hotellerie",
         "image": "/images/hotellerie-33.jpg"
       },
       {
-        "title":"hotellerie",
-        "image": "/images/hotellerie-33.jpg"
-      },
-      {
-        "title":"hotellerie",
         "image": "/images/hotellerie-33.jpg"
       }
     ],
     "tapis": [
       {
-        "title":"hotellerie",
+        "title":"Standard",
         "image": "/images/hotellerie-33.jpg"
       },
       {
-        "title":"hotellerie",
+        "title":"Avec Logo",
+        "image": "/images/hotellerie-33.jpg"
+      }
+    ],
+    "lavette": [
+      {
+        "image": "/images/hotellerie-33.jpg"
+      },
+      {
+        "image": "/images/hotellerie-33.jpg"
+      }
+    ],
+    "fontaine_d": [
+      {
+        "title":"Solvant",
+        "image": "/images/hotellerie-33.jpg"
+      },
+      {
+        "title":"Lessivielle",
+        "image": "/images/hotellerie-33.jpg"
+      },
+      {
+        "title":"Bio",
+        "image": "/images/hotellerie-33.jpg"
+      }
+    ],
+    "fontaine_eau": [
+      {
+        "title":"Réseau",
+        "image": "/images/hotellerie-33.jpg"
+      },
+      {
+        "title":"Bonbonnes",
+        "image": "/images/hotellerie-33.jpg"
+      }
+    ],
+    "distributeur": [
+      {
+        "title":"Boissons et/ou snack",
         "image": "/images/hotellerie-33.jpg"
       }
     ]

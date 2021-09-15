@@ -43,17 +43,28 @@
 
 <style lang="scss" scoped>
   #lowerBar {
+    img {
+      display: none;
+    }
     transition: all .3s;
 
     &.fixed-top {
       background-color: rgba(255, 255, 255, 0.7) !important;
       backdrop-filter: blur(5px);
+
+      img {
+        display: block;
+      }
     }
 
     .navbar-brand img {
       vertical-align: bottom;
       height: 56px;
     }
+  }
+
+  li {
+    cursor: pointer;
   }
 
 </style>
