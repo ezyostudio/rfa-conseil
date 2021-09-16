@@ -49,8 +49,8 @@
     transition: all .3s;
 
     &.fixed-top {
-      background-color: rgba(255, 255, 255, 0.7) !important;
-      backdrop-filter: blur(5px);
+      background-color: rgba(255, 255, 255, 0.5) !important;
+      backdrop-filter: blur(8px);
 
       img {
         display: block;
