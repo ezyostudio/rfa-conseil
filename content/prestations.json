@@ -3,128 +3,128 @@
     "standard": [
       {
         "title":"Industrie",
-        "image": "/images/hotellerie-33.jpg"
+        "image": "/images/prestations/vetements/industrie.jpg"
       },
       {
         "title":"Santé",
-        "image": "/images/hotellerie-33.jpg"
+        "image": "/images/prestations/vetements/sante.jpg"
       },
       {
         "title":"Hôtellerie",
-        "image": "/images/hotellerie-33.jpg"
+        "image": "/images/prestations/vetements/hotellerie.jpg"
       },
       {
         "title":"Restauration",
-        "image": "/images/hotellerie-33.jpg"
+        "image": "/images/prestations/vetements/restauration.jpg"
       }
     ],
     "epi": [
       {
         "title":"Haute visibilité",
-        "image": "/images/hotellerie-33.jpg"
+        "image": "/images/prestations/vetements/hv.jpg"
       },
       {
         "title":"Agroalimentaire",
-        "image": "/images/hotellerie-33.jpg"
+        "image": "/images/prestations/vetements/agro.jpg"
       },
       {
         "title":"Feu / Soudure / Chimique",
-        "image": "/images/hotellerie-33.jpg"
+        "image": "/images/prestations/vetements/feu.jpg"
       },
       {
         "title":"Salle blanche",
-        "image": "/images/hotellerie-33.jpg"
+        "image": "/images/prestations/vetements/salle_blanche.jpg"
       }
     ],
     "armoires": [
       {
         "title":"Plié",
-        "image": "/images/hotellerie-33.jpg"
+        "image": "/images/prestations/hotellerie.jpg"
       },
       {
         "title":"Cintre",
-        "image": "/images/hotellerie-33.jpg"
+        "image": "/images/prestations/hotellerie.jpg"
       },
       {
         "title":"Penderie",
-        "image": "/images/hotellerie-33.jpg"
+        "image": "/images/prestations/hotellerie.jpg"
       },
       {
         "title":"Réceptacle linge salle",
-        "image": "/images/hotellerie-33.jpg"
+        "image": "/images/prestations/hotellerie.jpg"
       }
     ],
     "linges": [
       {
         "title":"Hôtel",
-        "image": "/images/hotellerie-33.jpg"
+        "image": "/images/prestations/linges/hotel.jpg"
       },
       {
         "title":"Restaurant",
-        "image": "/images/hotellerie-33.jpg"
+        "image": "/images/prestations/linges/restaurant.jpg"
       },
       {
         "title":"SPA",
-        "image": "/images/hotellerie-33.jpg"
+        "image": "/images/prestations/linges/spa.jpg"
       }
     ],
     "sanitaires": [
       {
-        "image": "/images/hotellerie-33.jpg"
+        "image": "/images/prestations/sanitaires/1.jpg"
       },
       {
-        "image": "/images/hotellerie-33.jpg"
+        "image": "/images/prestations/sanitaires/hotellerie.jpg"
       },
       {
-        "image": "/images/hotellerie-33.jpg"
+        "image": "/images/prestations/sanitaires/3.jpg"
       }
     ],
     "tapis": [
       {
         "title":"Standard",
-        "image": "/images/hotellerie-33.jpg"
+        "image": "/images/prestations/tapis/tapis.jpg"
       },
       {
         "title":"Avec Logo",
-        "image": "/images/hotellerie-33.jpg"
+        "image": "/images/prestations/tapis/tapis.jpg"
       }
     ],
     "lavette": [
       {
-        "image": "/images/hotellerie-33.jpg"
+        "image": "/images/prestations/hotellerie.jpg"
       },
       {
-        "image": "/images/hotellerie-33.jpg"
+        "image": "/images/prestations/hotellerie.jpg"
       }
     ],
     "fontaine_d": [
       {
         "title":"Solvant",
-        "image": "/images/hotellerie-33.jpg"
+        "image": "/images/prestations/hotellerie.jpg"
       },
       {
         "title":"Lessivielle",
-        "image": "/images/hotellerie-33.jpg"
+        "image": "/images/prestations/hotellerie.jpg"
       },
       {
         "title":"Bio",
-        "image": "/images/hotellerie-33.jpg"
+        "image": "/images/prestations/hotellerie.jpg"
       }
     ],
     "fontaine_eau": [
       {
         "title":"Réseau",
-        "image": "/images/hotellerie-33.jpg"
+        "image": "/images/prestations/hotellerie.jpg"
       },
       {
         "title":"Bonbonnes",
-        "image": "/images/hotellerie-33.jpg"
+        "image": "/images/prestations/hotellerie.jpg"
       }
     ],
     "distributeur": [
       {
         "title":"Boissons et/ou snack",
-        "image": "/images/hotellerie-33.jpg"
+        "image": "/images/prestations/hotellerie.jpg"
       }
     ]
   }

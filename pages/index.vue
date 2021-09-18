@@ -149,29 +149,7 @@
     </section>
 
     <section class="container-fluid bg-primary mb-5" id="contact" ref="contactSection">
-      <div class="container card px-4 py-5">
-        <div class="card-body">
-          <h3 class="text-center mb-4">Contact</h3>
-          <form class="row">
-              <div class="col-md-6">
-              <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Adresse Mail</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="john@doe.com">
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Nom de l'entreprise</label>
-              <input type="name" class="form-control" id="exampleInputPassword1" placeholder="John Doe">
-            </div>
-            </div>
-            <div class="mb-3 col-md-6">
-              <label for="textarea" class="form-label">Votre demande</label>
-              <textarea class="form-control" name="textarea" id="textarea" cols="100" rows="6" placeholder="Je vous contacte car..."></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Envoyer</button>
-          </form>
-
-        </div>
-      </div>
+      <Contact />
     </section>
 
     <!-- Footer-->
