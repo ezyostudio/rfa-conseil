@@ -12,3 +12,10 @@ export default {
   props: ['prestation', 'cardStyle']
 }
 </script>
+
+<style lang="scss" scoped>
+  img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+</style>
