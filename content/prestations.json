@@ -39,19 +39,21 @@
     "armoires": [
       {
         "title":"Plié",
-        "image": "/images/prestations/hotellerie.jpg"
+        "image": "/images/prestations/armoires/1.png"
       },
       {
         "title":"Cintre",
-        "image": "/images/prestations/hotellerie.jpg"
+        "image": "/images/prestations/armoires/2.png"
       },
       {
         "title":"Penderie",
-        "image": "/images/prestations/hotellerie.jpg"
+        "image": "/images/prestations/armoires/3.png",
+        "contains": true
+
       },
       {
         "title":"Réceptacle linge salle",
-        "image": "/images/prestations/hotellerie.jpg"
+        "image": "/images/prestations/armoires/4.png"
       }
     ],
     "linges": [
@@ -117,7 +119,7 @@
     "fontaine_eau": [
       {
         "title":"Réseau",
-        "image": "/images/prestations/fontaine_eau/1.jpg",
+        "image": "/images/prestations/fontaine_eau/1.jpg"
       },
       {
         "title":"Bonbonnes",
