@@ -117,11 +117,12 @@
     "fontaine_eau": [
       {
         "title":"Réseau",
-        "image": "/images/prestations/hotellerie.jpg"
+        "image": "/images/prestations/fontaine_eau/1.jpg",
       },
       {
         "title":"Bonbonnes",
-        "image": "/images/prestations/hotellerie.jpg"
+        "image": "/images/prestations/fontaine_eau/2.jpg",
+        "contains": true
       }
     ],
     "distributeur": [
