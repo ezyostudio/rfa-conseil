@@ -73,7 +73,7 @@
         "image": "/images/prestations/sanitaires/1.jpg"
       },
       {
-        "image": "/images/prestations/sanitaires/hotellerie.jpg"
+        "image": "/images/prestations/sanitaires/2.png"
       },
       {
         "image": "/images/prestations/sanitaires/3.jpg"
@@ -91,24 +91,24 @@
     ],
     "lavette": [
       {
-        "image": "/images/prestations/hotellerie.jpg"
+        "image": "/images/prestations/lavette/1.png"
       },
       {
-        "image": "/images/prestations/hotellerie.jpg"
+        "image": "/images/prestations/lavette/2.png"
       }
     ],
     "fontaine_d": [
       {
         "title":"Solvant",
-        "image": "/images/prestations/hotellerie.jpg"
+        "image": "/images/prestations/fontaine_d/1.png"
       },
       {
         "title":"Lessivielle",
-        "image": "/images/prestations/hotellerie.jpg"
+        "image": "/images/prestations/fontaine_d/2.png"
       },
       {
         "title":"Bio",
-        "image": "/images/prestations/hotellerie.jpg"
+        "image": "/images/prestations/fontaine_d/3.png"
       }
     ],
     "fontaine_eau": [
