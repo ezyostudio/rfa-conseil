@@ -1,21 +1,44 @@
 <template>
-  <div class="card" :style="cardStyle">
+  <div class="card" :style="cardStyle" :class="{contains: prestation.contains, noTitle: prestation.title == null}">
     <div class="card-body">
-      <img :src="prestation.image" :alt="prestation.alt" class="mb-3">
+      <img :src="prestation.image" :alt="prestation.alt">
       <h5 class="card-title text-center text-light">{{prestation.title}}</h5>
     </div>
   </div>
 </template>
 
 <script>
-export default {
-  props: ['prestation', 'cardStyle']
-}
+  export default {
+    props: ['prestation', 'cardStyle']
+  }
+
 </script>
 
 <style lang="scss" scoped>
-  img {
-    aspect-ratio: 1/1;
-    object-fit: cover;
+  .card {
+    img {
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      background-color: white;
+      margin-bottom: 1em;
+    }
+
+    &.contains {
+      img {
+        object-fit: contain;
+
+      }
+    }
+
+    &.noTitle {
+      h5 {
+        display: none;
+      }
+
+      img {
+        margin-bottom: 0;
+      }
+    }
   }
+
 </style>

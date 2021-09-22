@@ -82,11 +82,11 @@
     "tapis": [
       {
         "title":"Standard",
-        "image": "/images/prestations/tapis/tapis.jpg"
+        "image": "/images/prestations/tapis/tapis_zoom.jpg"
       },
       {
         "title":"Avec Logo",
-        "image": "/images/prestations/tapis/tapis.jpg"
+        "image": "/images/prestations/tapis/tapis_logo.jpg"
       }
     ],
     "lavette": [
@@ -100,15 +100,18 @@
     "fontaine_d": [
       {
         "title":"Solvant",
-        "image": "/images/prestations/fontaine_d/1.png"
+        "image": "/images/prestations/fontaine_d/1.png",
+        "contains": true
       },
       {
         "title":"Lessivielle",
-        "image": "/images/prestations/fontaine_d/2.png"
+        "image": "/images/prestations/fontaine_d/2.png",
+        "contains": true
       },
       {
         "title":"Bio",
-        "image": "/images/prestations/fontaine_d/3.png"
+        "image": "/images/prestations/fontaine_d/3.png",
+        "contains": true
       }
     ],
     "fontaine_eau": [
