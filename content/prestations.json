@@ -3,7 +3,7 @@
     "standard": [
       {
         "title":"Industrie",
-        "image": "~/images/prestations/vetements/industrie.jpg"
+        "image": "/images/prestations/vetements/industrie.jpg"
       },
       {
         "title":"Santé",
