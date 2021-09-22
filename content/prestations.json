@@ -3,134 +3,134 @@
     "standard": [
       {
         "title":"Industrie",
-        "image": "/images/prestations/vetements/industrie.jpg"
+        "image": "images/prestations/vetements/industrie.jpg"
       },
       {
         "title":"Santé",
-        "image": "~/images/prestations/vetements/sante.jpg"
+        "image": "images/prestations/vetements/sante.jpg"
       },
       {
         "title":"Hôtellerie",
-        "image": "~/images/prestations/vetements/hotellerie.jpg"
+        "image": "images/prestations/vetements/hotellerie.jpg"
       },
       {
         "title":"Restauration",
-        "image": "~/images/prestations/vetements/restauration.jpg"
+        "image": "images/prestations/vetements/restauration.jpg"
       }
     ],
     "epi": [
       {
         "title":"Haute visibilité",
-        "image": "~/images/prestations/vetements/hv.jpg"
+        "image": "images/prestations/vetements/hv.jpg"
       },
       {
         "title":"Agroalimentaire",
-        "image": "~/images/prestations/vetements/agro.jpg"
+        "image": "images/prestations/vetements/agro.jpg"
       },
       {
         "title":"Feu / Soudure / Chimique",
-        "image": "~/images/prestations/vetements/feu.jpg"
+        "image": "images/prestations/vetements/feu.jpg"
       },
       {
         "title":"Salle blanche",
-        "image": "~/images/prestations/vetements/salle_blanche.jpg"
+        "image": "images/prestations/vetements/salle_blanche.jpg"
       }
     ],
     "armoires": [
       {
         "title":"Plié",
-        "image": "~/images/prestations/armoires/1.png"
+        "image": "images/prestations/armoires/1.png"
       },
       {
         "title":"Cintre",
-        "image": "~/images/prestations/armoires/2.png"
+        "image": "images/prestations/armoires/2.png"
       },
       {
         "title":"Penderie",
-        "image": "~/images/prestations/armoires/3.png",
+        "image": "images/prestations/armoires/3.png",
         "contains": true
 
       },
       {
         "title":"Réceptacle linge salle",
-        "image": "~/images/prestations/armoires/4.png"
+        "image": "images/prestations/armoires/4.png"
       }
     ],
     "linges": [
       {
         "title":"Hôtel",
-        "image": "~/images/prestations/linges/hotel.jpg"
+        "image": "images/prestations/linges/hotel.jpg"
       },
       {
         "title":"Restaurant",
-        "image": "~/images/prestations/linges/restaurant.jpg"
+        "image": "images/prestations/linges/restaurant.jpg"
       },
       {
         "title":"SPA",
-        "image": "~/images/prestations/linges/spa.jpg"
+        "image": "images/prestations/linges/spa.jpg"
       }
     ],
     "sanitaires": [
       {
-        "image": "~/images/prestations/sanitaires/1.jpg"
+        "image": "images/prestations/sanitaires/1.jpg"
       },
       {
-        "image": "~/images/prestations/sanitaires/2.png"
+        "image": "images/prestations/sanitaires/2.png"
       },
       {
-        "image": "~/images/prestations/sanitaires/3.jpg"
+        "image": "images/prestations/sanitaires/3.jpg"
       }
     ],
     "tapis": [
       {
         "title":"Standard",
-        "image": "~/images/prestations/tapis/tapis_zoom.jpg"
+        "image": "images/prestations/tapis/tapis_zoom.jpg"
       },
       {
         "title":"Avec Logo",
-        "image": "~/images/prestations/tapis/tapis_logo.jpg"
+        "image": "images/prestations/tapis/tapis_logo.jpg"
       }
     ],
     "lavette": [
       {
-        "image": "~/images/prestations/lavette/1.png"
+        "image": "images/prestations/lavette/1.png"
       },
       {
-        "image": "~/images/prestations/lavette/2.png"
+        "image": "images/prestations/lavette/2.png"
       }
     ],
     "fontaine_d": [
       {
         "title":"Solvant",
-        "image": "~/images/prestations/fontaine_d/1.png",
+        "image": "images/prestations/fontaine_d/1.png",
         "contains": true
       },
       {
         "title":"Lessivielle",
-        "image": "~/images/prestations/fontaine_d/2.png",
+        "image": "images/prestations/fontaine_d/2.png",
         "contains": true
       },
       {
         "title":"Bio",
-        "image": "~/images/prestations/fontaine_d/3.png",
+        "image": "images/prestations/fontaine_d/3.png",
         "contains": true
       }
     ],
     "fontaine_eau": [
       {
         "title":"Réseau",
-        "image": "~/images/prestations/fontaine_eau/1.jpg"
+        "image": "images/prestations/fontaine_eau/1.jpg"
       },
       {
         "title":"Bonbonnes",
-        "image": "~/images/prestations/fontaine_eau/2.jpg",
+        "image": "images/prestations/fontaine_eau/2.jpg",
         "contains": true
       }
     ],
     "distributeur": [
       {
         "title":"Boissons et/ou snack",
-        "image": "~/images/prestations/hotellerie.jpg"
+        "image": "images/prestations/hotellerie.jpg"
       }
     ]
   }

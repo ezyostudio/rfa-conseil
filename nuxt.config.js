@@ -8,6 +8,10 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  router: {
+    base: '/rfa-conseil/'
+  },
+
   generate: {
     dir: './dist',
     interval: 2000, // fix nuxt composition api bug
