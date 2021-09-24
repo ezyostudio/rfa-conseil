@@ -7,7 +7,7 @@
         ref: () => $refs.expertiseSection 
       },
       {
-        label: 'PRESTATION',
+        label: 'PRESTATIONS',
         ref: () => $refs.prestationSection
       },
       {
@@ -22,7 +22,7 @@
         <div class="content align-self-center fw-bold">
           <iconLogo class="w-100 m-auto mb-5" />
           <h2 class="text-primary">Conseil et Courtage</h2>
-          <h3 class="mb-4">en location et entretien de <br> vêtements de travail et autres prestations</h3>
+          <h3 class="mb-4">en location et entretien de vêtements de travail et autres prestations</h3>
           <icon-dots class="mb-4" />
           <button class="btn btn-lg fw-bold btn-primary" @click="$scrollTo($refs.expertiseSection)">En savoir plus
             <icon-arrow-down />
@@ -82,7 +82,7 @@
     <section class="container-fluid bg-primary mb-5" id="prestations" ref="prestationSection">
       <div class="container card px-4 py-5">
         <div class="card-body">
-          <h3 class="text-center mb-3">Les prestations de RFA CONSEIL</h3>
+          <h3 class="text-center mb-3">Les prestations de <br>RFA CONSEIL</h3>
 
           <div class="row mb-4">
             <p>RFA CONSEIL détient une connaissance incontestable du marché des blanchisseurs et loueurs de linge, et

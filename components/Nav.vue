@@ -20,7 +20,7 @@
     <nav ref="lowerBar" id="lowerBar" class="navbar navbar-expand-lg navbar-light bg-transparent"
       :class="{'fixed-top': sticky}" style="z-index: 10">
       <a class="d-none d-md-block navbar-brand position-absolute px-5 py-0" href="#">
-        <img src="/images/logo.png" alt="Logo RFA Conseil">
+        <img class="py-1" src="/images/logo_blanc.png" alt="Logo RFA Conseil">
       </a>
       <div class="container-fluid px-5">
         <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -59,7 +59,7 @@
 
     .navbar-brand img {
       vertical-align: bottom;
-      height: 56px;
+      height: 50px;
     }
   }
 

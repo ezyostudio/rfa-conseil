@@ -3,6 +3,16 @@
   position: relative;
   z-index: 0;
 
+  h2 {
+    font-weight: 300;
+  }
+
+  h3 {
+    color: #4E4E4E;
+    font-weight: 300;
+    padding-left: 50px;
+  }
+
   .container {
     max-width: 90vw;
 
