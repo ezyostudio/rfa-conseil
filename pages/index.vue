@@ -36,9 +36,8 @@
         <div class="card-body">
           <div class="row">
             <div class="col-12 col-md-7 order-1 order-md-0">
-              <p class="text-justify">RFA CONSEIL propose un service exclusif de conseil et de courtage dans le domaine
-                de
-                la location et l'entretien de vêtements de travail, armoires vestiaires, linge plat, équipements
+              <p class="text-justify">RFA CONSEIL propose un service exclusif de conseil et de courtage en
+                location et en entretien de vêtements de travail, armoires vestiaires, linge plat, équipements
                 sanitaires, tapis antisalissures, lavettes industrielles, fontaines dégraissantes, fontaines à eau et
                 machines à café. <br><br>
                 Née en 2015 de la volonté de son dirigeant de mettre à profit une expertise de plus de 25 ans dans ce
@@ -87,8 +86,8 @@
           <div class="row mb-4">
             <p>RFA CONSEIL détient une connaissance incontestable du marché des blanchisseurs et loueurs de linge, et
               permet à votre entreprise de bénéficier de cette expertise de plus de 25 ans.</p>
-            <p>Pour apporter une réponse exhaustive aux besoins de chaque client, RFA CONSEIL propose une prestation
-              déclinée en trois volets: </p>
+            <h6>Pour apporter une réponse exhaustive aux besoins de chaque client, RFA CONSEIL propose une prestation
+              déclinée en trois volets: </h6>
           </div>
 
           <rfa-title class="mb-3" data-bs-toggle="collapse" href="#collapsible_one" role="button" aria-expanded="true"
@@ -142,7 +141,7 @@
             <p>Profitez d'une analyse compléte de vos contrats actuels et d'une revalorisation des conditions
               générales de vente de vos futurs contrats de location et d'entretien.</p>
             <p>RFA CONSEIL assure le respect de vos intéréts par le biais d'un audit axé sur l'étude et le
-              controle des clauses de vos contrats.</p>
+              contrôle des clauses de vos contrats.</p>
           </div>
         </div>
       </div>
