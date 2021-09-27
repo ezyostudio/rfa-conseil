@@ -102,6 +102,20 @@ h3 .feather-chevron-right {
   transition: transform .3s;
 }
 
+#collapsible_two {
+  .img-sizer {
+    max-height: 200px;
+    max-width: 200px;
+    overflow: hidden;
+    border-radius: 2em;
+    padding: 0;
+
+    img {
+      border-radius: 0;
+    }
+  }
+}
+
 [data-bs-toggle="collapse"] {
   &[aria-expanded="true"] {
     h3 .feather-chevron-right {
