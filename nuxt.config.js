@@ -8,13 +8,8 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
-  // router: {
-  //   base: '/rfa-conseil/'
-  // },
-
   generate: {
     dir: './dist',
-
     interval: 2000, // fix nuxt composition api bug
   },
 
@@ -31,11 +26,15 @@ export default {
       // { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/logo.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/logo.ico' },
+      { rel: 'stylesheet', href: 'https://s.pageclip.co/v1/pageclip.css', media: 'screen' }
     ],
     script: [
       {
         src: "https://polyfill.io/v3/polyfill.min.js?features=smoothscroll",
+        body: true,
+      },{
+        src: "https://s.pageclip.co/v1/pageclip.js",
         body: true,
       },
     ]
@@ -52,6 +51,7 @@ export default {
   plugins: [
       { src: '@plugins/bootstrap', mode: 'client' },
       { src: '@plugins/scrollTo', mode: 'client' },
+      { src: '@plugins/pageclip', mode: 'client' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

@@ -7,8 +7,17 @@
         ref: () => $refs.expertiseSection 
       },
       {
-        label: 'PRESTATIONS',
-        ref: () => $refs.prestationSection
+        label: 'PRESTATION',
+        children: [{
+          label: 'EVALUATION TECHNIQUE',
+          ref: () => $refs.evaltechStep,
+        },{
+          label: 'NÉGOCIATION TARIFAIRES',
+          ref: () => $refs.negotarifStep,
+        },{
+          label: 'AUDIT DES CLAUSES CONTRACTUELLES',
+          ref: () => $refs.auditStep,
+        }]
       },
       {
         label: 'CONTACT',
@@ -90,7 +99,7 @@
               déclinée en trois volets: </h6>
           </div>
 
-          <rfa-title class="mb-3" data-bs-toggle="collapse" href="#collapsible_one" role="button" aria-expanded="true"
+          <rfa-title ref="evaltechStep" class="mb-3" data-bs-toggle="collapse" href="#collapsible_one" role="button" aria-expanded="true"
             aria-controls="collapsible_one">
             <icon-chevron-right /> 1. EVALUATION TECHNIQUE </rfa-title>
 
@@ -119,7 +128,7 @@
               :data="prestations.distributeur" />
           </div>
 
-          <rfa-title class="mb-3" data-bs-toggle="collapse" href="#collapsible_two" role="button" aria-expanded="false"
+          <rfa-title ref="negotarifStep" class="mb-3" data-bs-toggle="collapse" href="#collapsible_two" role="button" aria-expanded="false"
             aria-controls="collapsible_two">
             <icon-chevron-right /> 2. NÉGOCIATION TARIFAIRES </rfa-title>
 
@@ -132,7 +141,7 @@
             </ul>
           </div>
 
-          <rfa-title class="mb-3" data-bs-toggle="collapse" href="#collapsible_three" role="button"
+          <rfa-title ref="auditStep" class="mb-3" data-bs-toggle="collapse" href="#collapsible_three" role="button"
             aria-expanded="false" aria-controls="collapsible_three">
             <icon-chevron-right /> 3. AUDIT DES CLAUSES CONTRACTUELLES</rfa-title>
 
@@ -180,7 +189,11 @@
         prestations
       };
     },
-    methods: {}
+    methods: {},
+    mounted() {
+      window.nuxtInstance = this;
+      console.log(this);
+    }
   }
 
 </script>
