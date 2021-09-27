@@ -131,7 +131,8 @@
     "distributeur": [
       {
         "title":"Boissons et/ou snack",
-        "image": "/images/prestations/hotellerie.jpg"
+        "image": "/images/prestations/distributeur/distri.png",
+        "contains": true
       }
     ]
   }
