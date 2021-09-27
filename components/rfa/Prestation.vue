@@ -1,7 +1,7 @@
 <template>
   <div class="card" :style="cardStyle" :class="{contains: prestation.contains, noTitle: prestation.title == null}">
     <div class="card-body">
-      <img :src="prestation.image" :alt="prestation.alt">
+      <nuxt-img :src="prestation.image" :alt="prestation.alt" />
       <h5 class="card-title text-center text-light">{{prestation.title}}</h5>
     </div>
   </div>

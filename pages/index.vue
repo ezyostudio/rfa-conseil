@@ -144,10 +144,10 @@
 
             <div class="row d-flex justify-content-center gx-5">
               <div class="col-md-4 img-sizer me-5 mb-3">
-                <img src="/images/prestations/nego/tableau.png" alt="tableau">
+                <nuxt-img src="/images/prestations/nego/tableau.png" alt="tableau" />
               </div>
               <div class="col-md-4 img-sizer mb-3">
-                <img src="/images/prestations/nego/presentation.jpg" alt="presentation">
+                <nuxt-img src="/images/prestations/nego/presentation.jpg" alt="presentation" />
               </div>
             </div>
           </div>
@@ -172,8 +172,8 @@
               </div>
             </div>
           </div>
+          </div>
         </div>
-      </div>
       </div>
     </section>
 
