@@ -28,12 +28,31 @@
             class="navbar-toggler-icon"></span></button> -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <template v-for="link in links">
+              <template v-if="link.children && link.children.length>0">
+                <li class="nav-item dropdown" :key="link.label">
+                  <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    {{link.label}}
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li v-for="child in link.children" :key="child.label">
+                      <a class="dropdown-item" @click="$scrollTo(child.ref, false)">
+                        {{child.label}}
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </template>
 
-            <li v-for="link in links" :key="link.label" class="nav-item">
-              <a @click="$scrollTo(link.ref)" class="nav-link">
-                {{link.label}}
-              </a>
-            </li>
+              <template v-else>
+                <li class="nav-item" :key="link.label">
+                  <a @click="$scrollTo(link.ref)" class="nav-link">
+                    {{link.label}}
+                  </a>
+                </li>
+              </template>
+            </template>
           </ul>
         </div>
       </div>
@@ -46,6 +65,7 @@
     img {
       display: none;
     }
+
     transition: all .3s;
 
     &.fixed-top {

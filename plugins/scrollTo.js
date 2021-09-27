@@ -1,14 +1,18 @@
 export default (_, inject) => {
   inject('scrollTo', (target, options = {}) => {
     if (typeof target === 'function') target = target();
+    if (target._isVue) target = target.$el;
     if (target && 'scrollIntoView' in target) {
+      console.log(target);
       let _options = {}
 
       if (target.offsetHeight < window.innerHeight) {
-        _options = {
-          behavior: 'smooth',
-          block: 'center',
-          inline: 'nearest',
+        if(options) {
+          _options = {
+            behavior: 'smooth',
+            block: 'center',
+            inline: 'nearest',
+          }
         }
       }
 
