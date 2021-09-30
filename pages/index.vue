@@ -101,7 +101,7 @@
 
           <div class="accordion" id="accordionPrestation">
 
-          <rfa-title ref="evaltechStep" class="mb-3" data-bs-toggle="collapse" href="#collapsible_one" role="button" aria-expanded="true"
+          <rfa-title ref="evaltechStep" class="mb-3" data-bs-toggle="collapse" href="#collapsible_one" role="button" aria-expanded="false"
             aria-controls="collapsible_one">
             <icon-chevron-right /> 1. EVALUATION TECHNIQUE </rfa-title>
 
