@@ -99,11 +99,13 @@
               déclinée en trois volets: </h6>
           </div>
 
-          <rfa-title ref="evaltechStep" class="mb-3" data-bs-toggle="collapse" href="#collapsible_one" role="button" aria-expanded="true"
+          <div class="accordion" id="accordionPrestation">
+
+          <rfa-title ref="evaltechStep" class="mb-3" data-bs-toggle="collapse" href="#collapsible_one" role="button" aria-expanded="false"
             aria-controls="collapsible_one">
             <icon-chevron-right /> 1. EVALUATION TECHNIQUE </rfa-title>
 
-          <div id="collapsible_one" class="collapse show">
+          <div id="collapsible_one" class="collapse" data-bs-parent="#accordionPrestation">
             <p>Bénéficiez d’un audit technique au sein de vos locaux comprenant l’élaboration d’un cahier des charges
               approfondi pour vos futurs besoins et recevez des conseils sur mesures en adéquation avec votre réalité et
               vos contraintes.</p>
@@ -132,13 +134,22 @@
             aria-controls="collapsible_two">
             <icon-chevron-right /> 2. NÉGOCIATION TARIFAIRES </rfa-title>
 
-          <div id="collapsible_two" class="collapse">
+          <div id="collapsible_two" class="collapse" data-bs-parent="#accordionPrestation">
             <p class="text-primary fw-bold">Disposez de solutions tarifaires innovantantes par :</p>
             <ul>
               <li>Soit la renégociation du contrat existant avec votre prestataire,</li>
               <li>Soit la mise en concurrence de celui-ci en conformité avec le cahier des charges établi
                 ensemble en fonction de vos nouveaux besoins.</li>
             </ul>
+
+            <div class="row d-flex justify-content-center gx-5">
+              <div class="col-md-4 img-sizer me-5 mb-3">
+                <nuxt-img src="/images/prestations/nego/tableau.png" alt="tableau" />
+              </div>
+              <div class="col-md-4 img-sizer mb-3">
+                <nuxt-img src="/images/prestations/nego/presentation.jpg" alt="presentation" />
+              </div>
+            </div>
           </div>
 
           <rfa-title ref="auditStep" class="mb-3" data-bs-toggle="collapse" href="#collapsible_three" role="button"
@@ -146,11 +157,21 @@
             <icon-chevron-right /> 3. AUDIT DES CLAUSES CONTRACTUELLES</rfa-title>
 
 
-          <div id="collapsible_three" class="collapse">
+          <div id="collapsible_three" class="collapse" data-bs-parent="#accordionPrestation">
             <p>Profitez d'une analyse compléte de vos contrats actuels et d'une revalorisation des conditions
               générales de vente de vos futurs contrats de location et d'entretien.</p>
-            <p>RFA CONSEIL assure le respect de vos intéréts par le biais d'un audit axé sur l'étude et le
+            <p class="mb-4">RFA CONSEIL assure le respect de vos intéréts par le biais d'un audit axé sur l'étude et le
               contrôle des clauses de vos contrats.</p>
+
+               <div class="row d-flex justify-content-center gx-5">
+              <div class="col-md-4 img-sizer me-md-5 mb-3">
+                <img src="/images/prestations/contrat/signature.jpg" alt="tableau">
+              </div>
+              <div class="col-md-4 img-sizer mb-3">
+                <img src="/images/prestations/contrat/mains.jpg" alt="presentation">
+              </div>
+            </div>
+          </div>
           </div>
         </div>
       </div>
