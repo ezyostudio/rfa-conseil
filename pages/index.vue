@@ -7,7 +7,7 @@
         ref: () => $refs.expertiseSection 
       },
       {
-        label: 'PRESTATION',
+        label: 'PRESTATIONS',
         children: [{
           label: 'EVALUATION TECHNIQUE',
           ref: () => $refs.evaltechStep,
@@ -27,11 +27,25 @@
 
     <!-- Header-->
     <header id="intro" class="container-fluid bg-primary p-0">
+      <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="false" data-bs-touch="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <nuxt-img src="/images/header/cintres.jpg" alt="cintres" class="carousel-image" />
+        </div>
+        <div class="carousel-item">
+          <nuxt-img src="/images/header/coussin.jpg" alt="coussin" class="carousel-image" />
+        </div>    
+        <div class="carousel-item">
+          <nuxt-img src="/images/header/serviette.png" alt="serviette" class="carousel-image" />
+        </div>  
+      </div>
+      
+    </div>
       <div class="container d-flex justify-content-center">
         <div class="content align-self-center fw-bold">
           <iconLogo class="w-100 m-auto mb-5" />
-          <h2 class="text-primary">Conseil et Courtage</h2>
-          <h3 class="mb-4">en location et entretien de vêtements de travail et autres prestations</h3>
+          <h2 class="text-center text-md-start text-primary">Conseil et Courtage</h2>
+          <h3 class="text-center text-md-start ps-md-5 mb-4">en location et entretien de vêtements de travail et autres prestations</h3>
           <icon-dots class="mb-4" />
           <button class="btn btn-lg fw-bold btn-primary" @click="$scrollTo($refs.expertiseSection)">En savoir plus
             <icon-arrow-down />
@@ -180,6 +194,8 @@
     <section class="container-fluid bg-primary mb-5" id="contact" ref="contactSection">
       <Contact />
     </section>
+
+    
 
     <!-- Footer-->
     <footer class="py-3">

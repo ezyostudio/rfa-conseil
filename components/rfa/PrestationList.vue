@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h4 v-if="title">{{title}}</h4>
+    <h4 v-if="title" class="text-center text-lg-start">{{title}}</h4>
     <h5 v-if="subtitle" class="text-center">{{subtitle}}</h5>
 
     <div class="row gy-4 justify-content-center">

@@ -53,7 +53,8 @@
       },
       {
         "title":"Réceptacle linge salle",
-        "image": "/images/prestations/armoires/4.png"
+        "image": "/images/prestations/armoires/4.png",
+        "contains": true
       }
     ],
     "linges": [
