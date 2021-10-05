@@ -16,22 +16,21 @@
       </div>
 
       <form class="row" v-if="picker=='mail'">
-        <div class="col-md-6">
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Nom de l'entreprise</label>
-            <input type="name" class="form-control" id="exampleInputPassword1" placeholder="John Doe">
+        <div class="col-md-12">
+          <div class="form-floating mb-3">
+            <input type="text" name="company" class="form-control" id="inputCompany" placeholder="John Doe">
+            <label for="inputCompany">Nom de l'entreprise</label>
           </div>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Adresse Mail</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-              placeholder="john@doe.com">
+          <div class="form-floating mb-3">
+            <input type="email" name="email" class="form-control" id="inputEmail" placeholder="john@doe.com">
+            <label for="inputEmail">Adresse Mail</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" name="textarea" id="inputMessage" cols="100" rows="6" placeholder="Je vous contacte car..."></textarea>
+            <label for="inputMessage">Votre demande</label>
           </div>
         </div>
-        <div class="mb-3 col-md-6">
-          <label for="textarea" class="form-label">Votre demande</label>
-          <textarea class="form-control" name="textarea" id="textarea" cols="100" rows="6"
-            placeholder="Je vous contacte car..."></textarea>
-        </div>
+        
         <button type="submit" class="btn btn-primary">Envoyer</button>
       </form>
 
