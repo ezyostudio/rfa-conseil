@@ -17,7 +17,7 @@
       </div>
     </nav>
 
-    <nav ref="lowerBar" id="lowerBar" class="navbar navbar-expand-md navbar-light" :class="{'fixed-top': sticky}"
+    <nav ref="lowerBar" id="lowerBar" class="navbar navbar-expand-md navbar-light d-flex align-items-start" :class="{'fixed-top': sticky}"
       style="z-index: 10">
       <a class="d-block navbar-brand position-absolute px-5 py-0" href="#">
         <img class="py-1" src="/images/logo_blanc.png" alt="Logo RFA Conseil">

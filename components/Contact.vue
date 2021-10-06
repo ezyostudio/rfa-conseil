@@ -1,5 +1,5 @@
 <template>
-  <div class="container card p-5">
+  <div class="container card p-3 p-md-5">
     <div class="card-body d-flex justify-content-center align-items-center">
       <div class="col-lg-6 me-lg-5">
         <icon-illustration />

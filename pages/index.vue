@@ -77,7 +77,7 @@
           </div>
 
           <div class="row">
-            <rfa-title class="mb-3">L’objectif de RFA CONSEIL est d’assurer à tous ses clients</rfa-title>
+            <rfa-title type="title" class="mb-3">L’objectif de RFA CONSEIL est d’assurer à tous ses clients</rfa-title>
             <ul class="ms-2">
               <li>L’optimisation des besoin avec l’élaboration d’un nouveau cahier des charges</li>
               <li>La garantie d’une réduction des coûts</li>
@@ -89,7 +89,7 @@
           </div>
 
           <div class="row">
-            <rfa-title class="mb-3">Bénéficiez de conseils personnalisés pour une rentabilité accrue</rfa-title>
+            <rfa-title type="title" class="mb-3">Bénéficiez de conseils personnalisés pour une rentabilité accrue</rfa-title>
             <p class="text">La rémunération perçue par RFA CONSEIL est conditionnée aux économies générées par son
               intervention.</p>
             <p class="text">Un principe simple qui vous protège et nous engage:</p>
@@ -115,7 +115,7 @@
 
           <div class="accordion" id="accordionPrestation">
 
-          <rfa-title ref="evaltechStep" class="mb-3" data-bs-toggle="collapse" href="#collapsible_one" role="button" aria-expanded="false"
+          <rfa-title type="title" ref="evaltechStep" class="mb-3" data-bs-toggle="collapse" href="#collapsible_one" role="button" aria-expanded="false"
             aria-controls="collapsible_one">
             <icon-chevron-right /> 1. EVALUATION TECHNIQUE </rfa-title>
 
@@ -144,7 +144,7 @@
               :data="prestations.distributeur" />
           </div>
 
-          <rfa-title ref="negotarifStep" class="mb-3" data-bs-toggle="collapse" href="#collapsible_two" role="button" aria-expanded="false"
+          <rfa-title type="title" ref="negotarifStep" class="mb-3" data-bs-toggle="collapse" href="#collapsible_two" role="button" aria-expanded="false"
             aria-controls="collapsible_two">
             <icon-chevron-right /> 2. NÉGOCIATION TARIFAIRES </rfa-title>
 
@@ -166,7 +166,7 @@
             </div>
           </div>
 
-          <rfa-title ref="auditStep" class="mb-3" data-bs-toggle="collapse" href="#collapsible_three" role="button"
+          <rfa-title type="title" ref="auditStep" class="mb-3" data-bs-toggle="collapse" href="#collapsible_three" role="button"
             aria-expanded="false" aria-controls="collapsible_three">
             <icon-chevron-right /> 3. AUDIT DES CLAUSES CONTRACTUELLES</rfa-title>
 
