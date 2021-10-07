@@ -35,7 +35,7 @@
                     aria-expanded="false">
                     {{link.label}}
                   </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                     <li v-for="child in link.children" :key="child.label">
                       <a class="dropdown-item text-end text-md-start" @click="$scrollTo(child.ref, false)">
                         {{child.label}}
@@ -113,7 +113,8 @@
         .dropdown-item {
           text-align: right;
           color: rgba($color: #000000, $alpha: .55);
-          font-size: .8em;
+          padding-right: 0;
+          padding-left: 0;
         }
 
         &.show {
