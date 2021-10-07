@@ -20,38 +20,39 @@
           </div>
         </div>
 
-        <form action="">
+        <form @submit.prevent="submit">
           <div v-if="picker=='mail'">
             <div>
               <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Nom de l'entreprise</label>
-                <input type="name" class="form-control" id="exampleInputPassword1" placeholder="John Doe">
+                <label for="companyName" class="form-label">Nom de l'entreprise</label>
+                <input v-model="companyName" type="text" class="form-control" id="companyName" placeholder="John Doe" required>
               </div>
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Adresse Mail</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                  placeholder="john@doe.com">
+                <label for="email" class="form-label">Adresse Mail</label>
+                <input v-model="email" type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                  placeholder="john@doe.com" required>
               </div>
             </div>
             <div class="mb-3">
-              <label for="textarea" class="form-label">Votre demande</label>
-              <textarea class="form-control" name="textarea" id="textarea" cols="100" rows="5"
-                placeholder="Je vous contacte car..."></textarea>
+              <label for="message" class="form-label">Votre demande</label>
+              <textarea v-model="message" class="form-control" name="message" id="textarea" cols="100" rows="5"
+                placeholder="Je vous contacte car..." required></textarea>
             </div>
           </div>
 
           <div v-if="picker=='tel'">
             <div>
               <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Nom de l'entreprise</label>
-                <input type="name" class="form-control" id="exampleInputPassword1" placeholder="John Doe">
+                <label for="companyName2" class="form-label">Nom de l'entreprise</label>
+                <input v-model="companyName" type="text" class="form-control" id="companyName2" placeholder="John Doe" required>
               </div>
 
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Numero de téléphone</label>
+                <label for="phoneNumber" class="form-label">Numero de téléphone</label>
                 <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1">+33</span>
-                  <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                  <!-- <span class="input-group-text" id="basic-addon1">+33</span> -->
+                  <input v-model="phoneNumber" type="phone" id="phoneNumber" class="form-control" aria-label="Username"
+                    aria-describedby="basic-addon1" required>
                 </div>
               </div>
             </div>
@@ -59,7 +60,7 @@
           <div class="text-center">
             <button type="submit" class="btn btn-primary px-3">Envoyer</button>
           </div>
-          
+
         </form>
 
       </div>
@@ -69,16 +70,42 @@
 
 
 <script>
-  export default {
-    data() {
-      return {
-        picker: "mail"
-      }
-    },
+  import {
+    defineComponent,
+    ref,
+    useContext
+  } from '@nuxtjs/composition-api'
 
-    mounted() {
-      window.vueInstance = this
-    }
-  }
+  export default defineComponent({
+    setup() {
+
+      const { $pageclip } = useContext()
+
+      const picker = ref("mail");
+      const companyName = ref("");
+      const phoneNumber = ref("");
+      const email = ref("");
+      const message = ref("");
+
+      const inputs = { companyName, phoneNumber, email, message };
+
+      const submit = async () => {
+        const data = Object.fromEntries(Object.entries(inputs).map(([key, {value}])=>[key, value]));
+        const req = await $pageclip.send(data);
+        if(req.status !== 200) {
+          alert('Une erreur technique est survenue,merci de réessayer ultérieurement.');
+        }
+      }
+
+      return {
+        companyName,
+        phoneNumber,
+        email,
+        message,
+        picker,
+        submit
+      };
+    },
+  })
 
 </script>
