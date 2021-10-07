@@ -7,7 +7,7 @@
         ref: () => $refs.expertiseSection 
       },
       {
-        label: 'PRESTATION',
+        label: 'PRESTATIONS',
         children: [{
           label: 'EVALUATION TECHNIQUE',
           ref: () => $refs.evaltechStep,
@@ -27,13 +27,27 @@
 
     <!-- Header-->
     <header id="intro" class="container-fluid bg-primary p-0">
+      <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="false" data-bs-touch="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <nuxt-img src="/images/header/cintres.jpg" alt="cintres" class="carousel-image" />
+        </div>
+        <div class="carousel-item">
+          <nuxt-img src="/images/header/coussin.jpg" alt="coussin" class="carousel-image" />
+        </div>    
+        <div class="carousel-item">
+          <nuxt-img src="/images/header/serviette.png" alt="serviette" class="carousel-image" />
+        </div>  
+      </div>
+      
+    </div>
       <div class="container d-flex justify-content-center">
-        <div class="content align-self-center fw-bold">
-          <iconLogo class="w-100 m-auto mb-5" />
-          <h2 class="text-primary">Conseil et Courtage</h2>
-          <h3 class="mb-4">en location et entretien de vêtements de travail et autres prestations</h3>
-          <icon-dots class="mb-4" />
-          <button class="btn btn-lg fw-bold btn-primary" @click="$scrollTo($refs.expertiseSection)">En savoir plus
+        <div class="content align-self-center fw-bold d-md-block d-flex flex-column justify-content-center w-75">
+          <iconLogo class="w-100 m-auto mb-md-5" />
+          <h2 class="text-center text-md-start text-primary">Conseil et Courtage</h2>
+          <h3 class="text-center text-md-start ps-md-5 mb-4">en location et entretien de vêtements de travail et autres prestations</h3>
+          <icon-dots class="mb-4 w-100" />
+          <button class="btn btn-lg fs-6 fs-md-3 fw-bold btn-primary" @click="$scrollTo($refs.expertiseSection)">En savoir plus
             <icon-arrow-down />
           </button>
         </div>
@@ -63,7 +77,7 @@
           </div>
 
           <div class="row">
-            <rfa-title class="mb-3">L’objectif de RFA CONSEIL est d’assurer à tous ses clients</rfa-title>
+            <rfa-title type="title" class="mb-3">L’objectif de RFA CONSEIL est d’assurer à tous ses clients</rfa-title>
             <ul class="ms-2">
               <li>L’optimisation des besoin avec l’élaboration d’un nouveau cahier des charges</li>
               <li>La garantie d’une réduction des coûts</li>
@@ -75,7 +89,7 @@
           </div>
 
           <div class="row">
-            <rfa-title class="mb-3">Bénéficiez de conseils personnalisés pour une rentabilité accrue</rfa-title>
+            <rfa-title type="title" class="mb-3">Bénéficiez de conseils personnalisés pour une rentabilité accrue</rfa-title>
             <p class="text">La rémunération perçue par RFA CONSEIL est conditionnée aux économies générées par son
               intervention.</p>
             <p class="text">Un principe simple qui vous protège et nous engage:</p>
@@ -99,7 +113,9 @@
               déclinée en trois volets: </h6>
           </div>
 
-          <rfa-title ref="evaltechStep" class="mb-3" data-bs-toggle="collapse" href="#collapsible_one" role="button" aria-expanded="true"
+          <div class="accordion" id="accordionPrestation">
+
+          <rfa-title type="title" ref="evaltechStep" class="mb-3" data-bs-toggle="collapse" href="#collapsible_one" role="button" aria-expanded="false"
             aria-controls="collapsible_one">
             <icon-chevron-right /> 1. EVALUATION TECHNIQUE </rfa-title>
 
@@ -128,7 +144,7 @@
               :data="prestations.distributeur" />
           </div>
 
-          <rfa-title ref="negotarifStep" class="mb-3" data-bs-toggle="collapse" href="#collapsible_two" role="button" aria-expanded="false"
+          <rfa-title type="title" ref="negotarifStep" class="mb-3" data-bs-toggle="collapse" href="#collapsible_two" role="button" aria-expanded="false"
             aria-controls="collapsible_two">
             <icon-chevron-right /> 2. NÉGOCIATION TARIFAIRES </rfa-title>
 
@@ -142,15 +158,15 @@
 
             <div class="row d-flex justify-content-center gx-5">
               <div class="col-md-4 img-sizer me-5 mb-3">
-                <img src="/images/prestations/nego/tableau.png" alt="tableau">
+                <nuxt-img src="/images/prestations/nego/tableau.png" alt="tableau" />
               </div>
               <div class="col-md-4 img-sizer mb-3">
-                <img src="/images/prestations/nego/presentation.jpg" alt="presentation">
+                <nuxt-img src="/images/prestations/nego/presentation.jpg" alt="presentation" />
               </div>
             </div>
           </div>
 
-          <rfa-title ref="auditStep" class="mb-3" data-bs-toggle="collapse" href="#collapsible_three" role="button"
+          <rfa-title type="title" ref="auditStep" class="mb-3" data-bs-toggle="collapse" href="#collapsible_three" role="button"
             aria-expanded="false" aria-controls="collapsible_three">
             <icon-chevron-right /> 3. AUDIT DES CLAUSES CONTRACTUELLES</rfa-title>
 
@@ -170,6 +186,7 @@
               </div>
             </div>
           </div>
+          </div>
         </div>
       </div>
       </div>
@@ -178,6 +195,8 @@
     <section class="container-fluid bg-primary mb-5" id="contact" ref="contactSection">
       <Contact />
     </section>
+
+    
 
     <!-- Footer-->
     <footer class="py-3">

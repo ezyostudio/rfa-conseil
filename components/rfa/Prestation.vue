@@ -1,15 +1,15 @@
 <template>
-  <div class="card" :style="cardStyle" :class="{contains: prestation.contains, noTitle: prestation.title == null}">
+  <div class="card" :style="{'background-color': color}" :class="{contains: prestation.contains, noTitle: prestation.title == null}">
     <div class="card-body">
-      <img :src="prestation.image" :alt="prestation.alt">
-      <h5 class="card-title text-center text-light">{{prestation.title}}</h5>
+      <nuxt-img :src="prestation.image" :alt="prestation.alt" />
+      <rfa-title type="subtitle" :color="color">{{prestation.title}}</rfa-title>
     </div>
   </div>
 </template>
 
 <script>
   export default {
-    props: ['prestation', 'cardStyle']
+    props: ['prestation', 'cardStyle', 'color'],
   }
 
 </script>
