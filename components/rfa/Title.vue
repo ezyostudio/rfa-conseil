@@ -6,8 +6,8 @@
       </h3>
     </div>
 
-    <div v-if="type=='subtitle' && this.$slots.default[0].text!=''" class="box subtitle card-title">
-      <h5 class=" text-center" v-bind="$props" :style="{ color:color}">
+    <div v-if="type=='subtitle'" :style="{ backgroundColor:color}" class="box subtitle card-title">
+      <h5 class="text-light" v-bind="$props">
         <slot>{{text}}</slot>
       </h5>
     </div>
@@ -39,7 +39,6 @@
   .subtitle {
     background-color: #FFF;
     padding: .10em .8em;
-    margin: auto;
 
     h5 {
       margin-bottom: 0;

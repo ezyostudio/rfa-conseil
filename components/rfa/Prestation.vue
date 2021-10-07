@@ -2,7 +2,7 @@
   <div class="card" :style="{'background-color': color}" :class="{contains: prestation.contains, noTitle: prestation.title == null}">
     <div class="card-body">
       <nuxt-img :src="prestation.image" :alt="prestation.alt" />
-      <rfa-title type="subtitle" :color="color">{{prestation.title}}</rfa-title>
+      <h5 class="text-light text-center">{{prestation.title}}</h5>
     </div>
   </div>
 </template>
