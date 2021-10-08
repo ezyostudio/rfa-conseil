@@ -107,8 +107,5 @@
       };
     },
   })
-    mounted() {
-        window.vueInstance = this
-    }
-}
+
 </script>
