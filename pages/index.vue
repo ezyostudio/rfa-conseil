@@ -164,10 +164,10 @@
 
               <div class="row d-flex justify-content-center gx-5">
                 <div class="col-md-4 img-sizer me-5 mb-3">
-                  <nuxt-img src="/images/prestations/nego/tableau.png" alt="tableau" />
+                  <nuxt-img src="/images/prestations/nego/tableau.png" alt="tableau" class="img-fluid" />
                 </div>
                 <div class="col-md-4 img-sizer mb-3">
-                  <nuxt-img src="/images/prestations/nego/presentation.jpg" alt="presentation" />
+                  <nuxt-img src="/images/prestations/nego/presentation.jpg" alt="presentation" class="img-fluid" />
                 </div>
               </div>
             </div>
@@ -186,10 +186,10 @@
 
               <div class="row d-flex justify-content-center gx-5">
                 <div class="col-md-4 img-sizer me-md-5 mb-3">
-                  <img src="/images/prestations/contrat/signature.jpg" alt="tableau">
+                  <nuxt-img src="/images/prestations/contrat/signature.jpg" alt="signature" class="img-fluid" />
                 </div>
                 <div class="col-md-4 img-sizer mb-3">
-                  <img src="/images/prestations/contrat/mains.jpg" alt="presentation">
+                  <nuxt-img src="/images/prestations/contrat/mains.jpg" alt="mains" class="img-fluid" />
                 </div>
               </div>
             </div>
