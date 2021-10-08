@@ -118,7 +118,7 @@
           </div>
 
           <div class="accordion" id="accordionPrestation">
-
+          
             <rfa-title type="title" ref="evaltechStep" class="mb-3" data-bs-toggle="collapse" href="#collapsible_one"
               role="button" aria-expanded="false" aria-controls="collapsible_one">
               <icon-chevron-right /> 1. EVALUATION TECHNIQUE </rfa-title>
@@ -149,6 +149,28 @@
               <rfa-prestation-list title="DISTRIBUTION AUTOMATIQUE" class="mb-5" color="#4B4C7D"
                 :data="prestations.distributeur" />
             </div>
+
+          <div id="collapsible_two" class="collapse" data-bs-parent="#accordionPrestation">
+            <p class="text-primary fw-bold">Disposez de solutions tarifaires innovantantes par :</p>
+            <ul>
+              <li>Soit la renégociation du contrat existant avec votre prestataire,</li>
+              <li>Soit la mise en concurrence de celui-ci en conformité avec le cahier des charges établi
+                ensemble en fonction de vos nouveaux besoins.</li>
+            </ul>
+
+            <div class="row d-flex justify-content-center gx-5">
+              <div class="col-md-4 img-sizer me-5 mb-3">
+                <nuxt-img src="/images/prestations/nego/tableau.png" alt="tableau" />
+              </div>
+              <div class="col-md-4 img-sizer mb-3">
+                <nuxt-img src="/images/prestations/nego/presentation.jpg" alt="presentation" />
+              </div>
+            </div>
+          </div>
+
+          <rfa-title ref="auditStep" class="mb-3" data-bs-toggle="collapse" href="#collapsible_three" role="button"
+            aria-expanded="false" aria-controls="collapsible_three">
+            <icon-chevron-right /> 3. AUDIT DES CLAUSES CONTRACTUELLES</rfa-title>
 
             <rfa-title type="title" ref="negotarifStep" class="mb-3" data-bs-toggle="collapse" href="#collapsible_two"
               role="button" aria-expanded="false" aria-controls="collapsible_two">
