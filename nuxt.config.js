@@ -52,6 +52,7 @@ export default {
       { src: '@plugins/bootstrap', mode: 'client' },
       { src: '@plugins/scrollTo', mode: 'client' },
       { src: '@plugins/pageclip', mode: 'client' },
+      { src: '@plugins/lazy', mode: 'client' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

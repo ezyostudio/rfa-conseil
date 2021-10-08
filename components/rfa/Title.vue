@@ -52,10 +52,5 @@
 <script>
   export default {
     props: ['text', 'type', 'color'],
-
-    mounted() {
-      console.log(this.$slots.default[0].text);
-    }
   }
-
 </script>

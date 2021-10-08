@@ -39,21 +39,21 @@
     "armoires": [
       {
         "title":"Plié",
-        "image": "/images/prestations/armoires/1.png"
+        "image": "/images/prestations/armoires/1.jpg"
       },
       {
         "title":"Cintre",
-        "image": "/images/prestations/armoires/2.png"
+        "image": "/images/prestations/armoires/2.jpg"
       },
       {
         "title":"Penderie",
-        "image": "/images/prestations/armoires/3.png",
+        "image": "/images/prestations/armoires/3.jpg",
         "contains": true
 
       },
       {
         "title":"Réceptacle linge salle",
-        "image": "/images/prestations/armoires/4.png"
+        "image": "/images/prestations/armoires/4.jpg"
       }
     ],
     "linges": [
@@ -75,7 +75,7 @@
         "image": "/images/prestations/sanitaires/1.jpg"
       },
       {
-        "image": "/images/prestations/sanitaires/2.png"
+        "image": "/images/prestations/sanitaires/2.jpg"
       },
       {
         "image": "/images/prestations/sanitaires/3.jpg"
@@ -93,26 +93,26 @@
     ],
     "lavette": [
       {
-        "image": "/images/prestations/lavette/1.png"
+        "image": "/images/prestations/lavette/1.jpg"
       },
       {
-        "image": "/images/prestations/lavette/2.png"
+        "image": "/images/prestations/lavette/2.jpg"
       }
     ],
     "fontaine_d": [
       {
         "title":"Solvant",
-        "image": "/images/prestations/fontaine_d/1.png",
+        "image": "/images/prestations/fontaine_d/1.jpg",
         "contains": true
       },
       {
         "title":"Lessivielle",
-        "image": "/images/prestations/fontaine_d/2.png",
+        "image": "/images/prestations/fontaine_d/2.jpg",
         "contains": true
       },
       {
         "title":"Bio",
-        "image": "/images/prestations/fontaine_d/3.png",
+        "image": "/images/prestations/fontaine_d/3.jpg",
         "contains": true
       }
     ],
@@ -130,7 +130,7 @@
     "distributeur": [
       {
         "title":"Boissons et/ou snack",
-        "image": "/images/prestations/distributeur/distri.png",
+        "image": "/images/prestations/distributeur/distri.jpg",
         "contains": true
       }
     ]

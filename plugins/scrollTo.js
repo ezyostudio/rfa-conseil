@@ -3,7 +3,6 @@ export default (_, inject) => {
     if (typeof target === 'function') target = target();
     if (target._isVue) target = target.$el;
     if (target && 'scrollIntoView' in target) {
-      console.log(target);
       let _options = {}
 
       if (target.offsetHeight < window.innerHeight) {

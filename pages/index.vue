@@ -31,13 +31,13 @@
         data-bs-interval="5000" data-bs-pause="false" data-bs-touch="false">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <nuxt-img src="/images/header/cintres.jpg" alt="cintres" class="carousel-image" />
+            <nuxt-img src="/images/header/cintres.jpg" alt="cintres" class="carousel-image" loading="lazy" />
           </div>
           <div class="carousel-item">
-            <nuxt-img src="/images/header/coussin.jpg" alt="coussin" class="carousel-image" />
+            <nuxt-img src="/images/header/coussin.jpg" alt="coussin" class="carousel-image" loading="lazy" />
           </div>
           <div class="carousel-item">
-            <nuxt-img src="/images/header/serviette.png" alt="serviette" class="carousel-image" />
+            <nuxt-img src="/images/header/serviette.jpg" alt="serviette" class="carousel-image" loading="lazy" />
           </div>
         </div>
 
@@ -164,7 +164,7 @@
 
               <div class="row d-flex justify-content-center gx-5">
                 <div class="col-md-4 img-sizer me-5 mb-3">
-                  <nuxt-img src="/images/prestations/nego/tableau.png" alt="tableau" class="img-fluid" />
+                  <nuxt-img src="/images/prestations/nego/tableau.jpg" alt="tableau" class="img-fluid" />
                 </div>
                 <div class="col-md-4 img-sizer mb-3">
                   <nuxt-img src="/images/prestations/nego/presentation.jpg" alt="presentation" class="img-fluid" />
