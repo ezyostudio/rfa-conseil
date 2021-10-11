@@ -25,7 +25,8 @@
             <div>
               <div class="mb-3">
                 <label for="companyName" class="form-label">Nom de l'entreprise</label>
-                <input v-model="companyName" type="text" class="form-control" id="companyName" placeholder="John Doe" required>
+                <input v-model="companyName" type="text" class="form-control" id="companyName" placeholder="John Doe"
+                  required>
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Adresse Mail</label>
@@ -44,7 +45,8 @@
             <div>
               <div class="mb-3">
                 <label for="companyName2" class="form-label">Nom de l'entreprise</label>
-                <input v-model="companyName" type="text" class="form-control" id="companyName2" placeholder="John Doe" required>
+                <input v-model="companyName" type="text" class="form-control" id="companyName2" placeholder="John Doe"
+                  required>
               </div>
 
               <div class="mb-3">
@@ -60,7 +62,6 @@
           <div class="text-center">
             <button type="submit" class="btn btn-primary px-3">Envoyer</button>
           </div>
-
         </form>
 
       </div>
@@ -73,13 +74,17 @@
   import {
     defineComponent,
     ref,
-    useContext
+    useContext,
+    onMounted
   } from '@nuxtjs/composition-api'
 
   export default defineComponent({
     setup() {
 
-      const { $pageclip } = useContext()
+      const {
+        $pageclip,
+        $swal
+      } = useContext()
 
       const picker = ref("mail");
       const companyName = ref("");
@@ -87,14 +92,29 @@
       const email = ref("");
       const message = ref("");
 
-      const inputs = { companyName, phoneNumber, email, message };
+      const inputs = {
+        companyName,
+        phoneNumber,
+        email,
+        message
+      }; 
 
       const submit = async () => {
-        const data = Object.fromEntries(Object.entries(inputs).map(([key, {value}])=>[key, value]));
+        const data = Object.fromEntries(Object.entries(inputs).map(([key, {
+          value
+        }]) => [key, value]));
         const req = await $pageclip.send(data);
-        if(req.status !== 200) {
-          alert('Une erreur technique est survenue,merci de réessayer ultérieurement.');
+        if (req.status !== 200) {
+          alert('Une erreur technique est survenue, merci de réessayer ultérieurement.');
         }
+
+        //Remove input data from form
+        companyName.value = ""
+        phoneNumber.value = ""
+        email.value = ""
+        message.value = ""
+
+        $swal({title:"Formulaire envoyé", icon: 'success', confirmButtonColor: "#105391", timer: 3000})
       }
 
       return {
@@ -103,9 +123,11 @@
         email,
         message,
         picker,
-        submit
+        submit,
       };
     },
+
+
   })
 
 </script>
