@@ -1,71 +1,133 @@
 <template>
-  <div class="container card px-4 py-5">
-    <div class="card-body">
-      <h3 class="text-center mb-4">Contact</h3>
-
-      <div class="d-flex justify-content-center mb-3">
-        <div class="btn-group " role="group">
-          <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked  value="mail" v-model="picker">
-          <label class="btn btn-outline-primary" for="btnradio1">
-            <icon-mail /> Par mail</label>
-
-          <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" value="tel" v-model="picker">
-          <label class="btn btn-outline-primary" for="btnradio2">
-            <icon-tel /> Par téléphone</label>
-        </div>
+  <div class="container card p-3 p-md-5">
+    <div class="card-body d-flex justify-content-center align-items-center">
+      <div class="col-lg-6 me-lg-5">
+        <icon-illustration />
       </div>
+      <div class="col-12 col-lg-6">
+        <h3 class="text-center mb-4">Contact</h3>
+        <div class="d-flex justify-content-center mb-3">
+          <div class="btn-group " role="group">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked value="mail"
+              v-model="picker">
+            <label class="btn btn-outline-primary" for="btnradio1">
+              <icon-mail /> Par mail</label>
 
-      <form class="row" v-if="picker=='mail'">
-        <div class="col-md-12">
-          <div class="form-floating mb-3">
-            <input type="text" name="company" class="form-control" id="inputCompany" placeholder="John Doe">
-            <label for="inputCompany">Nom de l'entreprise</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="email" name="email" class="form-control" id="inputEmail" placeholder="john@doe.com">
-            <label for="inputEmail">Adresse Mail</label>
-          </div>
-          <div class="form-floating mb-3">
-            <textarea class="form-control" name="textarea" id="inputMessage" cols="100" rows="6" placeholder="Je vous contacte car..."></textarea>
-            <label for="inputMessage">Votre demande</label>
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" value="tel"
+              v-model="picker">
+            <label class="btn btn-outline-primary" for="btnradio2">
+              <icon-tel /> Par téléphone</label>
           </div>
         </div>
-        
-        <button type="submit" class="btn btn-primary">Envoyer</button>
-      </form>
 
-          <form class="row" v-if="picker=='tel'">
-        <div class="col-md-6">
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Nom de l'entreprise</label>
-            <input type="name" class="form-control" id="exampleInputPassword1" placeholder="John Doe">
+        <form @submit.prevent="submit">
+          <div v-if="picker=='mail'">
+            <div>
+              <div class="form-floating mb-3">
+                <input v-model="companyName" type="text" class="form-control" id="companyName" placeholder=" " required>
+                <label for="companyName">Nom de l'entreprise</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input v-model="email" type="email" class="form-control" id="email" placeholder=" " required>
+                <label for="email">Adresse Mail</label>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="message" class="form-label">Votre demande</label>
+              <textarea v-model="message" class="form-control" name="message" id="textarea" cols="100" rows="5"
+                required></textarea>
+            </div>
           </div>
 
-           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Numero de téléphone</label>
-            <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon1">+33</span>
-          <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
-        </div>
+          <div v-if="picker=='tel'">
+            <div>
+              <div class="form-floating mb-3">
+                <input v-model="companyName" type="text" class="form-control" id="companyName" placeholder=" " required>
+                <label for="companyName">Nom de l'entreprise</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <input v-model="phoneNumber" type="phone" class="form-control" id="phoneNumber" placeholder=" "
+                  required>
+                <label for="phoneNumber">Téléphone</label>
+              </div>
+            </div>
           </div>
-        </div>
-        <button type="submit" class="btn btn-primary">Envoyer</button>
-      </form>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary px-3">{{picker=='tel'?'Être rappelé':'Envoyer'}}</button>
+          </div>
+        </form>
+
+      </div>
     </div>
   </div>
 </template>
 
 
 <script>
-export default {
-    data() {
-        return {
-            picker: "mail"
+  import {
+    defineComponent,
+    ref,
+    useContext,
+    onMounted
+  } from '@nuxtjs/composition-api'
+
+  export default defineComponent({
+    setup() {
+
+      const {
+        $pageclip,
+        $swal
+      } = useContext()
+
+      const picker = ref("mail");
+      const companyName = ref("");
+      const phoneNumber = ref("");
+      const email = ref("");
+      const message = ref("");
+
+      const inputs = {
+        companyName,
+        phoneNumber,
+        email,
+        message
+      };
+
+      const submit = async () => {
+        const data = Object.fromEntries(Object.entries(inputs).map(([key, {
+          value
+        }]) => [key, value]));
+        const req = await $pageclip.send(data);
+        if (req.status !== 200) {
+          alert('Une erreur technique est survenue, merci de réessayer ultérieurement.');
         }
+
+        //Remove input data from form
+        companyName.value = ""
+        phoneNumber.value = ""
+        email.value = ""
+        message.value = ""
+
+        $swal({
+          title: "Formulaire envoyé",
+          icon: 'success',
+          confirmButtonColor: "#105391",
+          timer: 3000
+        })
+      }
+
+      return {
+        companyName,
+        phoneNumber,
+        email,
+        message,
+        picker,
+        submit,
+      };
     },
 
-    mounted() {
-        window.vueInstance = this
-    }
-}
+
+  })
+
 </script>

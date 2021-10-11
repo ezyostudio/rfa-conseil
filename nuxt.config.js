@@ -52,6 +52,7 @@ export default {
       { src: '@plugins/bootstrap', mode: 'client' },
       { src: '@plugins/scrollTo', mode: 'client' },
       { src: '@plugins/pageclip', mode: 'client' },
+      { src: '@plugins/lazy', mode: 'client' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -69,6 +70,7 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    'vue-sweetalert2/nuxt',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

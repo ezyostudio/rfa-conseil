@@ -1,22 +1,20 @@
-const TOKEN = "api_udYuQKaQvbkOMQNGlwwgtZVFmbsmJOIf"
+const TOKEN = "0ExS33QDLxWWVR9BaomonMxzcSLaJeDN"
 export default ({
   $axios
 }, inject) => {
-
   const axios = $axios.create({
-    baseURL: 'https://api.pageclip.co/',
-    auth: {
-      username: TOKEN
-    },
+    baseURL: 'https://send.pageclip.co/'+TOKEN,
     headers: {
-      'X-Custom-Header': 'foobar',
-      'Accept': 'application/vnd.pageclip.v1+json'
+      "X-REQMETHOD": "form-v1",
+      "X-REQMETHOD": "send-v1",
+      "Content-Type": "application/json"
     }
   });
+
   inject('pageclip', {
     axios,
     send(data) {
-      axios.post(`data/`)
+      return axios.post("", data);
     }
   })
 }

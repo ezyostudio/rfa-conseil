@@ -1,15 +1,22 @@
 <template>
-  <div class="card" :style="cardStyle" :class="{contains: prestation.contains, noTitle: prestation.title == null}">
+  <div class="card card-small" :style="{'background-color': color}" :class="{contains: prestation.contains, noTitle: prestation.title == null}">
     <div class="card-body">
-      <nuxt-img :src="prestation.image" :alt="prestation.alt" />
-      <h5 class="card-title text-center text-light">{{prestation.title}}</h5>
+      <div v-lazy-container="{ selector: 'nuxt-img' }">
+        <nuxt-img 
+          :src="prestation.image" 
+          :alt="prestation.alt" 
+          width="640px"
+          loading="lazy"
+        />
+      </div>
+      <h5 class="text-light text-center">{{prestation.title}}</h5>
     </div>
   </div>
 </template>
 
 <script>
   export default {
-    props: ['prestation', 'cardStyle']
+    props: ['prestation', 'cardStyle', 'color'],
   }
 
 </script>
