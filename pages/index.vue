@@ -211,8 +211,8 @@
         <div class="col">
           <p class="m-0 text-light">&copy; 2021 RFA CONSEIL</p>
         </div>
-        <div class="col">
-          <a href="https://go.ezyostudio.com/" target="_blank" class="text-light text-end">Made with
+        <div class="col text-end">
+          <a href="https://go.ezyostudio.com/" target="_blank" class="text-light text-decoration-none">Made with
             <icon-love /> by EzyoStudio</a>
         </div>
       </div>
