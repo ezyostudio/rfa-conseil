@@ -213,7 +213,7 @@
         </div>
         <div class="col">
           <a href="https://go.ezyostudio.com/" target="_blank" class="text-light text-end">Made with
-            <icon-love /> by EzyoStudio</p>
+            <icon-love /> by EzyoStudio</a>
         </div>
       </div>
     </div>
