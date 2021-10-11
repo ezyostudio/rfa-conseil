@@ -212,7 +212,7 @@
           <p class="m-0 text-light">&copy; 2021 RFA CONSEIL</p>
         </div>
         <div class="col">
-          <p class="text-light text-end">Made with
+          <a href="https://go.ezyostudio.com/" target="_blank" class="text-light text-end">Made with
             <icon-love /> by EzyoStudio</p>
         </div>
       </div>
