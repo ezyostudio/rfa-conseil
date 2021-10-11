@@ -1,5 +1,5 @@
 <template>
-  <div class="card little-card" :style="{'background-color': color}" :class="{contains: prestation.contains, noTitle: prestation.title == null}">
+  <div class="card card-small" :style="{'background-color': color}" :class="{contains: prestation.contains, noTitle: prestation.title == null}">
     <div class="card-body">
       <div v-lazy-container="{ selector: 'nuxt-img' }">
         <nuxt-img 
