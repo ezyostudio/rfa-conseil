@@ -4,13 +4,13 @@
       <div class="container-fluid px-5">
         <ul class="ms-auto navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" href="#">
+            <a class="nav-link active" href="tel:+33951740779">
               <icon-tel /> 09 51 74 07 79
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#">
-              <icon-mail /> regis.frachier@rfa-conseil.fr
+            <a class="nav-link active" @click="mailto">
+              <icon-mail /> regis.frachier@<span class="d-none">email.</span>rfa-conseil.fr
             </a>
           </li>
         </ul>
@@ -79,7 +79,7 @@
 
     .navbar-brand img {
       vertical-align: bottom;
-      height: 50px;
+      height: 42px;
     }
   }
 
@@ -156,6 +156,10 @@
         }
       }
 
+      const mailto = (e) => {
+        e.target.href ="mailto:"+decodeURIComponent(escape(window.atob("cmVnaXMuZnJhY2hpZXJAcmZhLWNvbnNlaWwuZnI=")));
+      }
+
       // this will register the event when the component is mounted on the DOM
       onMounted(() => {
         stickyBreakpoint = lowerBar.value.offsetTop
@@ -174,7 +178,8 @@
       return {
         lowerBar,
         sticky,
-        dropdown
+        dropdown,
+        mailto
       };
     },
   })
