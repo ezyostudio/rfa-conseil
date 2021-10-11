@@ -31,7 +31,7 @@
             <template v-for="link in links">
               <template v-if="link.children && link.children.length>0">
                 <li ref="dropdown" class="nav-item dropdown" :key="link.label">
-                  <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  <a class="nav-link text-dark dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     {{link.label}}
                   </a>
@@ -47,7 +47,7 @@
 
               <template v-else>
                 <li class="nav-item" :key="link.label">
-                  <a @click="$scrollTo(link.ref)" class="nav-link">
+                  <a @click="$scrollTo(link.ref)" class="nav-link text-dark">
                     {{link.label}}
                   </a>
                 </li>
