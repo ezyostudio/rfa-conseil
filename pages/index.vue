@@ -121,7 +121,7 @@
 
             <rfa-title type="title" ref="evaltechStep" class="mb-3" data-bs-toggle="collapse" href="#collapsible_one"
               role="button" aria-expanded="false" aria-controls="collapsible_one">
-              <icon-chevron-right /> 1. EVALUATION TECHNIQUE </rfa-title>
+              <icon-chevron-right /> 1. AUDIT TECHNIQUE DES PRESTATIONS </rfa-title>
 
             <div id="collapsible_one" class="collapse" data-bs-parent="#accordionPrestation">
               <p>Bénéficiez d’un audit technique au sein de vos locaux comprenant l’élaboration d’un cahier des charges
@@ -133,14 +133,14 @@
                 :data="prestations.standard" />
               <rfa-prestation-list subtitle="EPI" class="mb-5" color="#105391" :data="prestations.epi" />
 
-              <rfa-prestation-list title="ARMOIRES VESTIMENTAIRES" class="mb-5" color="#727676"
+              <rfa-prestation-list title="ARMOIRES VESTIAIRES" class="mb-5" color="#727676"
                 :data="prestations.armoires" />
               <rfa-prestation-list title="LINGES PLATS" class="mb-5" color="#32AFDA" :data="prestations.linges" />
               <rfa-prestation-list title="EQUIPEMENTS SANITAIRES" class="mb-5" color="#94D0E6"
                 :data="prestations.sanitaires" />
               <rfa-prestation-list title="TAPIS ANTISALISSURES" class="mb-5" color="#44607D"
                 :data="prestations.tapis" />
-              <rfa-prestation-list title="LAVETTE INDUSTRIELLES" class="mb-5" color="#004873"
+              <rfa-prestation-list title="LAVETTES INDUSTRIELLES" class="mb-5" color="#004873"
                 :data="prestations.lavette" />
               <rfa-prestation-list title="FONTAINES DÉGRAISSANTES" class="mb-5" color="#64518D"
                 :data="prestations.fontaine_d" />
