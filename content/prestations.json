@@ -53,7 +53,8 @@
       },
       {
         "title":"Réceptacle linge salle",
-        "image": "/images/prestations/armoires/4.jpg"
+        "image": "/images/prestations/armoires/4.jpg",
+        "contains": true
       }
     ],
     "linges": [
@@ -107,12 +108,12 @@
       },
       {
         "title":"Lessivielle",
-        "image": "/images/prestations/fontaine_d/2.jpg",
+        "image": "/images/prestations/fontaine_d/3.jpg",
         "contains": true
       },
       {
         "title":"Bio",
-        "image": "/images/prestations/fontaine_d/3.jpg",
+        "image": "/images/prestations/fontaine_d/2.jpg",
         "contains": true
       }
     ],

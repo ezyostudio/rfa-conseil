@@ -23,44 +23,39 @@
         <form @submit.prevent="submit">
           <div v-if="picker=='mail'">
             <div>
-              <div class="mb-3">
-                <label for="companyName" class="form-label">Nom de l'entreprise</label>
-                <input v-model="companyName" type="text" class="form-control" id="companyName" placeholder="John Doe"
-                  required>
+              <div class="form-floating mb-3">
+                <input v-model="companyName" type="text" class="form-control" id="companyName" placeholder=" " required>
+                <label for="companyName">Nom de l'entreprise</label>
               </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Adresse Mail</label>
-                <input v-model="email" type="email" class="form-control" id="email" aria-describedby="emailHelp"
-                  placeholder="john@doe.com" required>
+              <div class="form-floating mb-3">
+                <input v-model="email" type="email" class="form-control" id="email" placeholder=" " required>
+                <label for="email">Adresse Mail</label>
               </div>
             </div>
+
             <div class="mb-3">
               <label for="message" class="form-label">Votre demande</label>
               <textarea v-model="message" class="form-control" name="message" id="textarea" cols="100" rows="5"
-                placeholder="Je vous contacte car..." required></textarea>
+                required></textarea>
             </div>
           </div>
 
           <div v-if="picker=='tel'">
             <div>
-              <div class="mb-3">
-                <label for="companyName2" class="form-label">Nom de l'entreprise</label>
-                <input v-model="companyName" type="text" class="form-control" id="companyName2" placeholder="John Doe"
-                  required>
+              <div class="form-floating mb-3">
+                <input v-model="companyName" type="text" class="form-control" id="companyName" placeholder=" " required>
+                <label for="companyName">Nom de l'entreprise</label>
               </div>
 
-              <div class="mb-3">
-                <label for="phoneNumber" class="form-label">Numero de téléphone</label>
-                <div class="input-group mb-3">
-                  <!-- <span class="input-group-text" id="basic-addon1">+33</span> -->
-                  <input v-model="phoneNumber" type="phone" id="phoneNumber" class="form-control" aria-label="Username"
-                    aria-describedby="basic-addon1" required>
-                </div>
+              <div class="form-floating mb-3">
+                <input v-model="phoneNumber" type="phone" class="form-control" id="phoneNumber" placeholder=" "
+                  required>
+                <label for="phoneNumber">Téléphone</label>
               </div>
             </div>
           </div>
           <div class="text-center">
-            <button type="submit" class="btn btn-primary px-3">Envoyer</button>
+            <button type="submit" class="btn btn-primary px-3">{{picker=='tel'?'Être rappelé':'Envoyer'}}</button>
           </div>
         </form>
 
@@ -97,7 +92,7 @@
         phoneNumber,
         email,
         message
-      }; 
+      };
 
       const submit = async () => {
         const data = Object.fromEntries(Object.entries(inputs).map(([key, {
@@ -114,7 +109,12 @@
         email.value = ""
         message.value = ""
 
-        $swal({title:"Formulaire envoyé", icon: 'success', confirmButtonColor: "#105391", timer: 3000})
+        $swal({
+          title: "Formulaire envoyé",
+          icon: 'success',
+          confirmButtonColor: "#105391",
+          timer: 3000
+        })
       }
 
       return {
