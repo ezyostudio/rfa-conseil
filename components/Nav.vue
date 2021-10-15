@@ -47,7 +47,7 @@
 
               <template v-else>
                 <li class="nav-item" :key="link.label">
-                  <a @click="$scrollTo(link.ref)" class="nav-link text-dark">
+                  <a @click="processLink(link)" class="nav-link text-dark">
                     {{link.label}}
                   </a>
                 </li>
@@ -132,6 +132,8 @@
     ref,
     onMounted,
     onUnmounted,
+    useRouter,
+    useContext
   } from '@nuxtjs/composition-api'
 
   export default defineComponent({
@@ -142,6 +144,8 @@
       }
     },
     setup() {
+      const router = useRouter();
+      const {$scrollTo} = useContext();
       const lowerBar = ref(null);
       const dropdown = ref(null);
 
@@ -160,6 +164,10 @@
         e.target.href ="mailto:"+decodeURIComponent(escape(window.atob("cmVnaXMuZnJhY2hpZXJAcmZhLWNvbnNlaWwuZnI=")));
       }
 
+      const processLink = (link) => {
+        if(link.ref) $scrollTo(link.ref);
+        else if(link.path) router.push(link.path);
+      }
       // this will register the event when the component is mounted on the DOM
       onMounted(() => {
         stickyBreakpoint = lowerBar.value.offsetTop
@@ -179,7 +187,8 @@
         lowerBar,
         sticky,
         dropdown,
-        mailto
+        mailto,
+        processLink
       };
     },
   })
