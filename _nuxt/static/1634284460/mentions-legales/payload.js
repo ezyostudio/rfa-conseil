@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/mentions-legales", {data:[{_img:{"/_ipx/_/images/header/cintres.jpg":"\u002F_nuxt\u002Fimage\u002Febd664.jpg","/_ipx/_/images/prestations/linges/hotel.jpg":"\u002F_nuxt\u002Fimage\u002Fe1954b.jpg","/_ipx/_/images/header/serviette.jpg":"\u002F_nuxt\u002Fimage\u002Fb14090.jpg"}}],fetch:{},mutations:void 0});
