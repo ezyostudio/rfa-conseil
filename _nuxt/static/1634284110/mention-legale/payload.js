@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/mention-legale", {data:[{_img:{}}],fetch:{},mutations:void 0});
