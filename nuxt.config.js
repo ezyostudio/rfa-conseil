@@ -86,6 +86,7 @@ export default {
   buildModules: [
     '@nuxtjs/composition-api/module',
     '@nuxt/image',
+    '@luxdamore/nuxt-humans-txt'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -95,6 +96,26 @@ export default {
     '@nuxtjs/manifest',
     '@nuxt/content',
     'vue-sweetalert2/nuxt',
+    [
+      "nuxt-social-meta",
+      {
+        url: "https://rfa-conseil.fr",
+        title: "RFA Conseil",
+        site_name: "RFA Conseil",
+        description: "Conseil et Courtage en location et entretien de vêtements de travail et autres prestations",
+        img: "/images/logo.png",
+        img_size: {
+          width: 4210,
+          height: 1320
+        },
+        locale: "fr_FR",
+        // twitter: "@user",
+        // twitter_card: "summary_large_image",
+        theme_color: "##105391",
+      },
+    ],
+    '@nuxtjs/sitemap',
+
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -184,5 +205,76 @@ export default {
         "paramValue": "1"
       }
     }
-  }
+  },
+
+  humansTxt: {
+    enabled: true,
+    hideGenericMessagesInConsole: false, // Disabled in production
+    hideErrorsInConsole: false,
+    fileName: 'humans.txt',
+    fileEncoding: 'utf8',
+    link: {
+      rel: 'author',
+      href: '',
+      hid: 'humans-txt',
+    },
+    keepDevelopersInformations: false,
+    // "The internet is for humans"
+    thanksTo: [
+      'AGENCY',
+      {
+        key: 'Linkedin',
+        value: 'https://linkedin.com/ezyostudio',
+      },{
+        key: 'Github',
+        value: 'https://github.com/ezyostudio',
+      },
+      'DEVELOPPERS',
+      {
+        key: 'Tristan SCHWENK',
+        value: 'https://github.com/tristanschwenk',
+      },
+      {
+        key: 'Zao SOULA',
+        value: 'https://github.com/zaosoula',
+      },
+    ],
+    site: [
+      'SITE',
+      {
+        key: 'Last update',
+        value: new Date().toLocaleDateString(
+          'en-US', {
+            month: '2-digit',
+            day: '2-digit',
+            year: 'numeric',
+          }
+        ),
+      },
+      {
+        key: 'Standards',
+        value: [
+          'HTML5',
+          'CSS3',
+          'Javascript',
+        ],
+      },
+      {
+        key: 'Components',
+        value: 'VueJs',
+      },
+      {
+        key: 'Software',
+        value: 'NuxtJs',
+      },
+      {
+        key: 'Language',
+        value: 'French',
+      },
+      {
+        key: 'Doctype',
+        value: 'HTML5',
+      },
+    ],
+  },
 }
