@@ -19,25 +19,38 @@ export default {
     htmlAttrs: {
       lang: 'en'
     },
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+    meta: [{
+        charset: 'utf-8'
+      },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: ''
+      },
       // { name: 'format-detection', content: 'telephone=no' }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/logo.ico' },
-      { rel: 'stylesheet', href: 'https://s.pageclip.co/v1/pageclip.css', media: 'screen' }
-    ],
-    script: [
-      {
-        src: "https://polyfill.io/v3/polyfill.min.js?features=smoothscroll",
-        body: true,
-      },{
-        src: "https://s.pageclip.co/v1/pageclip.js",
-        body: true,
+    link: [{
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/logo.ico'
       },
-    ]
+      {
+        rel: 'stylesheet',
+        href: 'https://s.pageclip.co/v1/pageclip.css',
+        media: 'screen'
+      }
+    ],
+    script: [{
+      src: "https://polyfill.io/v3/polyfill.min.js?features=smoothscroll",
+      body: true,
+    }, {
+      src: "https://s.pageclip.co/v1/pageclip.js",
+      body: true,
+    }, ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -48,11 +61,22 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-      { src: '@plugins/bootstrap', mode: 'client' },
-      { src: '@plugins/scrollTo', mode: 'client' },
-      { src: '@plugins/pageclip', mode: 'client' },
-      { src: '@plugins/lazy', mode: 'client' },
+  plugins: [{
+      src: '@plugins/bootstrap',
+      mode: 'client'
+    },
+    {
+      src: '@plugins/scrollTo',
+      mode: 'client'
+    },
+    {
+      src: '@plugins/pageclip',
+      mode: 'client'
+    },
+    {
+      src: '@plugins/lazy',
+      mode: 'client'
+    },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -66,9 +90,9 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    // https://go.nuxtjs.dev/content
+    'nuxt-rfg-icon',
+    '@nuxtjs/manifest',
     '@nuxt/content',
     'vue-sweetalert2/nuxt',
   ],
@@ -86,6 +110,79 @@ export default {
     },
     extractCSS: {
       allChunks: true
+    }
+  },
+
+  'rfg-icon': {
+    static: true,
+    staticPath: '/_favicons/',
+    masterPicture: 'static/images/logo.png',
+    rfg: {
+      "design": {
+        "ios": {
+          "pictureAspect": "backgroundAndMargin",
+          "backgroundColor": "#ffffff",
+          "margin": "18%",
+          "assets": {
+            "ios6AndPriorIcons": false,
+            "ios7AndLaterIcons": false,
+            "precomposedIcons": false,
+            "declareOnlyDefaultIcon": true
+          },
+          "appName": "RFA Conseil"
+        },
+        "desktopBrowser": {
+          "design": "raw"
+        },
+        "windows": {
+          "pictureAspect": "whiteSilhouette",
+          "backgroundColor": "#105391",
+          "onConflict": "override",
+          "assets": {
+            "windows80Ie10Tile": false,
+            "windows10Ie11EdgeTiles": {
+              "small": false,
+              "medium": true,
+              "big": false,
+              "rectangle": false
+            }
+          },
+          "appName": "RFA Conseil"
+        },
+        "androidChrome": {
+          "pictureAspect": "backgroundAndMargin",
+          "margin": "17%",
+          "backgroundColor": "#ffffff",
+          "themeColor": "#ffffff",
+          "manifest": {
+            "name": "RFA Conseil",
+            "display": "standalone",
+            "orientation": "notSet",
+            "onConflict": "override",
+            "declared": true
+          },
+          "assets": {
+            "legacyIcon": false,
+            "lowResolutionIcons": false
+          }
+        },
+        "safariPinnedTab": {
+          "pictureAspect": "silhouette",
+          "themeColor": "#105391"
+        }
+      },
+      "settings": {
+        "compression": 5,
+        "scalingAlgorithm": "Mitchell",
+        "errorOnImageTooSmall": false,
+        "readmeFile": true,
+        "htmlCodeFile": true,
+        "usePathAsIs": false
+      },
+      "versioning": {
+        "paramName": "v",
+        "paramValue": "1"
+      }
     }
   }
 }
