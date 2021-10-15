@@ -5,4 +5,4 @@ Vue.use(VueLazyload, {
   preLoad: 1.3,
   attempt: 1,
   silent: false,
-}})
+})

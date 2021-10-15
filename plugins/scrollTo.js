@@ -3,7 +3,9 @@ export default (_, inject) => {
     if (typeof target === 'function') target = target();
     if (target._isVue) target = target.$el;
     if (target && 'scrollIntoView' in target) {
-      let _options = {}
+      let _options = {
+        behavior: 'smooth'
+      }
 
       if (target.offsetHeight < window.innerHeight) {
         if(options) {

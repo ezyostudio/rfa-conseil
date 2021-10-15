@@ -4,13 +4,13 @@
       <div class="container-fluid px-5">
         <ul class="ms-auto navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" href="#">
+            <a class="nav-link active" href="tel:+33951740779">
               <icon-tel /> 09 51 74 07 79
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#">
-              <icon-mail /> regis.frachier@rfa-conseil.fr
+            <a class="nav-link active" @click="mailto">
+              <icon-mail /> regis.frachier@<span class="d-none">email.</span>rfa-conseil.fr
             </a>
           </li>
         </ul>
@@ -31,7 +31,7 @@
             <template v-for="link in links">
               <template v-if="link.children && link.children.length>0">
                 <li ref="dropdown" class="nav-item dropdown" :key="link.label">
-                  <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  <a class="nav-link text-dark dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     {{link.label}}
                   </a>
@@ -47,11 +47,7 @@
 
               <template v-else>
                 <li class="nav-item" :key="link.label">
-<<<<<<< Updated upstream
-                  <a @click="$scrollTo(link.ref)" class="nav-link">
-=======
                   <a @click="processLink(link)" class="nav-link text-dark">
->>>>>>> Stashed changes
                     {{link.label}}
                   </a>
                 </li>
@@ -83,7 +79,7 @@
 
     .navbar-brand img {
       vertical-align: bottom;
-      height: 50px;
+      height: 42px;
     }
   }
 

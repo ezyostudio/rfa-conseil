@@ -9,7 +9,7 @@
       {
         label: 'PRESTATIONS',
         children: [{
-          label: 'EVALUATION TECHNIQUE',
+          label: 'AUDIT TECHNIQUE DES PRESTATIONS',
           ref: () => $refs.evaltechStep,
         },{
           label: 'NÉGOCIATION TARIFAIRES',
@@ -34,19 +34,22 @@
           <div class="row">
             <div class="col-12 col-md-7 order-1 order-md-0">
               <p class="text-justify">RFA CONSEIL propose un service exclusif de conseil et de courtage en
-                location et en entretien de vêtements de travail, armoires vestiaires, linge plat, équipements
-                sanitaires, tapis antisalissures, lavettes industrielles, fontaines dégraissantes, fontaines à eau et
-                machines à café. <br><br>
+                location et en entretien de vêtements de travail, et autres prestations.<br><br>
                 Née en 2015 de la volonté de son dirigeant de mettre à profit une expertise de plus de 25 ans dans ce
                 domaine d’activités, RFA CONSEIL s’adresse à tous types d’entreprises dans l’industrie, l’hôtellerie, la
                 restauration et les établissements de santé.</p>
-            </div>
-            <div class="col align-self-center order-0 order-md-1 mb-5 mb-md-0">
-              <h3 class="text-primary fw-bold text-center text-md-end">Obtenez des réponses techniques et tarifaires à
+              <p class="text-primary fw-bold">Obtenez des réponses techniques et tarifaires à
                 vos exigences,
                 et
                 gardez
-                la maîtrise des conditions générales de vente de vos contrats.</h3>
+                la maîtrise des conditions générales de vente de vos contrats.</p>
+            </div>
+            <div class="col align-self-center text-center order-0 order-md-1 mb-md-0">
+              <iconLogo class="w-50"/>
+              <h3 class="text-primary fw-bold text-center">Vous assure un service<br>indépendant<br> en
+                toutes circonstances qui
+                représente
+                vos intérêts.</h3>
             </div>
           </div>
 
@@ -57,9 +60,9 @@
               <li>La garantie d’une réduction des coûts</li>
               <li>L’optimisation des conditions contractuelles</li>
             </ul>
-            <p class="text-primary fw-bold">RFA CONSEIL vous assure un service indépendant en toutes circonstances qui
+            <!-- <p class="text-primary fw-bold">RFA CONSEIL vous assure un service indépendant en toutes circonstances qui
               représente
-              vos intérêts.</p>
+              vos intérêts.</p> -->
           </div>
 
           <div class="row">
@@ -92,7 +95,7 @@
 
             <rfa-title type="title" ref="evaltechStep" class="mb-3" data-bs-toggle="collapse" href="#collapsible_one"
               role="button" aria-expanded="false" aria-controls="collapsible_one">
-              <icon-chevron-right /> 1. EVALUATION TECHNIQUE </rfa-title>
+              <icon-chevron-right /> 1. AUDIT TECHNIQUE DES PRESTATIONS </rfa-title>
 
             <div id="collapsible_one" class="collapse" data-bs-parent="#accordionPrestation">
               <p>Bénéficiez d’un audit technique au sein de vos locaux comprenant l’élaboration d’un cahier des charges
@@ -104,14 +107,14 @@
                 :data="prestations.standard" />
               <rfa-prestation-list subtitle="EPI" class="mb-5" color="#105391" :data="prestations.epi" />
 
-              <rfa-prestation-list title="ARMOIRES VESTIMENTAIRES" class="mb-5" color="#727676"
+              <rfa-prestation-list title="ARMOIRES VESTIAIRES" class="mb-5" color="#727676"
                 :data="prestations.armoires" />
               <rfa-prestation-list title="LINGES PLATS" class="mb-5" color="#32AFDA" :data="prestations.linges" />
               <rfa-prestation-list title="EQUIPEMENTS SANITAIRES" class="mb-5" color="#94D0E6"
                 :data="prestations.sanitaires" />
               <rfa-prestation-list title="TAPIS ANTISALISSURES" class="mb-5" color="#44607D"
                 :data="prestations.tapis" />
-              <rfa-prestation-list title="LAVETTE INDUSTRIELLES" class="mb-5" color="#004873"
+              <rfa-prestation-list title="LAVETTES INDUSTRIELLES" class="mb-5" color="#004873"
                 :data="prestations.lavette" />
               <rfa-prestation-list title="FONTAINES DÉGRAISSANTES" class="mb-5" color="#64518D"
                 :data="prestations.fontaine_d" />
@@ -126,14 +129,14 @@
               <icon-chevron-right /> 2. NÉGOCIATION TARIFAIRES </rfa-title>
 
             <div id="collapsible_two" class="collapse" data-bs-parent="#accordionPrestation">
-              <p class="text-primary fw-bold">Disposez de solutions tarifaires innovantantes par :</p>
+              <h5 class="text-primary fw-bold mb-3">Disposez de solutions tarifaires innovantantes par :</h5>
               <ul>
-                <li>Soit la renégociation du contrat existant avec votre prestataire,</li>
+                <li class="mb-3">Soit la renégociation du contrat existant avec votre prestataire,</li>
                 <li>Soit la mise en concurrence de celui-ci en conformité avec le cahier des charges établi
                   ensemble en fonction de vos nouveaux besoins.</li>
               </ul>
 
-              <div class="row d-flex justify-content-center gx-5">
+              <div class="row d-flex justify-content-center mt-5 mb-3 gx-5">
                 <div class="col-md-4 img-sizer me-5 mb-3">
                   <nuxt-img src="/images/prestations/nego/tableau.jpg" alt="tableau" class="img-fluid" />
                 </div>
@@ -151,7 +154,7 @@
             <div id="collapsible_three" class="collapse" data-bs-parent="#accordionPrestation">
               <p>Profitez d'une analyse compléte de vos contrats actuels et d'une revalorisation des conditions
                 générales de vente de vos futurs contrats de location et d'entretien.</p>
-              <p class="mb-4">RFA CONSEIL assure le respect de vos intéréts par le biais d'un audit axé sur l'étude et
+              <p class="mb-4 text-primary fw-bold">RFA CONSEIL assure le respect de vos intéréts par le biais d'un audit axé sur l'étude et
                 le
                 contrôle des clauses de vos contrats.</p>
 
@@ -175,20 +178,20 @@
 
 
 
-  <!-- Footer-->
-  <footer class="py-3">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <p class="m-0 text-light">&copy; 2021 RFA CONSEIL</p>
-        </div>
-        <div class="col">
-          <a href="https://go.ezyostudio.com/" target="_blank" class="text-light text-end">Made with
-            <icon-love /> by EzyoStudio</p>
+    <!-- Footer-->
+    <footer class="py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p class="m-0 text-light">&copy; 2021 RFA CONSEIL</p>
+          </div>
+          <div class="col text-end">
+            <a href="https://go.ezyostudio.com/" target="_blank" class="text-light text-decoration-none">Made with
+              <icon-love /> by EzyoStudio</a>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
   </div>
 </template>
 
