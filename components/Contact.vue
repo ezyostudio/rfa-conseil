@@ -1,7 +1,23 @@
 <template>
-  <div class="container card p-3 p-md-5">
-    <div class="card-body d-flex justify-content-center align-items-center">
-      <div class="col-lg-6 me-lg-5">
+  <div class="container card p-3 p-md-5 pt-md-4">
+     <div class="text-primary d-block d-lg-flex justify-content-around align-items-center w-75 m-auto mb-3 mb-md-4">
+       <div class="d-flex align-items-center m-auto m-lg-0">
+          <icon-home width="30" height="30" />
+          <h6 class="mb-0">11 Rue des Métiers, 77181 Courtry </h6>
+        </div>
+
+        <div class="d-flex align-items-center">
+          <icon-tel width="30" height="30" />
+          <h6 class="mb-0"> 09 51 74 07 79 </h6>
+        </div>
+
+        <div class="d-flex align-items-center ">
+          <icon-mail width="30" height="30" />
+          <h6 class="mb-0"> regis.frachier@rfa-conseil.fr</h6>
+        </div>
+    </div>
+    <div class="card-body pt-0 d-flex justify-content-center align-items-center">
+      <div class="d-none d-lg-block col-lg-6 me-lg-5">
         <icon-illustration />
       </div>
       <div class="col-12 col-lg-6">
