@@ -17,7 +17,7 @@
       </div>
       <div class="container d-flex justify-content-center">
         <div class="content align-self-center fw-bold d-md-block d-flex flex-column justify-content-center w-75">
-          <iconLogo class="w-100 m-auto mb-md-5" />
+          <iconLogo class="w-100 m-auto mb-md-5" height="160px" />
           <h2 class="text-center text-md-start text-primary">Conseil et Courtage</h2>
           <h3 class="text-center text-md-start ps-md-5 mb-4">en location et entretien de vêtements de travail et autres
             prestations</h3>
