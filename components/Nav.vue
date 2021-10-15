@@ -164,8 +164,6 @@
         }
       }
 
-<<<<<<< Updated upstream
-=======
       const mailto = (e) => {
         e.target.href ="mailto:"+decodeURIComponent(escape(window.atob("cmVnaXMuZnJhY2hpZXJAcmZhLWNvbnNlaWwuZnI=")));
       }
@@ -174,7 +172,6 @@
         if(link.ref) $scrollTo(link.ref);
         else if(link.path) router.push(link.path);
       }
->>>>>>> Stashed changes
       // this will register the event when the component is mounted on the DOM
       onMounted(() => {
         stickyBreakpoint = lowerBar.value.offsetTop
@@ -193,13 +190,9 @@
       return {
         lowerBar,
         sticky,
-<<<<<<< Updated upstream
-        dropdown
-=======
         dropdown,
         mailto,
         processLink
->>>>>>> Stashed changes
       };
     },
   })
