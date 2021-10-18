@@ -17,7 +17,7 @@
       </div>
       <div class="container d-flex justify-content-center">
         <div class="content align-self-center fw-bold d-md-block d-flex flex-column justify-content-center w-75">
-          <iconLogo class="w-100 m-auto mb-md-5" />
+          <iconLogo class="w-100 m-auto mb-md-5" height="160px" />
           <h2 class="text-center text-md-start text-primary">Conseil et Courtage</h2>
           <h3 class="text-center text-md-start ps-md-5 mb-4">en location et entretien de vêtements de travail et autres
             prestations</h3>
@@ -45,3 +45,75 @@ export default defineComponent({
   }
 })
 </script>
+
+<style lang="scss" scoped>
+#intro {
+  margin-top: -56px;
+  position: relative;
+  z-index: 0;
+
+  .carousel {
+    width: 90vw;
+    height: calc(95vh - 100px);
+    min-height: 600px;
+    z-index: -1;
+    position: absolute;
+    right: 0;
+    margin-right: 0;
+    margin-left: auto;
+    padding-left: 10vw;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+    overflow: hidden;
+
+    .carousel-image {
+      width: 90vw;
+      height: calc(95vh - 100px);
+      min-height: 600px;
+      object-fit: cover;
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+  }
+
+
+  h2 {
+    font-weight: 300;
+  }
+
+  h3 {
+    color: #4E4E4E;
+    font-weight: 300;
+  }
+
+  .container {
+    max-width: 90vw;
+    z-index: 1;
+
+    // TO-DO: responsive breakpoint
+    height: calc(95vh - 100px);
+    min-height: 600px;
+
+    margin-right: 0;
+    margin-left: auto;
+    padding-left: 10vw;
+
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+    background: linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 22.81%, rgba(255, 255, 255, 0.40) 98.88%);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .content {
+      margin-left: -15vw;
+      width: 65%;
+
+      .btn {
+        border-radius: 40px;
+      }
+    }
+  }
+}
+</style>

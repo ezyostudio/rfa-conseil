@@ -45,7 +45,7 @@
                 la maîtrise des conditions générales de vente de vos contrats.</p>
             </div>
             <div class="col align-self-center text-center order-0 order-md-1 mb-md-0">
-              <iconLogo class="w-50"/>
+              <iconLogo class="w-50 mb-3"/>
               <h3 class="text-primary fw-bold text-center">Vous assure un service<br>indépendant<br> en
                 toutes circonstances qui
                 représente
