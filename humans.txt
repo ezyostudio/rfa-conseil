@@ -1,5 +1,5 @@
 /* AGENCY */
-Linkedin: https://linkedin.com/ezyostudio
+Linkedin: https://www.linkedin.com/company/ezyostudio
 Github: https://github.com/ezyostudio
 /* DEVELOPPERS */
 Tristan SCHWENK: https://github.com/tristanschwenk
