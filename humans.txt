@@ -1,0 +1,13 @@
+/* AGENCY */
+Linkedin: https://linkedin.com/ezyostudio
+Github: https://github.com/ezyostudio
+/* DEVELOPPERS */
+Tristan SCHWENK: https://github.com/tristanschwenk
+Zao SOULA: https://github.com/zaosoula
+/* SITE */
+Last update: 10/18/2021
+Standards: HTML5, CSS3, Javascript
+Components: VueJs
+Software: NuxtJs
+Language: French
+Doctype: HTML5
