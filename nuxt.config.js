@@ -103,7 +103,7 @@ export default {
         title: "RFA Conseil",
         site_name: "RFA Conseil",
         description: "Conseil et Courtage en location et entretien de vêtements de travail et autres prestations",
-        img: "/images/logo.png",
+        img: "/images/banner.jpg",
         img_size: {
           width: 4210,
           height: 1320
@@ -224,7 +224,7 @@ export default {
       'AGENCY',
       {
         key: 'Linkedin',
-        value: 'https://linkedin.com/ezyostudio',
+        value: 'https://www.linkedin.com/company/ezyostudio',
       },{
         key: 'Github',
         value: 'https://github.com/ezyostudio',
