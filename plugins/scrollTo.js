@@ -4,12 +4,16 @@ export default (_, inject) => {
     if (target._isVue) target = target.$el;
     if (target && 'scrollIntoView' in target) {
       let _options = {
-        behavior: 'smooth'
+        behavior: 'smooth',
+        block: 'center',
+        inline: 'nearest',
+
       }
 
       if (target.offsetHeight < window.innerHeight) {
+        console.log('center')
         if(options) {
-          _options = {
+          _options = { 
             behavior: 'smooth',
             block: 'center',
             inline: 'nearest',

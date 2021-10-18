@@ -109,7 +109,7 @@
 
               <rfa-prestation-list title="ARMOIRES VESTIAIRES" class="mb-5" color="#727676"
                 :data="prestations.armoires" />
-              <rfa-prestation-list title="LINGES PLATS" class="mb-5" color="#32AFDA" :data="prestations.linges" />
+              <rfa-prestation-list title="LINGE PLAT" class="mb-5" color="#32AFDA" :data="prestations.linges" />
               <rfa-prestation-list title="EQUIPEMENTS SANITAIRES" class="mb-5" color="#94D0E6"
                 :data="prestations.sanitaires" />
               <rfa-prestation-list title="TAPIS ANTISALISSURES" class="mb-5" color="#44607D"

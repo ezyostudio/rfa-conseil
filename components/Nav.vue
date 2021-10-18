@@ -37,7 +37,7 @@
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                     <li v-for="child in link.children" :key="child.label">
-                      <a class="dropdown-item text-end text-md-start" @click="$scrollTo(child.ref, false)">
+                      <a class="dropdown-item text-end text-md-start" @click="localScrollTo(child, false)">
                         {{child.label}}
                       </a>
                     </li>
@@ -165,9 +165,18 @@
       }
 
       const processLink = (link) => {
+        console.log("now")
         if(link.ref) $scrollTo(link.ref);
         else if(link.path) router.push(link.path);
       }
+
+      const localScrollTo = (item, bool) => {
+        item.ref().$el.click()
+        setTimeout(() => {  $scrollTo(item.ref, bool) }, 300);
+        
+        
+      }
+
       // this will register the event when the component is mounted on the DOM
       onMounted(() => {
         stickyBreakpoint = lowerBar.value.offsetTop
@@ -188,7 +197,8 @@
         sticky,
         dropdown,
         mailto,
-        processLink
+        processLink,
+        localScrollTo
       };
     },
   })
