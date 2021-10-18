@@ -277,4 +277,8 @@ export default {
       },
     ],
   },
+  sitemap: {
+    hostname: "https://rfa-conseil.fr",
+    gzip: true
+  }
 }
