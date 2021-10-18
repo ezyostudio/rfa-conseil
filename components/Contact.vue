@@ -8,12 +8,12 @@
 
         <div class="d-flex align-items-center ">
           <icon-mail width="30" height="30" />
-          <h6 class="mb-0"> regis.frachier@rfa-conseil.fr</h6>
+          <h6 class="mb-0 one-line"> regis.frachier@rfa-conseil.fr</h6>
         </div>
 
         <div class="d-flex align-items-center">
           <icon-tel width="30" height="30" />
-          <h6 class="mb-0"> 09 51 74 07 79 </h6>
+          <h6 class="mb-0 one-line"> 09 51 74 07 79 </h6>
         </div>
     </div>
     <div class="card-body pt-0 d-flex justify-content-center align-items-center">
@@ -84,6 +84,13 @@
 .one-line {
   @media screen and (min-width: 992px) and (max-width: 1200px) { 
       font-size: .8rem;
+   }
+
+   @media screen and (max-width: 576px) { 
+      font-size: .8rem;
+   }
+    @media screen and (max-width: 370px) { 
+      font-size: .6rem;
    }
 
 }
