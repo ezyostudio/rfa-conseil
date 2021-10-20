@@ -204,15 +204,22 @@
         const old = this.$refs.accordion.querySelector(".collapse.show");
         const target = e.target;
         const title = target.previousElementSibling;
+        let options = {
+          top: 0,
+          left: 0,
+          behavior: 'smooth' 
+        }
         if (old) {
           const oldTitle = old.previousElementSibling
           const oldIndex = parseInt(oldTitle.innerText.slice(1,2))
           const targetIndex = parseInt(title.innerText.slice(1,2))
           if(oldIndex<targetIndex) {
-            window.scrollTo(0, title.getBoundingClientRect().top+ window.pageYOffset - (old.getBoundingClientRect().height+ oldTitle.getBoundingClientRect().height) - 120)
+            options.top = title.getBoundingClientRect().top+ window.pageYOffset - (old.getBoundingClientRect().height+ oldTitle.getBoundingClientRect().height) - 120
           }else {
-            window.scrollTo(0, title.getBoundingClientRect().top+ window.pageYOffset - 120)
+            options.top = title.getBoundingClientRect().top+ window.pageYOffset - 120
           }
+          if (oldIndex === 1) options.behavior='instant'
+          window.scrollTo(options)
           old.classList.remove('show');
           title.setAttribute('aria-expanded', "false");
         }
