@@ -5,9 +5,6 @@ export default (_, inject) => {
     if (target && 'scrollIntoView' in target) {
       let _options = {
         behavior: 'smooth',
-        block: 'center',
-        inline: 'nearest',
-
       }
 
       if (target.offsetHeight < window.innerHeight) {

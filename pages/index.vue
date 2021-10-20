@@ -45,7 +45,7 @@
                 la maîtrise des conditions générales de vente de vos contrats.</p>
             </div>
             <div class="col align-self-center text-center order-0 order-md-1 mb-md-0">
-              <iconLogo class="w-50 mb-3"/>
+              <iconLogo class="w-50 mb-3" />
               <h3 class="text-primary fw-bold text-center">Vous assure un service<br>indépendant<br> en
                 toutes circonstances qui
                 représente
@@ -80,7 +80,7 @@
     </section>
 
     <section class="container-fluid bg-primary mb-5" id="prestations" ref="prestationSection">
-      <div class="container card px-4 py-5">
+      <div class="container card px-4 py-5 position-static">
         <div class="card-body">
           <h3 class="text-center mb-3">Les prestations de <br>RFA CONSEIL</h3>
 
@@ -91,7 +91,7 @@
               déclinée en trois volets: </h6>
           </div>
 
-          <div class="accordion" id="accordionPrestation">
+          <div class="accordion" ref="accordion">
 
             <rfa-title type="title" ref="evaltechStep" class="mb-3" data-bs-toggle="collapse" href="#collapsible_one"
               role="button" aria-expanded="false" aria-controls="collapsible_one">
@@ -106,7 +106,6 @@
               <rfa-prestation-list title="VETEMENTS DE TRAVAIL" subtitle="Standard" class="mb-5" color="#105391"
                 :data="prestations.standard" />
               <rfa-prestation-list subtitle="EPI" class="mb-5" color="#105391" :data="prestations.epi" />
-
               <rfa-prestation-list title="ARMOIRES VESTIAIRES" class="mb-5" color="#727676"
                 :data="prestations.armoires" />
               <rfa-prestation-list title="LINGE PLAT" class="mb-5" color="#32AFDA" :data="prestations.linges" />
@@ -154,7 +153,8 @@
             <div id="collapsible_three" class="collapse" data-bs-parent="#accordionPrestation">
               <p>Profitez d'une analyse compléte de vos contrats actuels et d'une revalorisation des conditions
                 générales de vente de vos futurs contrats de location et d'entretien.</p>
-              <p class="mb-4 text-primary fw-bold">RFA CONSEIL assure le respect de vos intéréts par le biais d'un audit axé sur l'étude et
+              <p class="mb-4 text-primary fw-bold">RFA CONSEIL assure le respect de vos intéréts par le biais d'un audit
+                axé sur l'étude et
                 le
                 contrôle des clauses de vos contrats.</p>
 
@@ -170,11 +170,11 @@
           </div>
         </div>
       </div>
-  </section>
+    </section>
 
-  <section class="container-fluid bg-primary mb-5" id="contact" ref="contactSection">
-    <Contact />
-  </section>
+    <section class="container-fluid bg-primary mb-5" id="contact" ref="contactSection">
+      <Contact />
+    </section>
 
     <rfa-footer />
   </div>
@@ -191,11 +191,35 @@
         prestations
       };
     },
-    methods: {},
     mounted() {
       window.nuxtInstance = this;
       console.log(this);
-    }
+      this.$refs.accordion.addEventListener('show.bs.collapse', this.handleScroll)
+    },
+    beforeDestroy() {
+      this.$refs.accordion.removeEventListener('show.bs.collapse', this.handleScroll)
+    },
+    methods: {
+      handleScroll(e) {
+        const old = this.$refs.accordion.querySelector(".collapse.show");
+        const target = e.target;
+        const title = target.previousElementSibling;
+        if (old) {
+          const oldTitle = old.previousElementSibling
+          const oldIndex = parseInt(oldTitle.innerText.slice(1,2))
+          const targetIndex = parseInt(title.innerText.slice(1,2))
+          if(oldIndex<targetIndex) {
+            window.scrollTo(0, title.getBoundingClientRect().top+ window.pageYOffset - (old.getBoundingClientRect().height+ oldTitle.getBoundingClientRect().height) - 120)
+          }else {
+            window.scrollTo(0, title.getBoundingClientRect().top+ window.pageYOffset - 120)
+          }
+          old.classList.remove('show');
+          title.setAttribute('aria-expanded', "false");
+        }
+
+
+      },
+    },
   }
 
 </script>

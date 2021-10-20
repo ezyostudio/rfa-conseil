@@ -17,8 +17,8 @@
       </div>
     </nav>
 
-    <nav ref="lowerBar" id="lowerBar" class="navbar navbar-expand-md navbar-light d-flex align-items-start" :class="{'fixed-top': sticky}"
-      style="z-index: 10">
+    <nav ref="lowerBar" id="lowerBar" class="navbar navbar-expand-md navbar-light d-flex align-items-start"
+      :class="{'fixed-top': sticky}" style="z-index: 10">
       <a class="d-block navbar-brand position-absolute px-5 py-0" href="#">
         <img class="py-1" src="/images/logo_blanc.png" alt="Logo RFA Conseil">
       </a>
@@ -31,13 +31,13 @@
             <template v-for="link in links">
               <template v-if="link.children && link.children.length>0">
                 <li ref="dropdown" class="nav-item dropdown" :key="link.label">
-                  <a class="nav-link text-dark dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
+                  <a class="nav-link text-dark dropdown-toggle" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
                     {{link.label}}
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                     <li v-for="child in link.children" :key="child.label">
-                      <a class="dropdown-item text-end text-md-start" @click="localScrollTo(child, false)">
+                      <a class="dropdown-item text-end text-md-start" @click="localScrollTo(child, {block: 'start'})">
                         {{child.label}}
                       </a>
                     </li>
@@ -103,7 +103,7 @@
 
     .navbar-nav {
       .dropdown-menu {
-        background-color: rgba($color: #000000, $alpha: 0) ;
+        background-color: rgba($color: #000000, $alpha: 0);
         padding: 0;
         border: none;
         max-height: 0;
@@ -145,7 +145,9 @@
     },
     setup() {
       const router = useRouter();
-      const {$scrollTo} = useContext();
+      const {
+        $scrollTo
+      } = useContext();
       const lowerBar = ref(null);
       const dropdown = ref(null);
 
@@ -161,20 +163,23 @@
       }
 
       const mailto = (e) => {
-        e.target.href ="mailto:"+decodeURIComponent(escape(window.atob("cmVnaXMuZnJhY2hpZXJAcmZhLWNvbnNlaWwuZnI=")));
+        e.target.href = "mailto:" + decodeURIComponent(escape(window.atob(
+          "cmVnaXMuZnJhY2hpZXJAcmZhLWNvbnNlaWwuZnI=")));
       }
 
       const processLink = (link) => {
         console.log("now")
-        if(link.ref) $scrollTo(link.ref);
-        else if(link.path) router.push(link.path);
+        if (link.ref) $scrollTo(link.ref);
+        else if (link.path) router.push(link.path);
       }
 
       const localScrollTo = (item, bool) => {
         item.ref().$el.click()
-        setTimeout(() => {  $scrollTo(item.ref, bool) }, 300);
         
-        
+        setTimeout(() => { window.scrollTo({
+          top: item.ref().$el.getBoundingClientRect().top + window.pageYOffset - 65,
+        });  }, 400);
+
       }
 
       // this will register the event when the component is mounted on the DOM
