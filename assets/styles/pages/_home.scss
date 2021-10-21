@@ -65,19 +65,23 @@ h3 .feather-chevron-right {
   transition: transform .3s;
 }
 
-#collapsible_two {
-  .img-sizer {
-    max-height: 300px;
-    max-width: 300px;
-    overflow: hidden;
-    border-radius: 2em;
-    padding: 0;
+.img-sizer {
+  max-height: 300px;
+  max-width: 400px;
+  overflow: hidden;
+  border-radius: 1em;
+  padding: 0;
+  position: relative;
+  
 
-    img {
-      border-radius: 0;
-    }
+  img {
+    border-radius: 0;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    object-position: top center;
   }
 }
+
 
 [data-bs-toggle="collapse"] {
   &[aria-expanded="true"] {

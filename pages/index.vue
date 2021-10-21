@@ -12,7 +12,7 @@
           label: 'AUDIT TECHNIQUE DES PRESTATIONS',
           ref: () => $refs.evaltechStep,
         },{
-          label: 'NÉGOCIATION TARIFAIRES',
+          label: 'NÉGOCIATION TARIFAIRE',
           ref: () => $refs.negotarifStep,
         },{
           label: 'AUDIT DES CLAUSES CONTRACTUELLES',
@@ -34,7 +34,7 @@
           <div class="row">
             <div class="col-12 col-md-7 order-1 order-md-0">
               <p class="text-justify">RFA CONSEIL propose un service exclusif de conseil et de courtage en
-                location et en entretien de vêtements de travail, et autres prestations.<br><br>
+                location et en entretien de vêtements de travail et autres prestations.<br><br>
                 Née en 2015 de la volonté de son dirigeant de mettre à profit une expertise de plus de 25 ans dans ce
                 domaine d’activités, RFA CONSEIL s’adresse à tous types d’entreprises dans l’industrie, l’hôtellerie, la
                 restauration et les établissements de santé.</p>
@@ -56,7 +56,7 @@
           <div class="row">
             <rfa-title type="title" class="mb-3">L’objectif de RFA CONSEIL est d’assurer à tous ses clients</rfa-title>
             <ul class="ms-2">
-              <li>L’optimisation des besoin avec l’élaboration d’un nouveau cahier des charges</li>
+              <li>L’optimisation des besoins avec l’élaboration d’un nouveau cahier des charges</li>
               <li>La garantie d’une réduction des coûts</li>
               <li>L’optimisation des conditions contractuelles</li>
             </ul>
@@ -70,7 +70,7 @@
             </rfa-title>
             <p class="text">La rémunération perçue par RFA CONSEIL est conditionnée aux économies générées par son
               intervention.</p>
-            <p class="text">Un principe simple qui vous protège et nous engage:</p>
+            <p class="text">Un principe simple qui vous protège et nous engage :</p>
             <p class="text-primary fw-bold">Si RFA CONSEIL ne vous permet pas de dégager d’économies, vous n’avez pas
               d’honoraire
               à verser !</p>
@@ -82,13 +82,13 @@
     <section class="container-fluid bg-primary mb-5" id="prestations" ref="prestationSection">
       <div class="container card px-4 py-5 position-static">
         <div class="card-body">
-          <h3 class="text-center mb-3">Les prestations de <br>RFA CONSEIL</h3>
+          <h3 class="text-center mb-3">Les prestations de RFA CONSEIL</h3>
 
           <div class="row mb-4">
             <p>RFA CONSEIL détient une connaissance incontestable du marché des blanchisseurs et loueurs de linge, et
               permet à votre entreprise de bénéficier de cette expertise de plus de 25 ans.</p>
             <h6>Pour apporter une réponse exhaustive aux besoins de chaque client, RFA CONSEIL propose une prestation
-              déclinée en trois volets: </h6>
+              déclinée en trois volets : </h6>
           </div>
 
           <div class="accordion" ref="accordion">
@@ -103,13 +103,13 @@
                 et
                 vos contraintes.</p>
 
-              <rfa-prestation-list title="VETEMENTS DE TRAVAIL" subtitle="Standard" class="mb-5" color="#105391"
+              <rfa-prestation-list title="VÊTEMENTS DE TRAVAIL" subtitle="Standard" class="mb-5" color="#105391"
                 :data="prestations.standard" />
               <rfa-prestation-list subtitle="EPI" class="mb-5" color="#105391" :data="prestations.epi" />
               <rfa-prestation-list title="ARMOIRES VESTIAIRES" class="mb-5" color="#727676"
                 :data="prestations.armoires" />
               <rfa-prestation-list title="LINGE PLAT" class="mb-5" color="#32AFDA" :data="prestations.linges" />
-              <rfa-prestation-list title="EQUIPEMENTS SANITAIRES" class="mb-5" color="#94D0E6"
+              <rfa-prestation-list title="ÉQUIPEMENTS SANITAIRES" class="mb-5" color="#94D0E6"
                 :data="prestations.sanitaires" />
               <rfa-prestation-list title="TAPIS ANTISALISSURES" class="mb-5" color="#44607D"
                 :data="prestations.tapis" />
@@ -125,19 +125,19 @@
 
             <rfa-title type="title" ref="negotarifStep" class="mb-3" data-bs-toggle="collapse" href="#collapsible_two"
               role="button" aria-expanded="false" aria-controls="collapsible_two">
-              <icon-chevron-right /> 2. NÉGOCIATION TARIFAIRES </rfa-title>
+              <icon-chevron-right /> 2. NÉGOCIATION TARIFAIRE </rfa-title>
 
             <div id="collapsible_two" class="collapse" data-bs-parent="#accordionPrestation">
-              <h5 class="text-primary fw-bold mb-3">Disposez de solutions tarifaires innovantantes par :</h5>
+              <h5 class="text-primary fw-bold mb-3">Disposez de solutions tarifaires innovantes par :</h5>
               <ul>
                 <li class="mb-3">Soit la renégociation du contrat existant avec votre prestataire,</li>
                 <li>Soit la mise en concurrence de celui-ci en conformité avec le cahier des charges établi
                   ensemble en fonction de vos nouveaux besoins.</li>
               </ul>
 
-              <div class="row d-flex justify-content-center mt-5 mb-3 gx-5">
-                <div class="col-md-4 img-sizer me-5 mb-3">
-                  <nuxt-img src="/images/prestations/nego/tableau.jpg" alt="tableau" class="img-fluid" />
+              <div class="row d-flex justify-content-center align-items-center mt-5 mb-3 gx-5">
+                <div class="col-md-4 img-sizer me-md-5 mb-3">
+                  <nuxt-img src="/images/prestations/nego/rfa-1.jpg" alt="tableau" class="img-fluid" />
                 </div>
                 <div class="col-md-4 img-sizer mb-3">
                   <nuxt-img src="/images/prestations/nego/presentation.jpg" alt="presentation" class="img-fluid" />
