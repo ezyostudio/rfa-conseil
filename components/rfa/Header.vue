@@ -21,7 +21,7 @@
           <h2 class="text-center text-md-start text-primary">Conseil et Courtage</h2>
           <h3 class="text-center text-md-start ps-md-5 mb-4">en location et entretien de vêtements de travail et autres
             prestations</h3>
-          <icon-dots class="mb-4 w-100" />
+          <icon-dots class="dots mb-4 w-100" />
           <button class="btn btn-lg fs-6 fs-md-3 fw-bold btn-primary" @click="$scrollTo(ctaTarget)">{{ctaText}}
             <icon-arrow-down />
           </button>
@@ -114,6 +114,10 @@ export default defineComponent({
         border-radius: 40px;
       }
     }
+  }
+
+  .dots {
+    max-width: 252px;
   }
 }
 </style>

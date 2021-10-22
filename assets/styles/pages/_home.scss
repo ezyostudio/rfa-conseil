@@ -28,7 +28,7 @@ section .container.card {
 }
 
 #expertise {
-  margin-top: .5em;
+  margin-top: -2em;
   @media screen and (min-width: 768px) {
     margin-top: -5em;  
   }
@@ -50,6 +50,7 @@ section .container.card {
   .card-small {
     border-radius: 20px;
     border: none;
+    height: 100%;
 
     img {
       width: 100%;
