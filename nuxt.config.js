@@ -37,26 +37,16 @@ export default {
         rel: 'icon',
         type: 'image/x-icon',
         href: '/logo.ico'
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://s.pageclip.co/v1/pageclip.css',
-        media: 'screen'
       }
     ],
     script: [{
       src: "https://polyfill.io/v3/polyfill.min.js?features=smoothscroll",
       body: true,
-    }, {
-      src: "https://s.pageclip.co/v1/pageclip.js",
-      body: true,
-    }, ]
+    }]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    // '@/assets/styles/normalize.css',
-    // '@/assets/styles/skeleton.css',
     '@/assets/styles/main.scss',
   ],
 
@@ -86,7 +76,9 @@ export default {
   buildModules: [
     '@nuxtjs/composition-api/module',
     '@nuxt/image',
-    '@luxdamore/nuxt-humans-txt'
+    'nuxt-purgecss',
+    '@nuxtjs/google-gtag',
+    '@luxdamore/nuxt-humans-txt',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -129,9 +121,7 @@ export default {
     loaders: {
       scss: dartSass
     },
-    extractCSS: {
-      allChunks: true
-    }
+    extractCSS: true
   },
 
   'rfg-icon': {
@@ -277,8 +267,26 @@ export default {
       },
     ],
   },
+
   sitemap: {
     hostname: "https://rfa-conseil.fr",
     gzip: true
+  },
+
+  'google-gtag': {
+    id: 'G-51MGQB2MGB',
+    config: {
+      anonymize_ip: true, // anonymize IP 
+    },
+  },
+
+  purgeCSS: {
+    mode: 'webpack',
+    paths: [
+      'components/**/*.vue',
+      'layouts/**/*.vue',
+      'pages/**/*.vue',
+      'plugins/**/*.js',
+    ],
   }
 }
