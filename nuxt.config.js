@@ -122,7 +122,30 @@ export default {
     loaders: {
       scss: dartSass
     },
-    extractCSS: true
+    babel: {
+      presets({ isServer }, [preset, options]) {
+
+        if(isServer) return;
+        const targets = {
+            chrome: '80',
+            edge: '18',
+            firefox: '70',
+            ios: '14',
+            safari: '12',
+        };
+
+        return [
+            [
+                require.resolve('@nuxt/babel-preset-app'),
+                {
+                    targets,
+                    corejs: 3,
+                    debug: process.env.NODE_ENV === 'production',
+                },
+            ],
+        ];
+      },
+    }
   },
 
   'rfg-icon': {
