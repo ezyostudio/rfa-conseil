@@ -4,7 +4,7 @@
         data-bs-interval="3000" data-bs-pause="false" data-bs-touch="false">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <nuxt-img src="/images/header/cintres.jpg" alt="cintres" class="carousel-image" loading="lazy" />
+            <nuxt-img src="/images/header/cintres.jpg" alt="cintres" class="carousel-image"/>
           </div>
           <div class="carousel-item">
             <nuxt-img src="/images/prestations/linges/hotel.jpg" alt="coussin" class="carousel-image" loading="lazy" />
