@@ -3,7 +3,7 @@
      <div class="text-primary d-flex flex-column flex-lg-row justify-content-around align-items-center w-100 m-auto mb-3 mb-md-4 gap-1">
        <div class="d-flex align-items-center m-auto m-lg-0">
           <icon-home width="30" height="30" />
-          <h6 class="mb-0 ms-1 one-line">11 Rue des Métiers, 77181 COURTY </h6>
+          <h6 class="mb-0 ms-1 one-line">11 Rue des Métiers, 77181 COURTRY </h6>
         </div>
 
          <div class="d-flex align-items-center">
@@ -83,14 +83,14 @@
 
 <style lang="scss">
 .one-line {
-  @media screen and (min-width: 992px) and (max-width: 1200px) { 
+  @media screen and (min-width: 992px) and (max-width: 1200px) {
       font-size: .8rem;
    }
 
-   @media screen and (max-width: 576px) { 
+   @media screen and (max-width: 576px) {
       font-size: .8rem;
    }
-    @media screen and (max-width: 370px) { 
+    @media screen and (max-width: 370px) {
       font-size: .6rem;
    }
 
