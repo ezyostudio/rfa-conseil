@@ -13,7 +13,7 @@
 
         <div class="d-flex align-items-center ">
           <icon-mail width="30" height="30" />
-          <h6 class="mb-0 ms-1 one-line"> regis.frachier@rfa-conseil.fr</h6>
+          <h6 class="mb-0 ms-1 one-line"> regis.frachier@<span class="d-none">email.</span>rfa-conseil.fr</h6>
         </div>
 
     </div>
