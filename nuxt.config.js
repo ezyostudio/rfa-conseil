@@ -15,7 +15,12 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'RFA Conseil',
+    title: 'RFA Conseil — Conseil et courtage en location et entretien de vêtements de travail',
+    titleTemplate: '%s — RFA Conseil',
+    titleTemplate: titleChunk => titleChunk
+      ? `${titleChunk} - RFA Conseil`
+      : 'RFA Conseil — Conseil et courtage en location et entretien de vêtements de travail'
+    ,
     htmlAttrs: {
       lang: 'en'
     },
@@ -29,7 +34,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: ''
+        content: 'Service exclusif de conseil et de courtage en location et en entretien de vêtements de travail et autres prestations.'
       },
       // { name: 'format-detection', content: 'telephone=no' }
     ],
@@ -93,22 +98,19 @@ export default {
       "nuxt-social-meta",
       {
         url: "https://rfa-conseil.fr",
-        title: "RFA Conseil",
-        site_name: "RFA Conseil",
-        description: "Conseil et Courtage en location et entretien de vêtements de travail et autres prestations",
-        img: "/images/banner.jpg",
+        title: 'RFA Conseil — Conseil et courtage en location et entretien de vêtements de travail',
+        site_name: 'RFA Conseil — Conseil et courtage en location et entretien de vêtements de travail',
+        description: "Service exclusif de conseil et de courtage en location et en entretien de vêtements de travail et autres prestations.",
+        img: "https://rfa-conseil.fr/images/banner.jpg",
         img_size: {
           width: 4210,
           height: 1320
         },
         locale: "fr_FR",
-        // twitter: "@user",
-        // twitter_card: "summary_large_image",
         theme_color: "##105391",
       },
     ],
     '@nuxtjs/sitemap',
-
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -300,7 +302,7 @@ export default {
   'google-gtag': {
     id: 'G-51MGQB2MGB',
     config: {
-      anonymize_ip: true, // anonymize IP 
+      anonymize_ip: true, // anonymize IP
     },
   },
 

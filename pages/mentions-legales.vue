@@ -593,10 +593,18 @@
 
 
 <script>
-import { defineComponent, ref } from '@nuxtjs/composition-api'
+import {
+  defineComponent,
+  useMeta,
+  ref
+} from '@nuxtjs/composition-api'
 
 export default defineComponent({
+  head: {},
   setup() {
+
+    useMeta({ title: 'Mentions légales' })
+
 
     const legals = ref(null);
 
