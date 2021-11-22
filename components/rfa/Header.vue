@@ -22,7 +22,11 @@
           <h3 class="text-center text-md-start ps-md-5 mb-4">en location et entretien de vêtements de travail et autres
             prestations</h3>
           <icon-dots class="dots mb-4 w-100" />
-          <button class="btn btn-lg fs-6 fs-md-3 fw-bold btn-primary" @click="$scrollTo(ctaTarget)">{{ctaText}}
+          <nuxt-link v-if="backUrl" tag="button" class="btn btn-lg fs-6 fs-md-3 fw-bold btn-primary me-3" :to="backUrl">
+            <icon-arrow-back />
+            {{backText}}
+          </nuxt-link>
+          <button :class="`btn btn-lg fs-6 fs-md-3 fw-bold ${backUrl ? 'btn-outline-primary' : 'btn-primary'}`" @click="$scrollTo(ctaTarget)">{{ctaText}}
             <icon-arrow-down />
           </button>
         </div>
@@ -35,13 +39,17 @@ import { defineComponent } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   setup() {
-   
+
   },
   props: {
     ctaText: {
       default: 'En savoir plus'
     },
-    ctaTarget: {}
+    ctaTarget: {},
+    backText: {
+      default: 'Retour'
+    },
+    backUrl: {}
   }
 })
 </script>

@@ -9,7 +9,7 @@
     ]" />
 
     <!-- Header-->
-    <rfa-header ctaText="Mentions légales" :ctaTarget="() => $refs.legals"/>
+    <rfa-header backText="Retour à l'accueil" backUrl="/" ctaText="Mentions légales" :ctaTarget="() => $refs.legals"/>
 
     <section class="container-fluid bg-primary mb-5" ref="legals">
       <div class="container card p-3 p-md-5">
