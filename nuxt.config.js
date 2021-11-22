@@ -15,8 +15,6 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'RFA Conseil — Conseil et courtage en location et entretien de vêtements de travail',
-    titleTemplate: '%s — RFA Conseil',
     titleTemplate: titleChunk => titleChunk
       ? `${titleChunk} - RFA Conseil`
       : 'RFA Conseil — Conseil et courtage en location et entretien de vêtements de travail'
