@@ -2,14 +2,14 @@
   <div class="card card-small" :style="{'background-color': color}" :class="{contains: prestation.contains, noTitle: prestation.title == null}">
     <div class="card-body">
       <div v-lazy-container="{ selector: 'nuxt-img' }">
-        <nuxt-img 
-          :src="prestation.image" 
-          :alt="prestation.alt" 
+        <nuxt-img
+          :src="prestation.image"
+          :alt="prestation.alt"
           width="640px"
           loading="lazy"
         />
       </div>
-      <h5 class="text-light text-center">{{prestation.title}}</h5>
+      <h6 class="h5 text-light text-center">{{prestation.title}}</h6>
     </div>
   </div>
 </template>
