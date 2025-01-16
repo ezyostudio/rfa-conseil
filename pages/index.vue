@@ -12,6 +12,9 @@
           label: 'AUDIT TECHNIQUE DES PRESTATIONS',
           ref: () => $refs.evaltechStep,
         },{
+          label: 'NÉGOCIATION TARIFAIRE',
+          ref: () => $refs.negotarifStep,
+        },{
           label: 'AUDIT DES CLAUSES CONTRACTUELLES',
           ref: () => $refs.auditStep,
         },{
@@ -58,12 +61,12 @@
     </section>
 
     <section class="container-fluid bg-primary mb-5" id="prestations" ref="prestationSection">
-      <div class="container card px-4 py-5">
+      <div class="container card px-4 py-5 position-static">
         <div class="card-body">
           <p class=" mb-3"><b>Une prestation déclinée en trois volets pour répondre aux besoins de chaque client :
           </b></p>
 
-          <div class="accordion" id="accordionPrestation">
+          <div class="accordion" ref="accordion">
 
             <rfa-title type="title" ref="evaltechStep" class="mb-3" data-bs-toggle="collapse" href="#collapsible_one"
               role="button" aria-expanded="false" aria-controls="collapsible_one">
@@ -86,14 +89,13 @@
                 </li>
               </ul>
 
-              <rfa-prestation-list title="VETEMENTS DE TRAVAIL" subtitle="Standard" class="mb-5" color="#105391"
+              <rfa-prestation-list title="VÊTEMENTS DE TRAVAIL" subtitle="Standard" class="mb-5" color="#105391"
                 :data="prestations.standard" />
               <rfa-prestation-list subtitle="EPI" class="mb-5" color="#105391" :data="prestations.epi" />
-
               <rfa-prestation-list title="ARMOIRES VESTIAIRES" class="mb-5" color="#727676"
                 :data="prestations.armoires" />
-              <rfa-prestation-list title="LINGES PLATS" class="mb-5" color="#32AFDA" :data="prestations.linges" />
-              <rfa-prestation-list title="EQUIPEMENTS SANITAIRES" class="mb-5" color="#94D0E6"
+              <rfa-prestation-list title="LINGE PLAT" class="mb-5" color="#32AFDA" :data="prestations.linges" />
+              <rfa-prestation-list title="ÉQUIPEMENTS SANITAIRES" class="mb-5" color="#94D0E6"
                 :data="prestations.sanitaires" />
               <rfa-prestation-list title="TAPIS ANTISALISSURES" class="mb-5" color="#44607D"
                 :data="prestations.tapis" />
@@ -146,9 +148,9 @@
                 <li>Soit par la mise en concurrence de celui-ci.</li>
               </ul>
 
-              <div class="row d-flex justify-content-center mt-5 mb-3 gx-5">
-                <div class="col-md-4 img-sizer me-5 mb-3">
-                  <nuxt-img src="/images/prestations/nego/tableau.jpg" alt="tableau" class="img-fluid" />
+              <div class="row d-flex justify-content-center align-items-center mt-5 mb-3 gx-5">
+                <div class="col-md-4 img-sizer me-md-5 mb-3">
+                  <nuxt-img src="/images/prestations/nego/rfa-1.jpg" alt="tableau" class="img-fluid" />
                 </div>
                 <div class="col-md-4 img-sizer mb-3">
                   <nuxt-img src="/images/prestations/nego/presentation.jpg" alt="presentation" class="img-fluid" />
@@ -160,11 +162,11 @@
           </div>
         </div>
       </div>
-  </section>
+    </section>
 
-  <section class="container-fluid bg-primary mb-5" id="contact" ref="contactSection">
-    <Contact />
-  </section>
+    <section class="container-fluid bg-primary mb-5" id="contact" ref="contactSection">
+      <Contact />
+    </section>
 
     <rfa-footer />
   </div>
@@ -181,7 +183,6 @@
         prestations
       };
     },
-    methods: {},
     mounted() {
       window.nuxtInstance = this;
       console.log(this);

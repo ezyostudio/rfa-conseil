@@ -7,9 +7,9 @@
     </div>
 
     <div v-if="type=='subtitle'" :style="{ backgroundColor:color}" class="box subtitle card-title">
-      <h5 class="text-light" v-bind="$props">
+      <component :is="tag" class="h5 text-light" v-bind="$props">
         <slot>{{text}}</slot>
-      </h5>
+      </component>
     </div>
   </div>
 
@@ -26,31 +26,39 @@
   }
 
   .title {
-    background-color: #00AEEF; 
-    
+    background-color: #00AEEF;
+
     h3 {
       margin: 0;
       font-size: 20px;
     }
   }
 
-  
+
 
   .subtitle {
     background-color: #FFF;
     padding: .10em .8em;
 
-    h5 {
+    .h5 {
       margin-bottom: 0;
     }
   }
 
-  
+
 
 </style>
 
 <script>
   export default {
     props: ['text', 'type', 'color'],
+    props: {
+      text: {},
+      type: {},
+      color: {},
+      tag: {
+        default: 'h4'
+      }
+    },
   }
 </script>

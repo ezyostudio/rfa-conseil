@@ -1,15 +1,3 @@
 <template>
-  <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0)">
-      <path
-        d="M19.9946 10.2681L20.9919 11.3621C21.4142 11.8254 21.4142 12.5744 20.9919 13.0327L12.2636 22.6128C11.8413 23.076 11.1585 23.076 10.7407 22.6128L2.00791 13.0327C1.58564 12.5695 1.58564 11.8205 2.00791 11.3621L3.00517 10.2681C3.43193 9.79997 4.12822 9.80983 4.546 10.2878L9.70303 16.2261V2.063C9.70303 1.40758 10.1837 0.88028 10.7812 0.88028H12.2187C12.8161 0.88028 13.2968 1.40758 13.2968 2.063V16.2261L18.4538 10.2878C18.8716 9.8049 19.5679 9.79504 19.9946 10.2681Z"
-        fill="white" />
-    </g>
-    <defs>
-      <clipPath id="clip0">
-        <rect width="22.0775" height="23" fill="white" transform="translate(23 0.88028) rotate(90)" />
-      </clipPath>
-    </defs>
-  </svg>
-
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </template>

@@ -1,10 +1,10 @@
 <template>
       <header id="intro" class="container-fluid bg-primary p-0">
       <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel"
-        data-bs-interval="5000" data-bs-pause="false" data-bs-touch="false">
+        data-bs-interval="3000" data-bs-pause="false" data-bs-touch="false">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <nuxt-img src="/images/header/cintres.jpg" alt="cintres" class="carousel-image" loading="lazy" />
+            <nuxt-img src="/images/header/cintres.jpg" alt="cintres" class="carousel-image"/>
           </div>
           <div class="carousel-item">
             <nuxt-img src="/images/prestations/linges/hotel.jpg" alt="coussin" class="carousel-image" loading="lazy" />
@@ -44,7 +44,11 @@ export default defineComponent({
     ctaText: {
       default: 'En savoir plus'
     },
-    ctaTarget: {}
+    ctaTarget: {},
+    backText: {
+      default: 'Retour'
+    },
+    backUrl: {}
   }
 })
 </script>
@@ -117,6 +121,10 @@ export default defineComponent({
         border-radius: 40px;
       }
     }
+  }
+
+  .dots {
+    max-width: 252px;
   }
 }
 </style>
