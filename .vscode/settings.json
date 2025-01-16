@@ -1,26 +1,11 @@
 {
   "beautify.language": {
-
     "js": {
-      "type": [
-        "javascript",
-        "json",
-        "jsonc"
-      ],
-      "filename": [
-        ".jshintrc",
-        ".jsbeautifyrc"
-      ]
+      "type": ["javascript", "json", "jsonc"],
+      "filename": [".jshintrc", ".jsbeautifyrc"]
     },
-    "css": [
-      "css",
-      "less",
-      "scss"
-    ],
-    "html": [
-      "htm",
-      "html",
-      "vue"
-    ]
-  }
+    "css": ["css", "less", "scss"],
+    "html": ["htm", "html", "vue"]
+  },
+  "editor.formatOnSave": false
 }
