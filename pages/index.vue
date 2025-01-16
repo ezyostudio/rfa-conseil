@@ -12,9 +12,6 @@
           label: 'AUDIT TECHNIQUE DES PRESTATIONS',
           ref: () => $refs.evaltechStep,
         },{
-          label: 'NÉGOCIATION TARIFAIRE',
-          ref: () => $refs.negotarifStep,
-        },{
           label: 'AUDIT DES CLAUSES CONTRACTUELLES',
           ref: () => $refs.auditStep,
         },{
