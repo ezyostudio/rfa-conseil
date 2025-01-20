@@ -41,18 +41,18 @@
           <div v-if="picker=='mail'">
             <div>
               <div class="form-floating mb-3">
-                <input v-model="companyName" type="text" class="form-control" id="companyName" name="name" placeholder=" " required>
+                <input type="text" class="form-control" id="companyName" name="name" placeholder=" " required>
                 <label for="companyName">Nom de l'entreprise</label>
               </div>
               <div class="form-floating mb-3">
-                <input v-model="email" type="email" class="form-control" id="email" name="email" placeholder=" " required>
+                <input type="email" class="form-control" id="email" name="email" placeholder=" " required>
                 <label for="email">Adresse Mail</label>
               </div>
             </div>
 
             <div class="mb-3">
               <label for="message" class="form-label">Votre demande</label>
-              <textarea v-model="message" class="form-control" name="message" id="textarea" cols="100" rows="5"
+              <textarea class="form-control" name="message" id="textarea" cols="100" rows="5"
                 required></textarea>
             </div>
           </div>
@@ -60,20 +60,21 @@
           <div v-if="picker=='tel'">
             <div>
               <div class="form-floating mb-3">
-                <input v-model="companyName" type="text" class="form-control" id="companyName" name="name" placeholder=" " required>
+                <input type="text" class="form-control" id="companyName" name="name" placeholder=" " required>
                 <label for="companyName">Nom de l'entreprise</label>
               </div>
 
               <div class="form-floating mb-3">
-                <input v-model="phoneNumber" type="phone" class="form-control" id="phoneNumber" name="phoneNumber" placeholder=" "
+                <input type="phone" class="form-control" id="phoneNumber" name="phoneNumber" placeholder=" "
                   required>
                 <label for="phoneNumber">Téléphone</label>
               </div>
             </div>
+
+            <input type="hidden" name="message" value="Être rappelé">
+            <input type="hidden" name="email" value="no-reply@rfa-conseil.fr">
           </div>
           <div class="text-center">
-            <input type="hidden" name="email" value="noreply@rfa-conseil.fr">
-            <input type="hidden" name="message" value="">
             <button type="submit" class="btn btn-primary px-3">{{picker=='tel'?'Être rappelé':'Envoyer'}}</button>
           </div>
         </form>
@@ -109,7 +110,6 @@
 
   export default defineComponent({
     setup() {
-
       const {
         $swal,
         $stableform,
@@ -118,29 +118,14 @@
       const form = ref(null);
 
       const picker = ref("mail");
-      const companyName = ref("");
-      const phoneNumber = ref("");
-      const email = ref("");
-      const message = ref("");
-      let stableForm;
-
-      const inputs = {
-        companyName,
-        phoneNumber,
-        email,
-        message
-      };
 
       onMounted(() => {
-        stableForm = new $stableform({
+        new $stableform({
           formId: '64a066e423b4395b06dc06e9',
           apiKey: 'B91D69E2-BBA2-4613-8783-051DFFC17E8F',
         })
           .on('success', data => {
-            companyName.value = ""
-            phoneNumber.value = ""
-            email.value = ""
-            message.value = ""
+            form.value.reset();
 
             $swal({
               title: "Formulaire envoyé",
@@ -158,10 +143,6 @@
 
       return {
         form,
-        companyName,
-        phoneNumber,
-        email,
-        message,
         picker,
       };
     },
