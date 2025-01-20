@@ -37,7 +37,7 @@
                 spécialisé en location et entretien de vêtements de travail, linge plat et équipements sanitaires sur toute la France.
                 <br><br>
                 Après plus de 20 ans d’expérience chez les loueurs de linge, l’expertise et le réseau de RFA CONSEIL,
-                <b>créée en 2015</b>, permet aux clients industrie, hôtellerie, restauration, santé, de :</p>
+                <b>créée en 2015</b>, permet aux clients industrie, hôtellerie, restauration, santé, de :</p>
                 <ul class="ms-2">
               <li>Optimiser leurs besoins,</li>
               <li>Gagner du temps,</li>
@@ -72,13 +72,12 @@
             <div id="collapsible_one" class="collapse" data-bs-parent="#accordionPrestation">
               <ul class="mb-4">
                 <li>
-                  Nous analysons en profondeur vos besoins et vos services actuels.
-
+                  Nous analysons en profondeur vos besoins et vos services actuels,
                 </li>
-                <li>Nous identifions les axes d’amélioration.
+                <li>Nous identifions les axes d’amélioration,
                 </li>
                 <li>
-                  Nous élaborons ensemble un nouveau cahier des charges approfondi.
+                  Nous élaborons ensemble un nouveau cahier des charges approfondi,
                 </li>
                 <li>
                   Vous recevez des conseils sur mesures en adéquation avec votre réalité et vos contraintes.
@@ -117,8 +116,7 @@
 
               <ul>
                 <li>Soit avec votre prestataire actuel,</li>
-                <li>Soit avec la concurrence,
-                </li>
+                <li>Soit avec la concurrence.</li>
               </ul>
 
               <p class="mb-4 text-primary fw-bold">C’est l’assurance pour vous d’avoir une protection maximale et d’obtenir des conditions avantageuses.              </p>
