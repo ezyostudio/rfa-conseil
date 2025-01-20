@@ -39,11 +39,11 @@
                 Après plus de 20 ans d’expérience chez les loueurs de linge, l’expertise et le réseau de RFA CONSEIL,
                 <b>créée en 2015</b>, permet aux clients industrie, hôtellerie, restauration, santé, de :</p>
                 <ul class="ms-2">
-              <li>Optimiser leurs besoins</li>
-              <li>Gagner du temps</li>
+              <li>Optimiser leurs besoins,</li>
+              <li>Gagner du temps,</li>
               <li>Assurer l’obtention d’une baisse des coûts significative.</li>
             </ul>
-            <p class="text">La rémunération perçue est conditionnée aux économies générées par son intervention.            </p>
+            <p class="text">La rémunération perçue est conditionnée aux économies générées par son intervention.</p>
             <p class="text">Un principe simple qui vous protège et nous engage :</p>
             <p><span class="text-primary fw-bold">Pas d’économie, pas d’honoraires</span> = un principe simple qui vous protège et nous engage.</p>
             </div>
@@ -116,7 +116,7 @@
               <p >Nous examinons vos contrats actuels et nous optimisons les clauses de vos futurs contrats.</p>
 
               <ul>
-                <li>Soit avec votre prestataire actuel</li>
+                <li>Soit avec votre prestataire actuel,</li>
                 <li>Soit avec la concurrence,
                 </li>
               </ul>
@@ -141,7 +141,7 @@
               <p>Nous négocions les tarifs avec les blanchisseurs et les loueurs de linge pour vous garantir les meilleures conditions financières en conformité avec le cahier des charges établi ensemble en fonction de vos nouveaux besoins.
               </p>
               <ul>
-                <li class="mb-3">Soit par la renégociation de votre contrat existant avec votre prestataire,                </li>
+                <li class="mb-3">Soit par la renégociation de votre contrat existant avec votre prestataire,</li>
                 <li>Soit par la mise en concurrence de celui-ci.</li>
               </ul>
 
