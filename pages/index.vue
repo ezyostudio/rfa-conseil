@@ -33,23 +33,22 @@
         <div class="card-body">
           <div class="row">
             <div class="col-12 col-md-7 order-1 order-md-0">
-              <p class="text-justify">RFA CONSEIL propose un service de <b>Conseil</b> et de <b>Courtage</b>
+              <p class="text-justify">RFA CONSEIL propose un service de conseil et de courtage
                 spécialisé en location et entretien de vêtements de travail, linge plat et équipements sanitaires sur toute la France.
                 <br><br>
                 Après plus de 20 ans d’expérience chez les loueurs de linge, l’expertise et le réseau de RFA CONSEIL,
                 <b>créée en 2015</b>, permet aux clients industrie, hôtellerie, restauration, santé, de :</p>
-                <ul class="ms-2">
+            <ul class="ms-2 mb-4">
               <li>Optimiser leurs besoins,</li>
               <li>Gagner du temps,</li>
               <li>Assurer l’obtention d’une baisse des coûts significative.</li>
             </ul>
             <p class="text">La rémunération perçue est conditionnée aux économies générées par son intervention.</p>
-            <p class="text">Un principe simple qui vous protège et nous engage :</p>
-            <p><span class="text-primary fw-bold">Pas d’économie, pas d’honoraires</span> = un principe simple qui vous protège et nous engage.</p>
+            <p><span class="text-primary fw-bold">Pas d’économie, pas d’honoraires :</span> un principe simple qui vous protège et nous engage.</p>
             </div>
             <div class="col align-self-center text-center order-0 order-md-1 mb-md-0">
-              <iconLogo class="w-50 mb-3" />
-              <h4 class="text-primary fw-bold text-center">Vous assure un service indépendant car non rémunérée par le prestataire qui prendrait le marché.
+              <iconLogo class="w-75 w-md-50 mb-3" />
+              <h4 class="text-primary fw-bold text-center mb-3 mb-md-0">Vous assure un service indépendant car non rémunérée par le prestataire qui prendrait le marché.
               </h4>
             </div>
           </div>
@@ -81,11 +80,10 @@
                 </li>
                 <li>
                   Vous recevez des conseils sur mesures en adéquation avec votre réalité et vos contraintes.
-
                 </li>
               </ul>
 
-              <rfa-prestation-list title="VÊTEMENTS DE TRAVAIL" subtitle="Standard" class="mb-5" color="#105391"
+              <rfa-prestation-list title="VÊTEMENTS DE TRAVAIL" subtitle="Standard" class="mb-5 mt-5" color="#105391"
                 :data="prestations.standard" />
               <rfa-prestation-list subtitle="EPI" class="mb-5" color="#105391" :data="prestations.epi" />
               <rfa-prestation-list title="ARMOIRES VESTIAIRES" class="mb-5" color="#727676"
@@ -114,14 +112,14 @@
 
               <p >Nous examinons vos contrats actuels et nous optimisons les clauses de vos futurs contrats.</p>
 
-              <ul>
+              <ul class="mb-4">
                 <li>Soit avec votre prestataire actuel,</li>
                 <li>Soit avec la concurrence.</li>
               </ul>
 
               <p class="mb-4 text-primary fw-bold">C’est l’assurance pour vous d’avoir une protection maximale et d’obtenir des conditions avantageuses.              </p>
 
-              <div class="row d-flex justify-content-center gx-5">
+              <div class="row d-flex justify-content-center gx-5 w-75 mb-4" style="margin-left: auto; margin-right: auto;">
                 <div class="col-md-4 img-sizer me-md-5 mb-3">
                   <nuxt-img src="/images/prestations/contrat/signature.jpg" alt="signature" class="img-fluid" />
                 </div>
@@ -143,11 +141,11 @@
                 <li>Soit par la mise en concurrence de celui-ci.</li>
               </ul>
 
-              <div class="row d-flex justify-content-center align-items-center mt-5 mb-3 gx-5">
-                <div class="col-md-4 img-sizer me-md-5 mb-3">
+              <div class="row d-flex justify-content-center align-items-center mt-5 gx-5 w-75" style="margin-left: auto; margin-right: auto;">
+                <div class="col-md-4 img-sizer me-md-5">
                   <nuxt-img src="/images/prestations/nego/rfa-1.jpg" alt="tableau" class="img-fluid" />
                 </div>
-                <div class="col-md-4 img-sizer mb-3">
+                <div class="col-md-4 img-sizer">
                   <nuxt-img src="/images/prestations/nego/presentation.jpg" alt="presentation" class="img-fluid" />
                 </div>
               </div>

@@ -6,6 +6,7 @@ section .container.card {
     li {
       list-style-type: none;
       position: relative;
+      margin-bottom: 12px;
 
       &:before {
         content: '';

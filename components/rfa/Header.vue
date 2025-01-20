@@ -1,36 +1,43 @@
 <template>
-      <header id="intro" class="container-fluid bg-primary p-0">
-      <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel"
-        data-bs-interval="3000" data-bs-pause="false" data-bs-touch="false">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <nuxt-img src="/images/header/cintres.jpg" alt="cintres" class="carousel-image"/>
-          </div>
-          <div class="carousel-item">
-            <nuxt-img src="/images/prestations/linges/hotel.jpg" alt="coussin" class="carousel-image" loading="lazy" />
-          </div>
-          <div class="carousel-item">
-            <nuxt-img src="/images/header/serviette.jpg" alt="serviette" class="carousel-image" loading="lazy" />
-          </div>
+  <header id="intro" class="container-fluid bg-primary p-0">
+    <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel"
+      data-bs-interval="3000" data-bs-pause="false" data-bs-touch="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <nuxt-img src="/images/header/cintres.jpg" alt="cintres" class="carousel-image" />
         </div>
-
+        <div class="carousel-item">
+          <nuxt-img src="/images/prestations/linges/hotel.jpg" alt="coussin" class="carousel-image" loading="lazy" />
+        </div>
+        <div class="carousel-item">
+          <nuxt-img src="/images/header/serviette.jpg" alt="serviette" class="carousel-image" loading="lazy" />
+        </div>
       </div>
-      <div class="container d-flex justify-content-center">
-        <div class="content align-self-center fw-bold d-md-block d-flex flex-column justify-content-center w-75">
-          <iconLogo class="w-100 m-auto mb-md-5" height="160px" />
-          <h2 class="text-center text-md-start text-primary">Conseil et Courtage</h2>
-          <h3 class="text-center text-md-start ps-md-5 mb-4">en location et entretien de vêtements de travail, linge plat et équipements sanitaires</h3>
-          <icon-dots class="dots mb-4 w-100" />
+
+    </div>
+    <div class="container d-flex justify-content-center">
+      <div class="content align-self-center fw-bold d-flex flex-column justify-content-center align-items-center w-md-75">
+        <iconLogo class="w-100 m-auto mb-md-5" height="160px" />
+        <h1 class="text-center text-primary">Conseil et Courtage</h1>
+        <h3 class="text-center mb-4">en location et entretien de vêtements de travail, linge plat et équipements
+          sanitaires</h3>
+        <icon-dots class="dots mb-4 mx-auto w-100" />
+
+        <div>
           <nuxt-link v-if="backUrl" tag="button" class="btn btn-lg fs-6 fs-md-3 fw-bold btn-primary me-3" :to="backUrl">
             <icon-arrow-back />
-            {{backText}}
+            {{ backText }}
           </nuxt-link>
-          <button :class="`btn btn-lg fs-6 fs-md-3 fw-bold ${backUrl ? 'btn-outline-primary' : 'btn-primary'}`" @click="$scrollTo(ctaTarget)">{{ctaText}}
+          <button
+            :class="`btn btn-lg fs-6 fs-md-3 fw-bold mr-auto ml-auto ${backUrl ? 'btn-outline-primary' : 'btn-primary'}`"
+            @click="$scrollTo(ctaTarget)">{{ ctaText }}
             <icon-arrow-down />
           </button>
         </div>
+
       </div>
-    </header>
+    </div>
+  </header>
 </template>
 
 <script>
@@ -115,7 +122,7 @@ export default defineComponent({
 
     .content {
       margin-left: -15vw;
-      width: 65%;
+      width: 100%;
 
       .btn {
         border-radius: 40px;

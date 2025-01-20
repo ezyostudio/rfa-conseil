@@ -1,7 +1,7 @@
 <template>
   <div>
-    <rfa-title :color="color" type="subtitle" v-if="title" class="text-center text-lg-start">{{title}}</rfa-title>
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center flex-column align-items-center">
+      <rfa-title :color="color" type="subtitle" v-if="title" class="text-center">{{title}}</rfa-title>
       <rfa-title tag="h5" :color="color" type="subtitle" v-if="subtitle" class="text-center">{{subtitle}}</rfa-title>
     </div>
 
