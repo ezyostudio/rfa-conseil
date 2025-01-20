@@ -37,15 +37,15 @@
           </div>
         </div>
 
-        <form @submit.prevent="submit">
+        <form ref="form">
           <div v-if="picker=='mail'">
             <div>
               <div class="form-floating mb-3">
-                <input v-model="companyName" type="text" class="form-control" id="companyName" placeholder=" " required>
+                <input v-model="companyName" type="text" class="form-control" id="companyName" name="name" placeholder=" " required>
                 <label for="companyName">Nom de l'entreprise</label>
               </div>
               <div class="form-floating mb-3">
-                <input v-model="email" type="email" class="form-control" id="email" placeholder=" " required>
+                <input v-model="email" type="email" class="form-control" id="email" name="email" placeholder=" " required>
                 <label for="email">Adresse Mail</label>
               </div>
             </div>
@@ -60,18 +60,20 @@
           <div v-if="picker=='tel'">
             <div>
               <div class="form-floating mb-3">
-                <input v-model="companyName" type="text" class="form-control" id="companyName" placeholder=" " required>
+                <input v-model="companyName" type="text" class="form-control" id="companyName" name="name" placeholder=" " required>
                 <label for="companyName">Nom de l'entreprise</label>
               </div>
 
               <div class="form-floating mb-3">
-                <input v-model="phoneNumber" type="phone" class="form-control" id="phoneNumber" placeholder=" "
+                <input v-model="phoneNumber" type="phone" class="form-control" id="phoneNumber" name="phoneNumber" placeholder=" "
                   required>
                 <label for="phoneNumber">Téléphone</label>
               </div>
             </div>
           </div>
           <div class="text-center">
+            <input type="hidden" name="email" value="noreply@rfa-conseil.fr">
+            <input type="hidden" name="message" value="">
             <button type="submit" class="btn btn-primary px-3">{{picker=='tel'?'Être rappelé':'Envoyer'}}</button>
           </div>
         </form>
@@ -93,7 +95,6 @@
     @media screen and (max-width: 370px) {
       font-size: .6rem;
    }
-
 }
 </style>
 
@@ -104,21 +105,24 @@
     ref,
     useContext,
     onMounted
-  } from '@nuxtjs/composition-api'
+  } from '@nuxtjs/composition-api';
 
   export default defineComponent({
     setup() {
 
       const {
-        $pageclip,
-        $swal
+        $swal,
+        $stableform,
       } = useContext()
+
+      const form = ref(null);
 
       const picker = ref("mail");
       const companyName = ref("");
       const phoneNumber = ref("");
       const email = ref("");
       const message = ref("");
+      let stableForm;
 
       const inputs = {
         companyName,
@@ -127,36 +131,38 @@
         message
       };
 
-      const submit = async () => {
-        const data = Object.fromEntries(Object.entries(inputs).map(([key, {
-          value
-        }]) => [key, value]));
-        const req = await $pageclip.send(data);
-        if (req.status !== 200) {
-          alert('Une erreur technique est survenue, merci de réessayer ultérieurement.');
-        }
-
-        //Remove input data from form
-        companyName.value = ""
-        phoneNumber.value = ""
-        email.value = ""
-        message.value = ""
-
-        $swal({
-          title: "Formulaire envoyé",
-          icon: 'success',
-          confirmButtonColor: "#105391",
-          timer: 3000
+      onMounted(() => {
+        stableForm = new $stableform({
+          formId: '64a066e423b4395b06dc06e9',
+          apiKey: 'B91D69E2-BBA2-4613-8783-051DFFC17E8F',
         })
-      }
+          .on('success', data => {
+            companyName.value = ""
+            phoneNumber.value = ""
+            email.value = ""
+            message.value = ""
+
+            $swal({
+              title: "Formulaire envoyé",
+              icon: 'success',
+              confirmButtonColor: "#105391",
+              timer: 3000
+            })
+          })
+          .on('error', err => {
+            console.error(err);
+            alert(StableForm.friendlyError(err, i18n.locale));
+          })
+          .subscribeTo(form.value);
+      })
 
       return {
+        form,
         companyName,
         phoneNumber,
         email,
         message,
         picker,
-        submit,
       };
     },
 

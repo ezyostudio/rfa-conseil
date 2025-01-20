@@ -64,7 +64,7 @@ export default {
       mode: 'client'
     },
     {
-      src: '@plugins/pageclip',
+      src: '@plugins/stableform',
       mode: 'client'
     },
     {
