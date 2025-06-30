@@ -56,7 +56,7 @@
             l'identité
             des différents intervenants dans le cadre de sa réalisation et de son suivi:
           </p>
-          <p><strong>Propriétaire</strong> : SASU RFA Conseil Capital social de 5000€ Numéro de TVA: FR65812203263 – 11
+          <p><strong>Propriétaire</strong> : SASU RFA Conseil Capital social de 100.000€ Numéro de TVA: FR65812203263 – 11
             RUE
             DES
             METIERS 77181 COURTRY<br>
@@ -219,7 +219,7 @@
             et
             de sa
             navigation sur le Site, le responsable du traitement des Données Personnelles est : RFA Conseil. <a
-              href="https://rfa-conseil.fr">https://rfa-conseil.fr</a>est représenté par Zao Soula, son représentant
+              href="https://rfa-conseil.fr">https://rfa-conseil.fr</a> est représenté par Regis Frachier, son représentant
             légal
           </p>
 
