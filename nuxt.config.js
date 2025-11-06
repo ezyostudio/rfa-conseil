@@ -23,29 +23,33 @@ export default {
       lang: 'en'
     },
     meta: [{
-        charset: 'utf-8'
-      },
-      {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1'
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'Service exclusif de conseil et de courtage en location et en entretien de vêtements de travail et autres prestations.'
-      },
+      charset: 'utf-8'
+    },
+    {
+      name: 'viewport',
+      content: 'width=device-width, initial-scale=1'
+    },
+    {
+      hid: 'description',
+      name: 'description',
+      content: 'Service exclusif de conseil et de courtage en location et en entretien de vêtements de travail et autres prestations.'
+    },
       // { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [{
-        rel: 'icon',
-        type: 'image/x-icon',
-        href: '/logo.ico'
-      }
+      rel: 'icon',
+      type: 'image/x-icon',
+      href: '/logo.ico'
+    }
     ],
     script: [{
       src: "https://polyfill.io/v3/polyfill.min.js?features=smoothscroll",
       body: true,
       defer: true
+    },
+    {
+      src: "https://www.google.com/recaptcha/api.js?render=6LcjkAQsAAAAACb_UofeEi2RnwUTmQNb7o53EkSn",
+      body: true,
     }]
   },
 
@@ -56,21 +60,21 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [{
-      src: '@plugins/bootstrap',
-      mode: 'client'
-    },
-    {
-      src: '@plugins/scrollTo',
-      mode: 'client'
-    },
-    {
-      src: '@plugins/stableform',
-      mode: 'client'
-    },
-    {
-      src: '@plugins/lazy',
-      mode: 'client'
-    },
+    src: '@plugins/bootstrap',
+    mode: 'client'
+  },
+  {
+    src: '@plugins/scrollTo',
+    mode: 'client'
+  },
+  {
+    src: '@plugins/stableform',
+    mode: 'client'
+  },
+  {
+    src: '@plugins/lazy',
+    mode: 'client'
+  },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -125,24 +129,24 @@ export default {
     babel: {
       presets({ isServer }, [preset, options]) {
 
-        if(isServer) return;
+        if (isServer) return;
         const targets = {
-            chrome: '80',
-            edge: '18',
-            firefox: '70',
-            ios: '14',
-            safari: '12',
+          chrome: '80',
+          edge: '18',
+          firefox: '70',
+          ios: '14',
+          safari: '12',
         };
 
         return [
-            [
-                require.resolve('@nuxt/babel-preset-app'),
-                {
-                    targets,
-                    corejs: 3,
-                    debug: process.env.NODE_ENV === 'production',
-                },
-            ],
+          [
+            require.resolve('@nuxt/babel-preset-app'),
+            {
+              targets,
+              corejs: 3,
+              debug: process.env.NODE_ENV === 'production',
+            },
+          ],
         ];
       },
     }
@@ -239,7 +243,7 @@ export default {
       {
         key: 'Linkedin',
         value: 'https://www.linkedin.com/company/ezyostudio',
-      },{
+      }, {
         key: 'Github',
         value: 'https://github.com/ezyostudio',
       },
@@ -259,10 +263,10 @@ export default {
         key: 'Last update',
         value: new Date().toLocaleDateString(
           'en-US', {
-            month: '2-digit',
-            day: '2-digit',
-            year: 'numeric',
-          }
+          month: '2-digit',
+          day: '2-digit',
+          year: 'numeric',
+        }
         ),
       },
       {

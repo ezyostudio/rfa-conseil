@@ -7,6 +7,7 @@ const defaultOptions = {
   baseUrl: 'https://stableform.ezyostudio.com',
   query: {},
   delayBetweenSends: 5, // In seconds
+  recaptchaV3key: '',
 };
 
 class Form {
@@ -31,9 +32,9 @@ class Form {
     };
 
     this.eventListeners = {
-      success: () => {},
-      sending: () => {},
-      error: () => {},
+      success: () => { },
+      sending: () => { },
+      error: () => { },
     };
 
     this.history = [];
@@ -42,7 +43,7 @@ class Form {
     this._submitListener = this._submitListener.bind(this);
   }
 
-  send(data, options = {}) {
+  async send(data, options = {}) {
     if (typeof FormData !== 'undefined' && data instanceof FormData) {
       data = Form.serializeFormData(data);
     }
@@ -53,6 +54,25 @@ class Form {
     if (spamProtectionStatus) {
       this.eventListeners.error({ error: spamProtectionStatus }, data, this);
       return Promise.reject(spamProtectionStatus);
+    }
+
+    if (this.options.recaptchaV3key?.length > 0) {
+      if (!window.grecaptcha) {
+        throw new Error(
+          '[EzyoStudio] Could not find grecaptcha object. Please make sure you have loaded the recaptcha script'
+        );
+      }
+
+      await new Promise(resolve => {
+        window.grecaptcha.ready(() => {
+          window.grecaptcha
+            .execute(this.options.recaptchaV3key, { action: 'submit' })
+            .then(token => {
+              data.recaptchaToken = token;
+              resolve();
+            });
+        });
+      });
     }
 
     this.eventListeners.sending(data, this);
@@ -285,33 +305,33 @@ Form.locales = {
 }
 
 Form.friendlyError = (err, locale) => {
-  if(typeof locale === 'object') {
+  if (typeof locale === 'object') {
     locale = {
       ...Form.locales['en'],
       locale,
     };
-  }else if(typeof locale === 'string' && Object.keys(Form.locales).includes(locale)) {
+  } else if (typeof locale === 'string' && Object.keys(Form.locales).includes(locale)) {
     locale = Form.locales[locale];
-  }else{
+  } else {
     locale = Form.locales['en'];
   }
 
-  if('validationErrors' in err && Array.isArray(err.validationErrors)) {
+  if ('validationErrors' in err && Array.isArray(err.validationErrors)) {
     return err.validationErrors.map(error => {
-      if(error.type in locale) {
+      if (error.type in locale) {
         return locale[error.type].replace(/\{\{label\}\}/g, error.params.label);
       }
     }).join('.\n');
   }
 
-  if('error' in err && typeof err.error === 'object') {
-    if(err.error instanceof Error) {
+  if ('error' in err && typeof err.error === 'object') {
+    if (err.error instanceof Error) {
       return err.error.toString();
-    }else if('code' in err.error){
-      if(err.error.code in locale) {
+    } else if ('code' in err.error) {
+      if (err.error.code in locale) {
         return locale[err.error.code];
       }
-      
+
       return err.error.message;
     }
   }

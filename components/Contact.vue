@@ -1,20 +1,21 @@
 <template>
   <div class="container card p-3 p-md-5 pt-md-4">
-     <div class="text-primary d-flex flex-column flex-lg-row justify-content-around align-items-center w-100 m-auto mb-3 mb-md-4 gap-1">
-       <div class="d-flex align-items-center m-auto m-lg-0">
-          <icon-home width="30" height="30" />
-          <h6 class="mb-0 ms-1 one-line">11 Rue des Métiers, 77181 COURTRY </h6>
-        </div>
+    <div
+      class="text-primary d-flex flex-column flex-lg-row justify-content-around align-items-center w-100 m-auto mb-3 mb-md-4 gap-1">
+      <div class="d-flex align-items-center m-auto m-lg-0">
+        <icon-home width="30" height="30" />
+        <h6 class="mb-0 ms-1 one-line">11 Rue des Métiers, 77181 COURTRY </h6>
+      </div>
 
-         <div class="d-flex align-items-center">
-          <icon-tel width="30" height="30" />
-          <h6 class="mb-0 ms-1 one-line"> 06 32 77 41 51 — 09 51 74 07 79</h6>
-        </div>
+      <div class="d-flex align-items-center">
+        <icon-tel width="30" height="30" />
+        <h6 class="mb-0 ms-1 one-line"> 06 32 77 41 51 — 09 51 74 07 79</h6>
+      </div>
 
-        <div class="d-flex align-items-center ">
-          <icon-mail width="30" height="30" />
-          <h6 class="mb-0 ms-1 one-line"> regis.frachier@<span class="d-none">email.</span>rfa-conseil.fr</h6>
-        </div>
+      <div class="d-flex align-items-center ">
+        <icon-mail width="30" height="30" />
+        <h6 class="mb-0 ms-1 one-line"> regis.frachier@<span class="d-none">email.</span>rfa-conseil.fr</h6>
+      </div>
 
     </div>
     <div class="card-body pt-0 d-flex justify-content-center align-items-center">
@@ -38,7 +39,7 @@
         </div>
 
         <form ref="form">
-          <div v-if="picker=='mail'">
+          <div v-if="picker == 'mail'">
             <div>
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="companyName" name="name" placeholder=" " required>
@@ -52,12 +53,11 @@
 
             <div class="mb-3">
               <label for="message" class="form-label">Votre demande</label>
-              <textarea class="form-control" name="message" id="textarea" cols="100" rows="5"
-                required></textarea>
+              <textarea class="form-control" name="message" id="textarea" cols="100" rows="5" required></textarea>
             </div>
           </div>
 
-          <div v-if="picker=='tel'">
+          <div v-if="picker == 'tel'">
             <div>
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="companyName" name="name" placeholder=" " required>
@@ -65,8 +65,7 @@
               </div>
 
               <div class="form-floating mb-3">
-                <input type="phone" class="form-control" id="phoneNumber" name="phoneNumber" placeholder=" "
-                  required>
+                <input type="phone" class="form-control" id="phoneNumber" name="phoneNumber" placeholder=" " required>
                 <label for="phoneNumber">Téléphone</label>
               </div>
             </div>
@@ -74,8 +73,14 @@
             <input type="hidden" name="message" value="Être rappelé">
             <input type="hidden" name="email" value="no-reply@rfa-conseil.fr">
           </div>
+          <p class="text-center text-muted">
+            <small class="block">Ce site est protégé par reCAPTCHA, <a
+                href="https://policies.google.com/terms" target="_blank">les conditions d’utilisation</a> et <a
+                href="https://policies.google.com/privacy" target="_blank">politique de confidentialité</a> de Google
+              s’appliquent.</small>
+          </p>
           <div class="text-center">
-            <button type="submit" class="btn btn-primary px-3">{{picker=='tel'?'Être rappelé':'Envoyer'}}</button>
+            <button type="submit" class="btn btn-primary px-3">{{ picker == 'tel' ? 'Être rappelé' : 'Envoyer' }}</button>
           </div>
         </form>
 
@@ -87,67 +92,69 @@
 <style lang="scss">
 .one-line {
   @media screen and (min-width: 992px) and (max-width: 1200px) {
-      font-size: .8rem;
-   }
+    font-size: .8rem;
+  }
 
-   @media screen and (max-width: 576px) {
-      font-size: .8rem;
-   }
-    @media screen and (max-width: 370px) {
-      font-size: .6rem;
-   }
+  @media screen and (max-width: 576px) {
+    font-size: .8rem;
+  }
+
+  @media screen and (max-width: 370px) {
+    font-size: .6rem;
+  }
 }
 </style>
 
 
 <script>
-  import {
-    defineComponent,
-    ref,
-    useContext,
-    onMounted
-  } from '@nuxtjs/composition-api';
+import {
+  defineComponent,
+  ref,
+  useContext,
+  onMounted
+} from '@nuxtjs/composition-api';
 
-  export default defineComponent({
-    setup() {
-      const {
-        $swal,
-        $stableform,
-      } = useContext()
+export default defineComponent({
+  setup() {
+    const {
+      $swal,
+      $stableform,
+    } = useContext()
 
-      const form = ref(null);
+    const form = ref(null);
 
-      const picker = ref("mail");
+    const picker = ref("mail");
 
-      onMounted(() => {
-        new $stableform({
-          formId: '64a066e423b4395b06dc06e9',
-          apiKey: 'B91D69E2-BBA2-4613-8783-051DFFC17E8F',
-        })
-          .on('success', data => {
-            form.value.reset();
-
-            $swal({
-              title: "Formulaire envoyé",
-              icon: 'success',
-              confirmButtonColor: "#105391",
-              timer: 3000
-            })
-          })
-          .on('error', err => {
-            console.error(err);
-            alert(StableForm.friendlyError(err, i18n.locale));
-          })
-          .subscribeTo(form.value);
+    onMounted(() => {
+      new $stableform({
+        formId: '64a066e423b4395b06dc06e9',
+        apiKey: 'B91D69E2-BBA2-4613-8783-051DFFC17E8F',
+        recaptchaV3key: "6LcjkAQsAAAAACb_UofeEi2RnwUTmQNb7o53EkSn",
       })
+        .on('success', data => {
+          form.value.reset();
 
-      return {
-        form,
-        picker,
-      };
-    },
+          $swal({
+            title: "Formulaire envoyé",
+            icon: 'success',
+            confirmButtonColor: "#105391",
+            timer: 3000
+          })
+        })
+        .on('error', err => {
+          console.error(err);
+          alert(StableForm.friendlyError(err, i18n.locale));
+        })
+        .subscribeTo(form.value);
+    })
+
+    return {
+      form,
+      picker,
+    };
+  },
 
 
-  })
+})
 
 </script>
