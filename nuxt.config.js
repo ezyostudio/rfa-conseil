@@ -42,11 +42,7 @@ export default {
       href: '/logo.ico'
     }
     ],
-    script: [{
-      src: "https://polyfill.io/v3/polyfill.min.js?features=smoothscroll",
-      body: true,
-      defer: true
-    },
+    script: [
     {
       src: "https://www.google.com/recaptcha/api.js?render=6LcjkAQsAAAAACb_UofeEi2RnwUTmQNb7o53EkSn",
       body: true,
